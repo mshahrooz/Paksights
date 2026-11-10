@@ -1,1862 +1,554 @@
 [
   {
-    "slug": "renew-nicop-from-abroad",
-    "title": "How to renew your NICOP while living abroad",
-    "category": "identity",
-    "deck": "An overseas-friendly checklist for NADRA PakID, document matching, biometrics and tracking.",
-    "answer": "NADRA accepts NICOP renewal applications through its official PakID app. Check the renewal category, prepare identity and overseas-status evidence, and follow the instructions shown for your case.",
-    "context": [
-      "A NICOP is an identity document for Pakistani citizens abroad. Renewal, first-time issuance, corrections and replacement of a lost card are different application types—choosing the wrong one can delay processing.",
-      "NADRA lists NICOP number and a Pakistani or foreign passport, residence permit, travel document or accepted embassy-attested undertaking among relevant renewal requirements. Requirements and whether an in-person step is needed can differ by case."
+    "slug": "visit-pakistan-from-uk-with-kids",
+    "title": "Visiting Pakistan from the UK with children: what to plan first",
+    "cat": "trip",
+    "image": 0,
+    "summary": "Plan arrival days, family visits, baggage and local transport without overloading the children.",
+    "sections": [
+      [
+        "Agree on the real purpose of the visit",
+        "Before booking attractions, ask relatives where you will sleep, which family events matter and how much time everyone expects together. Confirm stairs, bathrooms, laundry and whether children can have a quiet space to rest. A family visit usually needs more flexibility than an ordinary holiday."
+      ],
+      [
+        "Make the travel day simple",
+        "Compare the complete ticket cost, including seats, baggage and connections. Pack a change of clothes, required medication, comfort items and permitted snacks in cabin baggage. Check the actual airline rules for strollers and child restraints instead of relying on assumptions."
+      ],
+      [
+        "Protect the first two days",
+        "Arrange a known airport pickup and confirm the address before leaving the UK. Avoid scheduling a large gathering immediately after the flight. Let children adjust to new routines and agree with hosts that a short visit or early departure may sometimes be necessary."
+      ],
+      [
+        "Check the destination, not just the flight",
+        "Current UK advice warns against travel to some parts of Pakistan. Review the regions and routes in your itinerary, check travel insurance restrictions and have a simpler alternative if plans need to change. Do not rely on an old blog entry for safety information."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Check the exact service",
-        "body": "Open NADRA’s NICOP renewal guidance and confirm that you need renewal, not modification or reprint. If your name or date of birth changed, review the modification route first."
-      },
-      {
-        "title": "Prepare clear documents",
-        "body": "Have your existing NICOP details plus passport or residence evidence ready. Check that spelling, dates and parental information match your supporting records."
-      },
-      {
-        "title": "Use the official PakID app",
-        "body": "Sign in or register through NADRA’s official PakID mobile app. Select Renew NICOP, complete each field and upload legible documents."
-      },
-      {
-        "title": "Complete any biometric step",
-        "body": "Follow NADRA’s photograph, verification or appointment instructions. Some applicants may be asked to attend a registration centre."
-      },
-      {
-        "title": "Review before paying",
-        "body": "Check delivery address, the application category, names and card details. Confirm the current fee and service level inside the official application."
-      },
-      {
-        "title": "Track and keep records",
-        "body": "Save the application/reference number and payment confirmation. Respond only through official NADRA channels when a correction is requested."
-      }
+    "list": "Family contact and accommodation details; emergency numbers; airline baggage and child-item rules; flight and pickup plan; medication and comfort items; realistic first-week schedule.",
+    "qa": [
+      "How many outings should we reserve?",
+      "Start with one or two short activities and add more only after children settle."
     ],
-    "checklist": [
-      "Existing NICOP number",
-      "Passport or accepted evidence of residence/status abroad",
-      "Matching spelling and personal details",
-      "Access to PakID and a working email/phone",
-      "Address where you can reliably receive documents"
-    ],
-    "watch": [
-      "Do not assume a new NICOP, renewal and modification require the same evidence.",
-      "Avoid agents advertising guaranteed delivery or asking for your PakID password.",
-      "Fees and processing estimates can change; check the official app before payment."
-    ],
-    "faqs": [
-      {
-        "q": "Can I renew from outside Pakistan?",
-        "a": "Yes. NADRA lists PakID app renewal for overseas applicants; case-specific biometric requirements may apply."
-      },
-      {
-        "q": "My card is lost, not expired. What should I select?",
-        "a": "Look for the reprint/lost category rather than ordinary renewal."
-      },
-      {
-        "q": "What if the passport and NADRA names differ?",
-        "a": "Do not guess. Check NADRA’s documented requirements for name discrepancies and use the correct correction route."
-      }
-    ],
-    "sources": [
-      "nadra_nicop",
-      "nadra_faq",
-      "nadra_services"
-    ],
-    "tags": [
-      "NICOP",
-      "NADRA",
-      "PakID",
-      "renewal"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions",
+      "iata"
+    ]
   },
   {
-    "slug": "nicop-vs-poc",
-    "title": "NICOP vs POC: which card should you apply for?",
-    "category": "identity",
-    "deck": "Understand the citizenship distinction before paying for the wrong NADRA document.",
-    "answer": "NICOP is for Pakistani citizens living overseas. POC is generally for eligible foreign nationals of Pakistani origin. Your citizenship status—not simply where you live—drives the choice.",
-    "context": [
-      "NICOP and Pakistan Origin Card (POC) may look like similar overseas identity products, but NADRA defines them differently. A person who still holds Pakistani citizenship should not automatically choose a POC because they also hold a foreign passport.",
-      "NADRA lists POC eligibility for certain former Pakistani citizens, descendants of Pakistani citizens and qualifying family relationships. Some spouse-based categories have specific restrictions; check the current rules before applying."
+    "slug": "pakistan-december-packing-list",
+    "title": "Packing for Pakistan in December: start with your cities",
+    "cat": "trip",
+    "image": 7,
+    "summary": "A winter checklist for travellers visiting different cities and climates in Pakistan.",
+    "sections": [
+      [
+        "Winter conditions vary",
+        "The weather in Karachi, Lahore, Islamabad and higher-altitude areas is not the same. Check the forecast for each stop shortly before departure and update clothing choices accordingly. Do not assume that a single warm jacket is enough for every destination."
+      ],
+      [
+        "Use layers instead of bulky duplicates",
+        "Bring breathable clothing, comfortable shoes, socks, an optional warm mid-layer and outerwear suited to the actual forecast. Ask relatives whether the home has heating, warm bedding and laundry facilities; indoor comfort can be as important as daytime temperatures."
+      ],
+      [
+        "Pack for the practical parts",
+        "Keep moisturizer, a small rain layer if forecast, essential medication, a spare change in cabin baggage and weather-appropriate sleepwear. If visiting mountains, research the route, altitude and road conditions as a separate decision."
+      ],
+      [
+        "Leave room to return",
+        "Gifts and purchases often use baggage space. Weigh bags after packing and check the most restrictive carrier on connecting flights. Follow airline rules on batteries, liquids and prohibited articles."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Establish your citizenship position",
-        "body": "Work out whether you are currently a Pakistani citizen, a former citizen or a foreign national of Pakistani descent. If uncertain, seek confirmation rather than self-classifying."
-      },
-      {
-        "title": "Read NADRA’s eligibility pages",
-        "body": "Compare the NICOP definition with the new POC eligibility rules, particularly where your claim depends on a parent, grandparent or spouse."
-      },
-      {
-        "title": "Collect the correct supporting link",
-        "body": "For a POC, prepare relevant proof of origin or family connection. For NICOP, review the identity and citizenship requirements applicable to your case."
-      },
-      {
-        "title": "Apply through the official channel",
-        "body": "Use NADRA PakID for the supported category. Keep your recorded spelling and family data consistent."
-      },
-      {
-        "title": "Confirm entry and residence implications",
-        "body": "A POC has particular entry and administrative privileges, but it is not the same legal status as Pakistani citizenship. Confirm any destination-specific travel rules separately."
-      }
+    "list": "Weather in every destination; heating and bedding at home; laundry access; one complete cabin change; shoes; layering; return-flight baggage allowance.",
+    "qa": [
+      "Do we need a heavy coat everywhere?",
+      "Not necessarily. Base your choice on destinations, current forecasts and accommodation."
     ],
-    "checklist": [
-      "Your citizenship status",
-      "Foreign and Pakistani passport information, if any",
-      "Parent/grandparent or spouse documents for origin-based eligibility",
-      "Consistent family identity details"
-    ],
-    "watch": [
-      "POC is not proof of Pakistani citizenship.",
-      "Acquiring another nationality does not by itself tell you whether you have retained Pakistani citizenship.",
-      "Do not rely on social-media advice about spouse eligibility; restrictions appear in NADRA’s policy."
-    ],
-    "faqs": [
-      {
-        "q": "Can a foreign-born child get NICOP?",
-        "a": "Possibly, if the child is a Pakistani citizen and satisfies NADRA’s requirements. Establish citizenship and registration first."
-      },
-      {
-        "q": "Does POC replace a Pakistani passport?",
-        "a": "No. It is an identity/status document for eligible foreign nationals, not a Pakistani passport."
-      },
-      {
-        "q": "Can a former Pakistani citizen apply for POC?",
-        "a": "NADRA explicitly lists certain former Pakistani citizens among eligible applicants; check the required evidence."
-      }
-    ],
-    "sources": [
-      "nadra_poc",
-      "nadra_services",
-      "nadra_faq"
-    ],
-    "tags": [
-      "NICOP",
-      "POC",
-      "citizenship"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "pmd",
+      "iata",
+      "uk"
+    ]
   },
   {
-    "slug": "renew-pakistani-passport-online",
-    "title": "Renew a Pakistani passport online from overseas",
-    "category": "identity",
-    "deck": "What DGI&P says about eligibility, timing and the online renewal journey.",
-    "answer": "The Directorate General of Immigration & Passports offers online passport renewal to inland and overseas Pakistanis. Its guidance says to apply when the passport has expired or has less than one year of validity remaining.",
-    "context": [
-      "Passport renewal and replacement after loss, damage or a change in particulars are not necessarily the same workflow. Starting with the right service can save a repeat application.",
-      "The passport portal warns that online fees once paid are non-refundable and non-transferable. Review your entries and selected service before paying, and check your destination’s entry rules separately."
+    "slug": "two-week-pakistan-family-itinerary",
+    "title": "A realistic two-week Pakistan itinerary for visiting relatives",
+    "cat": "trip",
+    "image": 0,
+    "summary": "Balance family obligations with a handful of enjoyable outings and enough time to rest.",
+    "sections": [
+      [
+        "Choose a main home base",
+        "Staying close to relatives usually saves time and repeated packing. Decide which city will be your base before considering any second destination. Confirm accommodation and transport rather than assuming these arrangements are already understood."
+      ],
+      [
+        "Days 1 to 4: settle in",
+        "Use the arrival day for rest, then reserve time for close relatives, errands and familiarizing children with the household. A short neighborhood outing can be more successful than rushing into a long sightseeing day."
+      ],
+      [
+        "Days 5 to 11: a few quality activities",
+        "Plan two or three short outings around the family’s interests. Museums, cultural venues, parks or a shared meal might be suitable where security advice and current conditions permit. Build in at least one unplanned day between busy commitments."
+      ],
+      [
+        "Days 12 to 14: finish without rushing",
+        "Leave time for laundry, final family visits and checking return baggage. If considering a side trip, build buffer time around weather and transport changes and never compress the return journey into an unsafe schedule."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Check the renewal condition",
-        "body": "Review the online renewal page and ensure your passport is expired or within the renewal window described by DGI&P."
-      },
-      {
-        "title": "Match identity records",
-        "body": "Compare passport name, date of birth and identity number with your NADRA documents. Resolve discrepancies through the appropriate authority."
-      },
-      {
-        "title": "Start on DGI&P’s site",
-        "body": "Follow the Apply for Online Passport Renewal link from the official DGI&P e-services page."
-      },
-      {
-        "title": "Submit required details and images",
-        "body": "Complete the form, upload the evidence requested for your case and follow instructions for photo or biometric data."
-      },
-      {
-        "title": "Verify fees and submission",
-        "body": "Check service category, address and all details carefully. DGI&P warns against expecting a refund or fee transfer."
-      },
-      {
-        "title": "Plan travel conservatively",
-        "body": "Keep confirmation details and leave flexibility around flight plans; avoid assuming a promised delivery date is guaranteed."
-      }
+    "list": "Primary city; household arrangements; major family occasions; two short outings; indoor alternatives; return-flight buffer; customs and baggage checks.",
+    "qa": [
+      "Should we include northern Pakistan?",
+      "Only if official advice, weather, transport, travel time and your family’s needs make the journey appropriate. It is optional."
     ],
-    "checklist": [
-      "Current or expired Pakistani passport",
-      "NADRA identity document",
-      "Correct address and contact details",
-      "Digital copies requested by the portal",
-      "Time buffer before travel"
-    ],
-    "watch": [
-      "A visa or residence permit can have different passport-validity rules from Pakistan’s renewal criteria.",
-      "Lost or damaged passports may require a separate route or consular assistance.",
-      "Only use passport links reached from the official DGI&P domain."
-    ],
-    "faqs": [
-      {
-        "q": "Can I apply without visiting Pakistan?",
-        "a": "DGI&P says online renewal is available to overseas Pakistanis; eligibility and additional steps depend on the case."
-      },
-      {
-        "q": "Is the fee refundable if I make a mistake?",
-        "a": "DGI&P states an online passport fee, once paid, is non-refundable and non-transferable."
-      },
-      {
-        "q": "How early can I renew?",
-        "a": "DGI&P’s published online renewal guidance references expired passports or validity of less than one year."
-      }
-    ],
-    "sources": [
-      "dgip_pass",
-      "mofa_missions"
-    ],
-    "tags": [
-      "passport",
-      "DGI&P",
-      "renewal"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions",
+      "ca"
+    ]
   },
   {
-    "slug": "lost-identity-documents-abroad",
-    "title": "Lost your NICOP or passport abroad? A practical first-response guide",
-    "category": "identity",
-    "deck": "Secure your identity, find the right replacement route and avoid making a travel problem worse.",
-    "answer": "For a lost NICOP, NADRA’s PakID services list a reprint/lost application category. For a lost passport, contact DGI&P and the Pakistani mission serving your location to confirm the appropriate procedure.",
-    "context": [
-      "Losing identity papers overseas is stressful because a police report, residence-permit replacement and Pakistani identity replacement may involve different authorities. Keep these separate instead of assuming a single application solves all of them.",
-      "Whether you are about to travel or staying abroad long-term affects the order of action. Your local authorities and airline may also impose requirements not covered by Pakistani guidance."
+    "slug": "pakistan-family-trip-budget",
+    "title": "How to budget for a family trip to Pakistan from abroad",
+    "cat": "trip",
+    "image": 3,
+    "summary": "Separate international travel costs, local spending, gifts and contingency before committing.",
+    "sections": [
+      [
+        "Start with full international costs",
+        "Flight prices alone are not a complete budget. Include checked bags, seats, transport to the departure airport, insurance and any other provider-specific costs. Collect actual quotes for your dates rather than trusting an average online figure."
+      ],
+      [
+        "Build a local spending plan",
+        "Estimate accommodation contributions, domestic transport, meals away from home, activities, mobile service and gifts. A family visit hosted by relatives will have different costs from a hotel-based sightseeing holiday."
+      ],
+      [
+        "Choose one calculation currency",
+        "Record what currency each estimate started in and the conversion rate you used. Rates and payment fees can change, so leave room for uncertainty. Never present an illustrative rate as a live quote."
+      ],
+      [
+        "Add a contingency and review it",
+        "Keep a separate line for unexpected changes to flights, local travel or accommodation. Revisit the plan when actual bookings are made. Our free calculator works with manually entered estimates and does not transmit your data."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Protect yourself locally",
-        "body": "If there is theft or suspected misuse, report it to the appropriate local authority and follow local rules for replacing a stolen residence card or travel document."
-      },
-      {
-        "title": "Secure accounts",
-        "body": "Update passwords for accounts that may have been compromised. Do not send photos of identity documents to strangers offering urgent help."
-      },
-      {
-        "title": "Replace the NICOP correctly",
-        "body": "NADRA lists a reprint/lost card route in PakID. Choose it rather than a normal renewal when appropriate."
-      },
-      {
-        "title": "Ask your Pakistani mission about passports",
-        "body": "Use MOFA’s official overseas mission directory to find the right consular office. Ask what the passport or emergency-travel process requires in your situation."
-      },
-      {
-        "title": "Preserve evidence",
-        "body": "Keep report references, application numbers, scanned copies and correspondence safely, without publishing personal numbers online."
-      }
+    "list": "Tickets; airline extras; insurance; airport travel; local transport; accommodation; meals; attractions; gifts; connectivity; contingency.",
+    "qa": [
+      "What is an average family trip cost?",
+      "There is no reliable universal figure. Duration, origin, family size and accommodation determine the total."
     ],
-    "checklist": [
-      "Any photocopies or scans of the lost documents",
-      "Police/theft report if locally relevant",
-      "Travel date and itinerary",
-      "Local immigration or residence documents",
-      "Mission and NADRA case references"
-    ],
-    "watch": [
-      "Do not book non-refundable travel on an assumed replacement timeline.",
-      "An emergency travel document is not the same as a full passport; confirm its limitations with the mission.",
-      "A lost card does not automatically cancel local residence-permit obligations."
-    ],
-    "faqs": [
-      {
-        "q": "Can I replace a lost NICOP online?",
-        "a": "NADRA lists reprint/lost within the PakID application categories."
-      },
-      {
-        "q": "Who handles a lost passport overseas?",
-        "a": "Start with DGI&P guidance and the Pakistani embassy or consulate for your jurisdiction."
-      },
-      {
-        "q": "Should I post a photo of the missing card to social media?",
-        "a": "Avoid publishing identification numbers or document photos. Use official reporting channels instead."
-      }
-    ],
-    "sources": [
-      "nadra_faq",
-      "mofa_missions",
-      "dgip_pass"
-    ],
-    "tags": [
-      "lost card",
-      "passport",
-      "urgent"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "iata",
+      "uk"
+    ]
   },
   {
-    "slug": "online-power-of-attorney-pakistan",
-    "title": "Digital power of attorney for Pakistan: how it works from abroad",
-    "category": "identity",
-    "deck": "Understand the NADRA–MOFA online route before authorizing anyone to act for you.",
-    "answer": "Pakistan has a digital power-of-attorney pathway for overseas applicants via NADRA in collaboration with the Ministry of Foreign Affairs. Availability and verification steps should be checked against your mission and the official POA portal.",
-    "context": [
-      "A power of attorney permits another person to perform specified acts on your behalf. Its scope matters: a narrow authority for a single transaction is generally easier to oversee than an unrestricted authority.",
-      "MOFA mission guidance describes online application, uploading executor, attorney and witness details, and remote verification. Manual attestation routes may also exist. Ask the receiving office in Pakistan what wording and form it accepts before drafting."
+    "slug": "family-trip-packing-checklist",
+    "title": "A family-trip packing checklist for overseas Pakistanis",
+    "cat": "trip",
+    "image": 7,
+    "summary": "Use a simple timeline from four weeks before departure through the journey home.",
+    "sections": [
+      [
+        "A month ahead",
+        "Check passports and the official requirements applicable to your circumstances, review travel advice and reserve important transport. Discuss the visit with your host and make a list of items that genuinely must come from abroad."
+      ],
+      [
+        "Two weeks ahead",
+        "Confirm sleeping arrangements, emergency contacts, medication and any mobility needs. Check whether you can do laundry and whether the children need familiar comfort objects or specific supplies."
+      ],
+      [
+        "In the final days",
+        "Review current weather, airline baggage rules, flight details, pickup arrangements and security information. Keep essentials in cabin bags and valuable purchases documented. Avoid overpacking for unlikely scenarios."
+      ],
+      [
+        "Before returning",
+        "Set aside time to weigh suitcases, check customs restrictions and verify the journey to the departure airport. Save copies of essential travel information offline in case internet coverage is disrupted."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Define one task clearly",
-        "body": "Write down precisely what you want the attorney to do, which property or office is involved and what the attorney must not do."
-      },
-      {
-        "title": "Check acceptance in Pakistan",
-        "body": "Ask the land registry, bank, lawyer or authority that will receive the POA for their current wording, registration and documentation requirements."
-      },
-      {
-        "title": "Open the official NADRA POA portal",
-        "body": "Use poa.nadra.gov.pk, not a lookalike portal. Review application rules and your mission’s guidance."
-      },
-      {
-        "title": "Prepare parties and witnesses",
-        "body": "Gather the identity particulars of you, your proposed attorney and the required witnesses, plus your drafted instrument."
-      },
-      {
-        "title": "Follow verification and attestation steps",
-        "body": "Complete payment and any virtual interview or mission checks described by the applicable process."
-      },
-      {
-        "title": "Send and retain the final instrument",
-        "body": "Follow instructions for delivering the attested document to Pakistan. Keep a complete copy and monitor what is done under the authority."
-      }
+    "list": "Flight details; travel advisories; medication; contacts; baggage limits; clothing layers; gifts; child necessities; return customs rules.",
+    "qa": [
+      "Can I use one list for every family?",
+      "No. Adapt the list for ages, mobility, season, countries of travel and accommodation."
     ],
-    "checklist": [
-      "Defined legal purpose and limits",
-      "Draft POA approved for the intended receiving office",
-      "Applicant and attorney identification",
-      "Required witness information",
-      "Secure method to deliver the final instrument"
-    ],
-    "watch": [
-      "Never sign an unrestricted authority merely for convenience without independent legal advice.",
-      "A POA alone is not proof that property has a clean title.",
-      "Do not confuse online application with a guarantee that every office accepts every wording."
-    ],
-    "faqs": [
-      {
-        "q": "Do I need to visit an embassy?",
-        "a": "Some digital POA processing can be remote, subject to the portal and mission’s instructions."
-      },
-      {
-        "q": "Can a POA be used to buy or sell property?",
-        "a": "Depending on its legal wording and local registration rules, a POA may authorize specific transactions; ask an independent lawyer and the receiving registry."
-      },
-      {
-        "q": "Is the digital route the only route?",
-        "a": "MOFA guidance also describes manual attestation in some missions. Confirm locally."
-      }
-    ],
-    "sources": [
-      "mofa_poa",
-      "poa_portal",
-      "mofa_missions"
-    ],
-    "tags": [
-      "POA",
-      "power of attorney",
-      "NADRA"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "ca",
+      "us",
+      "iata"
+    ]
   },
   {
-    "slug": "dual-nationality-pakistan",
-    "title": "Does Pakistan allow dual nationality with your country?",
-    "category": "identity",
-    "deck": "How to check the official country list and avoid assumptions about citizenship.",
-    "answer": "DGI&P publishes an official list of countries with which Pakistan has dual-nationality arrangements. Always check the current list and your other country’s own nationality law before making decisions.",
-    "context": [
-      "Dual nationality is a question about citizenship, not merely possession of two passports. Countries can have different rules about retention, acquisition, disclosure and public-office eligibility.",
-      "DGI&P’s list was updated in January 2026. For people with complex family history, naturalization or prior renunciation, the listed country alone may not establish individual citizenship status."
+    "slug": "flying-to-pakistan-with-toddler",
+    "title": "Flying to Pakistan with a toddler: carry-on and arrival essentials",
+    "cat": "family",
+    "image": 2,
+    "summary": "Focus on the journey and the first night rather than taking every possible baby product.",
+    "sections": [
+      [
+        "Keep a compact flight routine",
+        "Put wipes, spare outfits for child and caregiver, required medication, and comfort items in the bag you can reach most easily. Ask the airline about infant seating, stroller handling, food and liquid allowances on your specific journey."
+      ],
+      [
+        "Plan a safe sleeping place",
+        "Before departure, discuss where the toddler will sleep and whether the room can be made appropriate for their age. Check for stairs, windows, heat or cold, and crowded rooms. Consider local childcare or family support realistically."
+      ],
+      [
+        "Make the first week gentle",
+        "Late family functions and unfamiliar meal times can leave young children exhausted. Limit the number of commitments each day and protect familiar sleep cues when possible. Shorter visits are easier to adjust than plans made weeks in advance."
+      ],
+      [
+        "Arrange suitable transport",
+        "Do not assume a child car restraint will be available in every vehicle. Ask transport providers directly about available safety equipment and check current official advice for routes and travel arrangements."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Locate both governments’ rules",
-        "body": "Read the DGI&P list for Pakistan’s arrangement and the citizenship authority of your second country for its requirements."
-      },
-      {
-        "title": "Check the precise legal history",
-        "body": "Document whether Pakistani citizenship was retained, acquired, resumed or renounced; older records may matter."
-      },
-      {
-        "title": "Separate status from documents",
-        "body": "Check whether your NICOP, POC and passport correspond to your actual citizenship status."
-      },
-      {
-        "title": "Ask before making irreversible choices",
-        "body": "If you are asked to renounce a citizenship, seek official clarification or qualified immigration/legal advice first."
-      },
-      {
-        "title": "Recheck before a major transaction",
-        "body": "Nationality and document status can affect travel, property and family processes; refresh the official list at the time."
-      }
+    "list": "Spare clothing; nappies and wipes; comfort object; appropriate food; medication; airline child-item policy; suitable sleeping setup; transport restraint plan.",
+    "qa": [
+      "Can a stroller be gate-checked?",
+      "Rules vary by airline and airport. Confirm with the operating carrier."
     ],
-    "checklist": [
-      "Current DGI&P dual-nationality list",
-      "Other country’s official citizenship guidance",
-      "Passports and citizenship certificates",
-      "Any renunciation or resumption records"
-    ],
-    "watch": [
-      "A foreign passport does not automatically prove you have lost Pakistani citizenship.",
-      "The citizenship rules of your other country are separate from Pakistan’s.",
-      "A country’s inclusion on a general list does not settle every individual case."
-    ],
-    "faqs": [
-      {
-        "q": "Is the United States on the published list?",
-        "a": "Yes, the current DGI&P list includes the United States; confirm your personal status and any applicable restrictions."
-      },
-      {
-        "q": "What about Canada and the UK?",
-        "a": "Both appear on DGI&P’s published dual-nationality arrangements list."
-      },
-      {
-        "q": "Should I surrender a Pakistani document before confirming?",
-        "a": "No. Establish your lawful citizenship status and the correct procedure with the responsible authority first."
-      }
-    ],
-    "sources": [
-      "dgip_dual",
-      "nadra_poc",
-      "nadra_services"
-    ],
-    "tags": [
-      "dual citizenship",
-      "nationality",
-      "passport"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "iata",
+      "uk"
+    ]
   },
   {
-    "slug": "open-roshan-digital-account",
-    "title": "Roshan Digital Account: eligibility, documents and opening steps",
-    "category": "money",
-    "deck": "A bank-account guide for non-resident Pakistanis without traveling to a branch.",
-    "answer": "Roshan Digital Accounts are offered by participating banks under the State Bank of Pakistan initiative. Eligible non-resident individuals can apply remotely and choose a rupee or foreign-currency account, subject to bank checks.",
-    "context": [
-      "The RDA initiative supports payments, banking and qualifying investments in Pakistan. The SBP also explains that funds held in an RDA can generally be repatriated abroad without prior SBP or bank approval, subject to the account rules.",
-      "A key distinction: RDAs are normally funded from abroad. Local deposits unrelated to permitted returns on qualifying investments are not an ordinary way to fund them."
+    "slug": "visiting-pakistan-with-elderly-parents",
+    "title": "Visiting Pakistan with elderly parents: comfort-first planning",
+    "cat": "family",
+    "image": 2,
+    "summary": "Make accessibility, healthcare planning and rest the starting point of a family visit.",
+    "sections": [
+      [
+        "Ask what matters to the traveller",
+        "Some older relatives prefer time with family over sightseeing. Discuss walking distance, stamina, mobility and preferred pace before committing to activities. Avoid presenting a demanding itinerary as a surprise."
+      ],
+      [
+        "Check the practical environment",
+        "Confirm stairs, bathroom accessibility, bed height and reliable transport at the host's home. Ask airlines about assistance services well before departure, rather than expecting arrangements to be made on arrival."
+      ],
+      [
+        "Plan individual medical needs carefully",
+        "A clinician who knows the traveller should advise on medication and fitness to travel where necessary. Keep prescriptions and medication information accessible. This article is not medical advice and does not replace a personal consultation."
+      ],
+      [
+        "Leave room for unexpected changes",
+        "Short visits, rest days and flexible return arrangements reduce pressure. Consider the effect of long road journeys and review current regional safety guidance before arranging any excursion."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Check eligibility rather than residency by guesswork",
-        "body": "Read SBP’s current RDA eligibility criteria, including relevant non-resident identification and tax-status conditions."
-      },
-      {
-        "title": "Choose a participating bank",
-        "body": "Use the bank list reached from SBP’s RDA page. Compare service charges, currencies, app quality and available products through each bank’s official tariff."
-      },
-      {
-        "title": "Decide on currency",
-        "body": "Choose a Pakistani-rupee account, foreign-currency account, or both if available and appropriate to your needs. Review conversion spreads."
-      },
-      {
-        "title": "Gather identity and income proof",
-        "body": "SBP lists CNIC/NICOP/POC, passport where applicable, proof of non-resident status and proof of income/funds among standard onboarding records."
-      },
-      {
-        "title": "Complete the bank’s digital onboarding",
-        "body": "Apply through the chosen bank’s official RDA flow; respond to any additional verification the bank lawfully requests."
-      },
-      {
-        "title": "Fund the account from abroad",
-        "body": "Make a traceable transfer through the bank’s accepted channel and keep transaction receipts for your records."
-      }
+    "list": "Accessibility at home; assistance request; medication plan; emergency contacts; suitable vehicle; restful calendar; current travel advice.",
+    "qa": [
+      "Should we include a long sightseeing drive?",
+      "Only after considering the person's needs, appropriate professional advice, road conditions and official security guidance."
     ],
-    "checklist": [
-      "NICOP/CNIC/POC as applicable",
-      "Passport and non-resident evidence",
-      "Source-of-income or profession document",
-      "Tax forms where required, including US FATCA documentation",
-      "Comparison of the bank’s current schedule of charges"
-    ],
-    "watch": [
-      "SBP’s RDA guidance says funds generally come from abroad; do not assume any local cash deposit is allowed.",
-      "A repatriable account is not a risk-free investment. Deposits and investment products have different risks.",
-      "US-based applicants may be asked for FATCA information."
-    ],
-    "faqs": [
-      {
-        "q": "Must I visit Pakistan to open an RDA?",
-        "a": "SBP describes remote digital onboarding for eligible non-residents."
-      },
-      {
-        "q": "Can I transfer funds back abroad?",
-        "a": "SBP describes RDA balances and qualifying returns as repatriable without prior approval, under the product’s rules."
-      },
-      {
-        "q": "Is every bank’s pricing identical?",
-        "a": "No. Compare each bank’s official fees, conversion spreads and service features."
-      }
-    ],
-    "sources": [
-      "sbp_rda",
-      "sbp_init"
-    ],
-    "tags": [
-      "RDA",
-      "bank account",
-      "overseas banking"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "ca",
+      "us"
+    ]
   },
   {
-    "slug": "send-money-to-pakistan-safely",
-    "title": "Sending money to Pakistan: compare the amount received, not the headline rate",
-    "category": "money",
-    "deck": "A practical method for choosing a remittance channel and keeping proof of payment.",
-    "answer": "Use formal, regulated money-transfer channels and compare total cost using the payout amount after fees and exchange-rate margin. A seemingly zero-fee transfer can still be expensive if its exchange rate is poor.",
-    "context": [
-      "The State Bank of Pakistan supports home remittances through formal channels. For your personal transfer, the most useful number is how many rupees reach the recipient for the total money you pay.",
-      "Transfers can also differ in delivery method, transfer limits, identity requirements and cancellation terms. These should be checked with the provider in the country where you send from."
+    "slug": "first-pakistan-trip-british-born-teens",
+    "title": "Helping British-born teenagers enjoy their first Pakistan visit",
+    "cat": "family",
+    "image": 2,
+    "summary": "Give teenagers a role in planning while respecting family priorities and cultural differences.",
+    "sections": [
+      [
+        "Let young people shape some activities",
+        "Ask each teenager to suggest interests such as music, museums, sport, food or family photography. Match a small number of activities to these interests, while keeping safety guidance and transport in mind."
+      ],
+      [
+        "Discuss expectations ahead of time",
+        "Explain where they will stay, who they will meet and what social occasions may involve. Talk about clothing, privacy, screen time and household rules openly instead of waiting until everyone is tired."
+      ],
+      [
+        "Make connections personal",
+        "Invite relatives to share stories and photos. A teenager who is not fluent in Urdu or a regional language can still build relationships through everyday activities, humor, cooking and shared interests."
+      ],
+      [
+        "Allow downtime",
+        "Long journeys and frequent gatherings can overwhelm a teenager. Set aside space for rest and communication with friends while balancing family time. Let them ask uncomfortable questions without embarrassment."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Compare like-for-like quotes",
-        "body": "Enter the same send currency and the same total cost budget for each provider. Note whether fees are included in the transfer amount or charged separately."
-      },
-      {
-        "title": "Inspect the real payout",
-        "body": "Read the exact estimated PKR delivered, fees and exchange rate shown before confirmation. Use our manual comparison tool to check the arithmetic."
-      },
-      {
-        "title": "Verify the receiving details",
-        "body": "Confirm recipient name, receiving bank or cash location, account number or IBAN as applicable. Never rely on details sent in an unexpected message."
-      },
-      {
-        "title": "Use a recognized channel",
-        "body": "Check the provider’s authorization in your sending country and its published payout partners; avoid private cash exchanges arranged on social media."
-      },
-      {
-        "title": "Keep evidence",
-        "body": "Save the receipt, transfer ID and quoted payout. Ask the recipient to confirm receipt through a separate trusted channel."
-      },
-      {
-        "title": "Escalate a problem in order",
-        "body": "Start with the remittance provider’s support. If the receiving Pakistani bank is involved, its complaint mechanism and SBP Sunwai may be relevant."
-      }
+    "list": "Two personal interests per teen; family event calendar; household expectations; internet plan; downtime; local safety information.",
+    "qa": [
+      "Must teenagers already speak Urdu?",
+      "No. Encourage everyday phrases and let conversations develop naturally."
     ],
-    "checklist": [
-      "Transfer amount and send currency",
-      "Two live provider quotes collected by you",
-      "Identity of the recipient independently confirmed",
-      "Understanding of fee deduction vs extra fee",
-      "Receipt and transaction reference"
-    ],
-    "watch": [
-      "Never send money to an intermediary promising a guaranteed special rate outside regulated channels.",
-      "An advertised rate may not equal the final rate at checkout.",
-      "Never share OTPs or full banking login credentials with a remittance “helper”."
-    ],
-    "faqs": [
-      {
-        "q": "Is the cheapest advertised fee always the best option?",
-        "a": "No. Compare the final PKR payout at the same total sending cost."
-      },
-      {
-        "q": "Does PakSights show live exchange rates?",
-        "a": "No. Our tool uses quotes you type in and makes no claim to provide live exchange rates."
-      },
-      {
-        "q": "Where can I complain if the receiving bank mishandles funds?",
-        "a": "Start with the bank and follow the process of the relevant regulator; SBP’s Sunwai portal accepts Pakistani banking complaints."
-      }
-    ],
-    "sources": [
-      "sbp_init",
-      "sbp_sunwai_info"
-    ],
-    "tags": [
-      "remittance",
-      "exchange rates",
-      "send money"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions"
+    ]
   },
   {
-    "slug": "complain-about-pakistan-bank-from-abroad",
-    "title": "How to complain about a Pakistani bank from overseas",
-    "category": "money",
-    "deck": "Build an evidence trail and use the State Bank of Pakistan’s Sunwai service.",
-    "answer": "Sunwai is an SBP-backed online complaint platform for issues involving banks, microfinance banks and development financial institutions, including Roshan Digital Accounts.",
-    "context": [
-      "The Sunwai portal routes complaints to the appropriate forum, including the financial institution as the first forum and Banking Mohtasib or SBP in relevant cases. This is more effective than sending repeated unstructured messages to unrelated offices.",
-      "The quality of your evidence matters. Make your complaint easy to understand by specifying the transaction, what went wrong, what you want resolved and what you have already tried."
+    "slug": "pakistan-wedding-trip-planning",
+    "title": "Planning a trip to Pakistan for a family wedding",
+    "cat": "family",
+    "image": 4,
+    "summary": "Organize event dates, clothing, gifts, children’s routines and the return journey.",
+    "sections": [
+      [
+        "Ask for a real event schedule",
+        "Family weddings often involve several gatherings, but the number and timing vary. Confirm which events matter, where they will take place and what clothing is expected before reserving flights."
+      ],
+      [
+        "Build in adjustment days",
+        "Arriving immediately before a late event can be exhausting, particularly for children or older relatives. Where possible, allow a buffer before the main family functions and do not fill every free morning with shopping."
+      ],
+      [
+        "Budget clothing and gifts separately",
+        "Record outfit costs, alterations, presents and transport in addition to flights. Check what can be purchased in advance and what genuinely requires shopping after arrival."
+      ],
+      [
+        "Prepare for a calm departure",
+        "Protect enough time after the wedding to finish errands, weigh baggage and review return-country customs rules. Keep receipts and avoid relying on a last-minute long-distance journey to reach the airport."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Put account security first",
-        "body": "For unauthorized transactions or suspected fraud, use your bank’s official fraud hotline immediately, not just a slower general complaint."
-      },
-      {
-        "title": "Write a timeline",
-        "body": "List dates, branch or channel, the transaction reference, monetary amount and what was promised. Avoid adding unrelated accusations."
-      },
-      {
-        "title": "Contact the bank",
-        "body": "Use the bank’s published complaint channel and get a case/reference number. Preserve the response and applicable deadlines."
-      },
-      {
-        "title": "Open Sunwai",
-        "body": "Use sunwai.sbp.org.pk. Register securely, follow the questionnaire and select the applicable complaint route."
-      },
-      {
-        "title": "Attach supporting documents",
-        "body": "Provide redacted bank statements, email screenshots, case numbers and other relevant records without sharing passwords or OTPs."
-      },
-      {
-        "title": "Track and escalate appropriately",
-        "body": "Keep the Sunwai tracking number and respond to information requests. Follow the portal’s routing instructions before escalating elsewhere."
-      }
+    "list": "Confirmed event dates; venues; transport; outfits and alterations; gift list; child arrangements; expenses; luggage; return buffer.",
+    "qa": [
+      "Should outfits be purchased abroad or in Pakistan?",
+      "Compare timing, sizing, quality, alteration availability and total cost before deciding."
     ],
-    "checklist": [
-      "Bank name and masked account details",
-      "Transaction reference/date/amount",
-      "Bank complaint number and past correspondence",
-      "Clear requested remedy",
-      "Secure copies of evidence"
-    ],
-    "watch": [
-      "Sunwai is a complaint-routing system, not a guarantee of compensation.",
-      "Never share an OTP or full password in an email or portal attachment.",
-      "The correct escalation forum can depend on complaint type and institution."
-    ],
-    "faqs": [
-      {
-        "q": "Can I file a Sunwai complaint from abroad?",
-        "a": "The portal is web-based; check its identification and contact requirements when registering."
-      },
-      {
-        "q": "Does Sunwai cover Roshan Digital Accounts?",
-        "a": "Yes. SBP specifically includes RDA-related banking complaints."
-      },
-      {
-        "q": "Should I go directly to Banking Mohtasib?",
-        "a": "Sunwai explains and routes the appropriate sequence; typically the bank is the first forum."
-      }
-    ],
-    "sources": [
-      "sbp_sunwai",
-      "sbp_sunwai_info"
-    ],
-    "tags": [
-      "banking complaint",
-      "Sunwai",
-      "RDA"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "iata",
+      "customs"
+    ]
   },
   {
-    "slug": "pakistan-tax-residency-overseas",
-    "title": "Pakistan tax residency for overseas Pakistanis: questions to check",
-    "category": "money",
-    "deck": "Don’t rely solely on the popular “183-day rule” when analyzing tax residency.",
-    "answer": "Pakistan’s Income Tax Ordinance section 82 sets out conditions for resident-individual status. These include 183-day presence and other statutory tests, so physical days in Pakistan are not the only possible consideration.",
-    "context": [
-      "A person’s immigration status, citizenship and tax residency are different concepts. Tax status can also differ between Pakistan and the country where you live.",
-      "Section 82 published by FBR includes a 120-days-plus-prior-four-years test and a provision for certain government employees posted abroad. Rules may be affected by subsequent amendments and tax treaties; use a current tax-year review."
+    "slug": "gifts-from-uk-to-pakistan",
+    "title": "Gift ideas to take from the UK to family in Pakistan",
+    "cat": "shopping",
+    "image": 4,
+    "summary": "Choose useful gifts by recipient, budget and baggage space instead of buying randomly.",
+    "sections": [
+      [
+        "Make the list before the shop",
+        "Group relatives by household and note preferences, ages and useful needs. Ask a trusted family member for suggestions if appropriate. Avoid giving children products intended for older age groups."
+      ],
+      [
+        "Choose practical categories",
+        "Books, stationery, clothing in confirmed sizes, craft supplies and requested personal accessories may be easier to select than fragile decorative objects. Check dietary or ingredient restrictions before buying food gifts."
+      ],
+      [
+        "Check travel restrictions",
+        "Review the full airline journey for baggage size, liquids and batteries. Customs rules may apply to gifts and higher-value purchases. Do not assume that an item can be brought into Pakistan merely because it is sold freely in Britain."
+      ],
+      [
+        "Budget and organize",
+        "Set a spending cap per household, reserve space in the case and label gifts privately so distributing them is simple. Keep purchase receipts where relevant."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Identify the relevant Pakistani tax year",
-        "body": "Make sure you are counting days under the tax-year definition used for the return or transaction in question."
-      },
-      {
-        "title": "Create a travel log",
-        "body": "Use passport stamps, airline records and a calendar to record physical presence accurately. Keep entry and exit dates."
-      },
-      {
-        "title": "Check every Section 82 test",
-        "body": "Review the complete current wording, not merely the 183-day threshold. Government-posting and prior-year presence can change results."
-      },
-      {
-        "title": "Separate foreign and Pakistan-source income",
-        "body": "List income sources and assets before assuming that non-residency means no Pakistan filing or payment obligations."
-      },
-      {
-        "title": "Review any applicable treaty",
-        "body": "If two countries may regard you as tax resident, get advice on the relevant double-taxation agreement and reporting obligations."
-      },
-      {
-        "title": "Keep transaction-specific evidence",
-        "body": "Property transfers, bank onboarding and tax filings may ask for proof of non-resident status under their own procedures."
-      }
+    "list": "Recipient names; ages and sizes; requested items; spending limit; weight; battery and liquid rules; customs considerations.",
+    "qa": [
+      "Are food items always suitable gifts?",
+      "No. Check import rules, dietary requirements, packaging and shelf life."
     ],
-    "checklist": [
-      "Pakistan visit dates for the relevant years",
-      "Employment or government-posting status",
-      "Countries of tax residence",
-      "Pakistan-source income and property transactions",
-      "Professional advice for cross-border cases"
-    ],
-    "watch": [
-      "The FBR property-tax relief rule uses a specific non-residence condition; do not assume it settles general annual tax residency.",
-      "A 183-day shortcut can be incomplete under Section 82.",
-      "This guide cannot determine anyone’s tax liability without a full fact pattern."
-    ],
-    "faqs": [
-      {
-        "q": "Am I non-resident if I spent fewer than 183 days in Pakistan?",
-        "a": "Not necessarily for every purpose. Read all applicable Section 82 tests and any transaction-specific rule."
-      },
-      {
-        "q": "Does holding NICOP determine tax residency?",
-        "a": "No. Identity-document status and tax-residency criteria are different."
-      },
-      {
-        "q": "Can I be tax resident in two countries?",
-        "a": "Potentially yes under domestic rules; treaties and professional assessment can affect the outcome."
-      }
-    ],
-    "sources": [
-      "fbr_residency",
-      "fbr_overseas"
-    ],
-    "tags": [
-      "tax residency",
-      "FBR",
-      "non resident"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "iata",
+      "uk"
+    ]
   },
   {
-    "slug": "overseas-pakistani-property-tax-filer-rate",
-    "title": "Overseas Pakistani property tax relief: who can use filer rates?",
-    "category": "property",
-    "deck": "What FBR says about Sections 236C and 236K for eligible NICOP/POC holders.",
-    "answer": "FBR says certain non-resident overseas Pakistanis holding NICOP or POC can receive filer-rate advance income tax on property purchases and sales under Sections 236K and 236C even if they are not otherwise filers, subject to its published conditions and verification process.",
-    "context": [
-      "This is a specific transaction benefit, not a general exemption from every tax. FBR’s published FAQ ties it to NICOP/POC ownership and non-resident status, and describes a registrar or housing society initiating a payment slip for commissioner approval.",
-      "Tax slabs and rates change when finance legislation changes. Because older online examples can outlive the law, use the current FBR schedule at the date of transfer rather than relying on a copied percentage."
+    "slug": "what-to-bring-back-pakistan-to-uk",
+    "title": "What to bring back from Pakistan to the UK: a smarter shopping list",
+    "cat": "shopping",
+    "image": 4,
+    "summary": "Plan souvenirs without overlooking baggage allowances and UK border restrictions.",
+    "sections": [
+      [
+        "Buy for long-term use",
+        "Small textiles, meaningful handicrafts, books and household objects may be easier to carry and enjoy than bulky items. Ask how goods should be cleaned and stored before paying."
+      ],
+      [
+        "Read customs rules before buying",
+        "The UK has personal allowance and restricted-goods rules, including special conditions for food and animal products. Rules can differ for Northern Ireland. Verify your specific journey with official UK guidance, not a generic social-media list."
+      ],
+      [
+        "Keep receipts and packing space",
+        "Retain receipts for valuable items and note the cost of purchases. Wrap delicate objects carefully and check whether your airline treats the item as hold baggage only."
+      ],
+      [
+        "Check the return itinerary",
+        "A connecting flight may have different baggage allowances or security rules. Protect travel documents and essentials from the growing shopping pile, and leave time for any declarations."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Confirm your documents",
-        "body": "Ensure your NICOP or POC is valid and correctly linked to your identity."
-      },
-      {
-        "title": "Check the stated non-residence condition",
-        "body": "FBR’s property FAQ specifies the relevant overseas non-residence criterion. Prepare documentary support for the applicable tax year."
-      },
-      {
-        "title": "Tell the recording authority in advance",
-        "body": "Before the transfer date, ask the registrar, development authority or housing society how it processes the overseas-filer-rate request."
-      },
-      {
-        "title": "Prepare documentary evidence",
-        "body": "FBR describes uploading NICOP/POC details, a scan of the card and information supporting non-residence."
-      },
-      {
-        "title": "Allow for approval",
-        "body": "The authority creates the PSID and the request is reviewed through FBR’s Commissioner approval process before payment at the eligible rate."
-      },
-      {
-        "title": "Ask for the whole tax estimate",
-        "body": "Check withholding, capital gains, provincial duties and other transfer costs separately with a tax adviser or relevant authority."
-      }
+    "list": "Usefulness; weight; packaging; value; customs allowance; food rules; carrier restrictions; receipts.",
+    "qa": [
+      "Are presents exempt from import allowances?",
+      "Not automatically. Check applicable government rules for the value and type of goods."
     ],
-    "checklist": [
-      "NICOP or POC details",
-      "Proof of qualifying non-resident status",
-      "Property documents and transfer value",
-      "Registrar or society contact",
-      "Current FBR rules and professional review"
-    ],
-    "watch": [
-      "“Filer rate” does not mean “no tax”.",
-      "The property-specific FBR definition should not be substituted for every other tax-residency test.",
-      "Never pay an agent to “switch your filer status” without official confirmation."
-    ],
-    "faqs": [
-      {
-        "q": "Do I need to be on the Active Taxpayers List?",
-        "a": "FBR provides a special filer-rate procedure for qualifying non-resident NICOP/POC holders even when they are non-filers."
-      },
-      {
-        "q": "Does this apply to both buying and selling?",
-        "a": "FBR identifies purchase tax under 236K and sale tax under 236C."
-      },
-      {
-        "q": "Can I use an old tax-rate table?",
-        "a": "Do not rely on an old rate table; confirm the latest law and the transaction value band."
-      }
-    ],
-    "sources": [
-      "fbr_overseas",
-      "fbr_residency"
-    ],
-    "tags": [
-      "236C",
-      "236K",
-      "property tax",
-      "filer"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "customs",
+      "iata"
+    ]
   },
   {
-    "slug": "verify-land-record-punjab",
-    "title": "How to verify Punjab land records before buying from overseas",
-    "category": "property",
-    "deck": "Use the Punjab Land Records Authority as a starting point, then verify the actual title.",
-    "answer": "Punjab Land Records Authority (PLRA) provides land-record services, including verification and access to Fard and computerized land information. Online lookup is useful, but a transaction still requires careful legal verification.",
-    "context": [
-      "A screenshot of land ownership, seller-provided photocopy or marketing brochure alone is not enough to establish marketable title. Public land records, sale deeds, mutation records, approvals and physical possession can tell different parts of the story.",
-      "PLRA says overseas Pakistanis can access certain land services remotely through digital platforms and mission-related facilitation. Exact coverage can differ by locality and property type."
+    "slug": "islamabad-with-children",
+    "title": "Islamabad with children: planning an easy family day out",
+    "cat": "places",
+    "image": 5,
+    "summary": "A flexible way to choose age-appropriate activities without exhausting the family.",
+    "sections": [
+      [
+        "Pick one main reason to go out",
+        "Choose a cultural stop, a suitable park or a family meal based on the interests and stamina of the youngest traveller. Confirm the venue's current access and opening times directly."
+      ],
+      [
+        "Avoid overloading the route",
+        "Road conditions and traffic can change. A single meaningful stop is often better than spending most of the day in a vehicle. Build in opportunities for shade, water, restrooms and seating."
+      ],
+      [
+        "Consider what children will enjoy",
+        "Older children may enjoy heritage and exhibitions, while younger children may prefer unstructured movement. Ask about accessibility and have a quiet indoor alternative if the weather changes."
+      ],
+      [
+        "Check safety before deciding",
+        "Current UK travel advice includes security concerns for Islamabad and nearby routes. Verify travel advisories and local conditions rather than relying on a fixed recommendation or assuming an attraction is always appropriate."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Get exact property identifiers",
-        "body": "Collect district, tehsil, mouza, khasra/khewat details or the relevant plot information from the seller before searching."
-      },
-      {
-        "title": "Visit the official PLRA site",
-        "body": "Start at punjab-zameen.gov.pk and find the available public verification or service route. Avoid third-party lookalike domains."
-      },
-      {
-        "title": "Obtain current verified records",
-        "body": "Request a current Fard or certified relevant record where the service permits it, and confirm the seller’s identity against the official record."
-      },
-      {
-        "title": "Cross-check the title chain",
-        "body": "Have a locally qualified property lawyer examine registration documents, mutations, prior transfers and any encumbrance or litigation risk."
-      },
-      {
-        "title": "Confirm the issuing authority",
-        "body": "Housing societies, development authorities and revenue records can have different roles. Check layout approval, dues and transfer requirements directly."
-      },
-      {
-        "title": "Only then plan payment",
-        "body": "Prefer documented bank transfers, written agreements and independent professional oversight over informal cash or a relative’s assurance."
-      }
+    "list": "Opening hours; transport; shade and toilets; water; accessibility; weather; applicable travel advisory; backup plan.",
+    "qa": [
+      "How many attractions make a good day?",
+      "Often one main outing and an optional nearby stop, depending on the family's energy."
     ],
-    "checklist": [
-      "Exact location and parcel/plot identifiers",
-      "Seller identity and title documents",
-      "Current official revenue or society record",
-      "Independent local lawyer",
-      "Payment conditions and transfer timetable"
-    ],
-    "watch": [
-      "A digital record search is not a guarantee that a property has no dispute.",
-      "Not every urban plot or society property is covered identically by rural revenue records.",
-      "Never treat advance payment as a substitute for legal due diligence."
-    ],
-    "faqs": [
-      {
-        "q": "Can I verify ownership from abroad?",
-        "a": "PLRA describes remote facilities for overseas Pakistanis; available services depend on the record and transaction."
-      },
-      {
-        "q": "Is a Fard enough to buy safely?",
-        "a": "No. Legal title, registered deeds, encumbrances and society or authority status also require checking."
-      },
-      {
-        "q": "Should I authorize a relative to handle the deal?",
-        "a": "Only with carefully limited authority, transparent records and independent review."
-      }
-    ],
-    "sources": [
-      "punjab_land",
-      "mofa_poa"
-    ],
-    "tags": [
-      "Punjab",
-      "Fard",
-      "land records"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions",
+      "pmd"
+    ]
   },
   {
-    "slug": "verify-property-record-sindh",
-    "title": "Checking property records in Sindh from abroad",
-    "category": "property",
-    "deck": "What Sindh Zameen provides—and why you still need certified documents.",
-    "answer": "Sindh’s Board of Revenue provides the Sindh Zameen public portal for searching digital land-record information, including village forms and certain registry-related material. The portal itself cautions that online information is for public information and has no legal validity.",
-    "context": [
-      "The first job is to determine which body maintains the relevant record. Agricultural revenue land, a privately developed housing society and a city authority plot may require different records and approval checks.",
-      "Sindh Zameen provides search features and maps, but explains that users should obtain official certified documents from a Revenue Service Center. An online result is a useful lead, not a title certificate."
+    "slug": "lahore-one-day-with-family",
+    "title": "Lahore in a day with relatives: keep the itinerary manageable",
+    "cat": "places",
+    "image": 5,
+    "summary": "Plan a family outing around one interest, with time for transport and breaks.",
+    "sections": [
+      [
+        "Agree on the day's main focus",
+        "A family may choose architecture, a cultural venue, shopping or food. Try to select one clear purpose instead of claiming that all of Lahore can fit into a single day."
+      ],
+      [
+        "Account for walking and access",
+        "For heritage visits, check opening hours, steps, access rules, shade and facilities. Confirm any photography rules and accessibility needs directly with the operator or venue."
+      ],
+      [
+        "Use a realistic schedule",
+        "Allow time for traffic and meals. Keep some hours unplanned for prayer, family conversations and unexpected delays. Avoid tightly scheduling a long return drive after several late-night events."
+      ],
+      [
+        "Review safety information",
+        "Regional advisories and local circumstances can change. Follow current official security advice and make alternative plans if an area or public gathering is unsuitable."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Identify the area and record type",
-        "body": "Gather district, deh, land details or available registration information."
-      },
-      {
-        "title": "Use Sindh’s government portal",
-        "body": "Access sindhzameen.gos.pk and try the applicable name, identity or registry search feature offered by the portal."
-      },
-      {
-        "title": "Record exact matches and limitations",
-        "body": "Confirm the spelling, parcel information and record type. If the site says no match, do not assume ownership is clear or impossible."
-      },
-      {
-        "title": "Request certified copies",
-        "body": "Follow the Board of Revenue directions for obtaining legally usable records from an authorized service centre."
-      },
-      {
-        "title": "Get independent title review",
-        "body": "A lawyer should review the sale deed, title chain, registered encumbrances, disputes, permissions and the correct authority’s records."
-      },
-      {
-        "title": "Confirm the transfer process",
-        "body": "Ask the competent registry or society which taxes, signatures and approvals are required before making payment."
-      }
+    "list": "Main interest; venue hours; access and steps; transport; weather; current advice; flexible return plan.",
+    "qa": [
+      "Can we cover the whole city in a day?",
+      "No. Focus on one part of the city and save other areas for another visit."
     ],
-    "checklist": [
-      "District/deh/parcel details",
-      "Seller identity",
-      "Current certified revenue or registry documents",
-      "Society/development-authority status",
-      "Independent legal review"
-    ],
-    "watch": [
-      "Sindh Zameen expressly says portal information has no legal validity.",
-      "Do not mistake a public search result for a certified title document.",
-      "Marketing brochures are not proof of legal approvals."
-    ],
-    "faqs": [
-      {
-        "q": "Can I search the Sindh database online?",
-        "a": "Yes. The official Board of Revenue portal offers public search facilities for digitized records."
-      },
-      {
-        "q": "Is online data legally conclusive?",
-        "a": "No. The portal advises obtaining certified documents from the competent office."
-      },
-      {
-        "q": "What if the property is in a housing society?",
-        "a": "Check the issuing society or development authority and the applicable land-record authority separately."
-      }
-    ],
-    "sources": [
-      "sindh_land"
-    ],
-    "tags": [
-      "Sindh",
-      "land",
-      "property records"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions",
+      "ptdc"
+    ]
   },
   {
-    "slug": "buying-property-in-pakistan-from-abroad",
-    "title": "Buying property in Pakistan while abroad: a safer decision checklist",
-    "category": "property",
-    "deck": "A practical end-to-end workflow before committing large sums remotely.",
-    "answer": "Buying property remotely is possible, but separate three jobs: verifying the title, verifying the seller and authority, and controlling how money and transfer documents move.",
-    "context": [
-      "Different provinces and housing authorities use different property systems. The relevant records may sit with a revenue board, registrar, development authority or cooperative housing society.",
-      "A digital power of attorney can support representation in some transactions, but its existence does not guarantee the property is genuine. FBR withholding procedures and foreign funding rules should also be checked before transfer."
+    "slug": "northern-pakistan-trip-planning-safety",
+    "title": "Before planning a northern Pakistan trip: essential decisions",
+    "cat": "places",
+    "image": 8,
+    "summary": "Consider current advisories, road conditions and your family's needs before choosing a route.",
+    "sections": [
+      [
+        "Official advice comes first",
+        "The UK and other countries warn against travel to particular parts of Pakistan. Read each relevant regional warning and check whether your actual route is affected. Do not treat this blog as a safety clearance."
+      ],
+      [
+        "Distance does not equal travel time",
+        "Mountain routes can be affected by weather, closures and landslides. Verify conditions independently and plan buffer days rather than promising to reach your international return flight after a remote excursion."
+      ],
+      [
+        "Consider the whole family",
+        "Think about children, mobility, access to medical help, weather conditions and everyone’s tolerance for lengthy drives. A city-based holiday can be a better choice than a strenuous trip."
+      ],
+      [
+        "Know when to cancel",
+        "If travel advice, insurance or weather indicates that plans are unsuitable, choose an alternative. Scenic photographs, old itineraries and informal assurances are not sufficient evidence of current safety."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Do your independent research",
-        "body": "Identify the actual legal authority, location, current development status and seller before paying a token amount."
-      },
-      {
-        "title": "Verify ownership from the issuer",
-        "body": "Use official government land services and request certified documents, not just copies supplied by an agent."
-      },
-      {
-        "title": "Check restrictions and costs",
-        "body": "Get written confirmation of transfer procedures, outstanding society dues, approvals, taxes and other fees."
-      },
-      {
-        "title": "Separate adviser from seller",
-        "body": "Appoint your own local lawyer or authorized professional, independent of the developer or selling agent."
-      },
-      {
-        "title": "Limit representation powers",
-        "body": "If using a POA, ensure the document authorizes only the required actions and is accepted by the registry or office."
-      },
-      {
-        "title": "Use traceable payments and clear milestones",
-        "body": "Specify how earnest money, final settlement and title transfer are linked in writing. Retain all receipts and avoid undocumented cash."
-      },
-      {
-        "title": "Confirm completion",
-        "body": "Collect registered or officially recorded transfer documents and check the updated record in your name."
-      }
+    "list": "Regional advisories; road status; weather; insurance coverage; reliable transport; medical access; spare days; backup destination.",
+    "qa": [
+      "Is a beautiful destination automatically advisable?",
+      "No. Assess the exact route and current official advice before making any commitment."
     ],
-    "checklist": [
-      "Official ownership/registered-deed verification",
-      "Current dues and approvals",
-      "Independent legal advice",
-      "Written price and conditions",
-      "Tax/fee estimate",
-      "Controlled payment and title-transfer plan"
-    ],
-    "watch": [
-      "A housing scheme advertisement is not proof of approval.",
-      "Sending all funds before independently verifying title creates avoidable risk.",
-      "Do not rely only on the seller’s lawyer or your own relatives for due diligence."
-    ],
-    "faqs": [
-      {
-        "q": "Is a POA necessary?",
-        "a": "It depends on the transaction and whether you can attend; the receiving office should confirm acceptable representation."
-      },
-      {
-        "q": "Can I verify every plot online?",
-        "a": "No. Coverage differs by province, property type and authority."
-      },
-      {
-        "q": "How do I calculate tax?",
-        "a": "Use the current FBR and provincial rules for the exact transaction and seek a complete cost statement."
-      }
-    ],
-    "sources": [
-      "punjab_land",
-      "sindh_land",
-      "mofa_poa",
-      "fbr_overseas"
-    ],
-    "tags": [
-      "buy property",
-      "real estate",
-      "due diligence"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "uk",
+      "regions",
+      "ca",
+      "pmd"
+    ]
   },
   {
-    "slug": "property-dispute-overseas-pakistani",
-    "title": "Property occupied or disputed in Pakistan? How to organize your complaint",
-    "category": "property",
-    "deck": "A sensible evidence-first approach, including help from the Overseas Pakistanis Foundation.",
-    "answer": "The Overseas Pakistanis Foundation (OPF) accepts complaints from eligible overseas Pakistanis, including property disputes and illegal occupation, and coordinates with relevant authorities. OPF does not replace courts or act as your personal litigation counsel.",
-    "context": [
-      "Many property complaints become harder to resolve because documents, notices and old case numbers are scattered between relatives and offices. A one-page timeline can help the authority see the issue clearly.",
-      "OPF says it may request overseas status and supporting records and can coordinate with agencies or authorities, but it does not directly provide court representation."
+    "slug": "urdu-phrases-for-kids-grandparents",
+    "title": "Easy Urdu phrases children can use with grandparents",
+    "cat": "culture",
+    "image": 6,
+    "summary": "Practical Roman Urdu for greetings, everyday needs and friendly conversations.",
+    "sections": [
+      [
+        "Make language useful, not a test",
+        "Pick phrases children can use right away and practice them in everyday situations. Family language may be Punjabi, Sindhi, Pashto or another language rather than Urdu, and that is equally worth celebrating."
+      ],
+      [
+        "Start with greetings",
+        "Assalam-o-alaikum is a common greeting. Aap kaisay hain? means 'How are you?' in polite everyday speech. Shukriya means 'Thank you.' Practice a friendly tone rather than memorizing long lists."
+      ],
+      [
+        "Add practical phrases",
+        "Mujhay pani chahiye means 'I would like water.' Mujhay bhook lagi hai means 'I am hungry.' Mujhay madad chahiye means 'I need help.' Expressions vary by region, family and pronunciation."
+      ],
+      [
+        "Practice with relatives",
+        "Role-play greeting a grandparent, asking about their day or thanking someone after a meal. Invite the family to add their own words and explain differences without correcting children harshly."
+      ]
     ],
-    "steps": [
-      {
-        "title": "Collect primary proof",
-        "body": "Organize registered deeds, ownership records, payment proofs, possession records, legal notices and past complaints in date order."
-      },
-      {
-        "title": "Write a factual timeline",
-        "body": "State when you acquired the property, when the alleged interference started, who is involved and what remedy you seek."
-      },
-      {
-        "title": "Identify legal urgency",
-        "body": "If a filing deadline, threatened eviction or immediate safety issue exists, consult a Pakistan-qualified lawyer promptly rather than awaiting a complaint referral."
-      },
-      {
-        "title": "Use OPF’s complaint route",
-        "body": "Consult the OPF complaint cell page and follow its Online Complaint Management System directions."
-      },
-      {
-        "title": "Include overseas status and focal contact",
-        "body": "OPF lists identity, overseas documents, complaint evidence and a focal person in Pakistan among its requirements."
-      },
-      {
-        "title": "Keep all reference numbers",
-        "body": "Track the OPF case and separate it from police, revenue or court proceedings. Send follow-up evidence when asked."
-      }
+    "list": "Three greetings; two phrases for needs; a short role-play; a family language notebook; one weekly conversation.",
+    "qa": [
+      "Is this a formal Urdu course?",
+      "No. It is a simple starting point for conversation and should be adapted to your family's language."
     ],
-    "checklist": [
-      "Ownership or tenancy documents",
-      "Dated timeline and case references",
-      "Proof of overseas status",
-      "Focal person or legal representative in Pakistan",
-      "Precise remedy requested"
-    ],
-    "watch": [
-      "OPF complaint handling is free according to its February 2026 public notice.",
-      "OPF cannot promise a legal outcome or replace an attorney.",
-      "Never pay an individual claiming to speed up an OPF complaint."
-    ],
-    "faqs": [
-      {
-        "q": "Does OPF handle illegal occupation cases?",
-        "a": "OPF lists property disputes and illegal occupation among the types of complaints it facilitates."
-      },
-      {
-        "q": "Will OPF represent me in court?",
-        "a": "OPF says it does not offer direct legal representation."
-      },
-      {
-        "q": "Does filing cost money?",
-        "a": "OPF’s public notice says its online complaint and processing services are free."
-      }
-    ],
-    "sources": [
-      "opf",
-      "opf_free",
-      "punjab_land",
-      "sindh_land"
-    ],
-    "tags": [
-      "property complaint",
-      "OPF",
-      "dispute"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "refs": [
+      "ptdc"
+    ]
   },
   {
-    "slug": "nadra-frc-from-abroad",
-    "title": "Get a NADRA Family Registration Certificate while overseas",
-    "category": "family",
-    "deck": "Which FRC type to choose and how to spot a family-record mismatch.",
-    "answer": "A Family Registration Certificate (FRC) summarizes family relationships recorded by NADRA. It can be required for immigration, visa and administrative matters; choose the correct family grouping before applying.",
-    "context": [
-      "NADRA describes FRC categories including by birth, marriage, adoption and a broader combined category. Its record is only as useful as the accuracy of the family links in the underlying database.",
-      "NADRA expects family members to have relevant identity registration, with limited scenarios for documenting unregistered individuals. Do not assume an FRC fixes a missing birth or marriage registration automatically."
-    ],
-    "steps": [
-      {
-        "title": "Ask the requesting authority which FRC",
-        "body": "Find out whether they require the birth family, spouse-and-children group or another specific family composition."
-      },
-      {
-        "title": "Check all family identifiers",
-        "body": "Collect NADRA ID numbers and verify exact name spellings, relationship links and dates."
-      },
-      {
-        "title": "Read the official NADRA guidance",
-        "body": "Confirm current eligibility and whether the relevant FRC route is supported through PakID for your situation."
-      },
-      {
-        "title": "Correct wrong underlying records first",
-        "body": "Where a spouse or child is missing or linked incorrectly, investigate correction or registration instead of repeatedly downloading the same FRC."
-      },
-      {
-        "title": "Submit and preserve the certificate",
-        "body": "Use the official route, retain the issued document and check whether your immigration or other recipient needs an additional attestation."
-      }
-    ],
-    "checklist": [
-      "Requester’s FRC category requirement",
-      "Your NADRA identity number",
-      "Family members’ registered identity numbers",
-      "Accurate marriage and birth record details",
-      "Attestation requirements from the recipient, if any"
-    ],
-    "watch": [
-      "An FRC is proof of NADRA family-composition data, not necessarily a substitute for every marriage or birth certificate.",
-      "If a relative is missing from the database, an FRC request may not solve the underlying issue.",
-      "Different foreign immigration departments may request different family documents."
-    ],
-    "faqs": [
-      {
-        "q": "What is an FRC used for?",
-        "a": "NADRA lists immigration, visa and other legal or administrative uses."
-      },
-      {
-        "q": "Can I get an FRC for my spouse and children?",
-        "a": "NADRA has an FRC by marriage category for spouse-and-children information."
-      },
-      {
-        "q": "How do I fix a missing child?",
-        "a": "Investigate the relevant NADRA registration or record-correction process before reapplying."
-      }
-    ],
-    "sources": [
-      "nadra_frc",
-      "nadra_faq"
-    ],
-    "tags": [
-      "FRC",
-      "family certificate",
-      "immigration"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "child-born-abroad-pakistani-documents",
-    "title": "Baby born abroad? A Pakistani document planning guide",
-    "category": "family",
-    "deck": "Keep the foreign birth record, Pakistani citizenship question and NADRA registration separate.",
-    "answer": "For a child born abroad, begin with the foreign birth registration and determine the child’s Pakistani citizenship status. NADRA supports child-related records and NICOP pathways, but exact evidence and consular steps depend on the facts.",
-    "context": [
-      "Families often need documents from two systems: the country of birth and Pakistan. A local birth certificate does not automatically complete Pakistan’s identity registration, and a Pakistani identity card is not the same as a passport.",
-      "NADRA’s official PakID services include child registration/certificate services and NICOP-related applications. Requirements vary depending on parents’ citizenship, marital status and existing records."
-    ],
-    "steps": [
-      {
-        "title": "Register the birth locally",
-        "body": "Follow the birth-registration law in the country where the child was born and get the official certificate."
-      },
-      {
-        "title": "Determine nationality and entitlement",
-        "body": "Check Pakistani citizenship rules and the child’s status with the relevant mission if parental nationality or prior renunciation complicates the case."
-      },
-      {
-        "title": "Match the parents’ records",
-        "body": "Review parental identity documents and marriage records for consistent names, dates and identifying details."
-      },
-      {
-        "title": "Confirm the correct NADRA product",
-        "body": "Ask whether the child needs CRC, NICOP or another identity registration step, and which can be done through PakID."
-      },
-      {
-        "title": "Ask about passport and travel separately",
-        "body": "For travel to Pakistan or elsewhere, confirm the child’s passport needs and entry requirements with the appropriate authorities."
-      },
-      {
-        "title": "Store a family document set",
-        "body": "Keep the birth certificate, translations if required, Pakistani records, passports and application numbers together securely."
-      }
-    ],
-    "checklist": [
-      "Foreign birth certificate",
-      "Parents’ IDs and passports",
-      "Marriage/civil-status evidence where applicable",
-      "Citizenship assessment",
-      "Travel-document plan"
-    ],
-    "watch": [
-      "A birth abroad does not by itself tell you whether the child is eligible for every Pakistani document.",
-      "Do not buy travel tickets before verifying passport and entry needs.",
-      "Names that do not match across countries can complicate future certificates."
-    ],
-    "faqs": [
-      {
-        "q": "Can a foreign-born child apply for NICOP?",
-        "a": "NADRA discusses NICOP applications for qualifying children; eligibility and supporting evidence must be confirmed."
-      },
-      {
-        "q": "Do we need a Pakistani passport too?",
-        "a": "A NICOP is not a passport. Confirm travel requirements for the child’s nationality and itinerary."
-      },
-      {
-        "q": "What if one parent holds only foreign nationality?",
-        "a": "Ask NADRA or the mission which citizenship and parental records are required for the child’s case."
-      }
-    ],
-    "sources": [
-      "nadra_services",
-      "nadra_faq",
-      "mofa_missions"
-    ],
-    "tags": [
-      "newborn",
-      "NICOP",
-      "child",
-      "birth abroad"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "succession-certificate-inheritance-abroad",
-    "title": "Inheritance in Pakistan: NADRA succession process for overseas heirs",
-    "category": "family",
-    "deck": "Key papers to prepare when a family member dies leaving assets in Pakistan.",
-    "answer": "NADRA provides a process for Succession Certificates concerning movable assets and Letters of Administration concerning immovable assets, in the jurisdictions and circumstances covered by applicable succession laws.",
-    "context": [
-      "The deceased person’s records, accurate identification of all legal heirs and details of assets are central. NADRA lists a death certificate, CNIC cancellation, FRC, heirs’ IDs, asset details and an attested authorization or affidavit among the documentation.",
-      "NADRA states that one legal heir normally attends a designated site in Pakistan, with special arrangements for legal counsel in Sindh and Balochistan. Overseas heirs should confirm how biometric verification and overseas identity evidence are handled."
-    ],
-    "steps": [
-      {
-        "title": "Identify every asset and jurisdiction",
-        "body": "List bank accounts, investments, land and other property, noting where each is located."
-      },
-      {
-        "title": "Gather family and death records",
-        "body": "Obtain a death certificate, identity cancellation certificate and up-to-date family registration information."
-      },
-      {
-        "title": "List all heirs accurately",
-        "body": "Prepare identification for every legal heir, including those overseas, and do not conceal disagreements or missing heirs."
-      },
-      {
-        "title": "Check NADRA’s applicable route",
-        "body": "Read the official succession page for the current authorized centre, jurisdiction and representation rules."
-      },
-      {
-        "title": "Plan overseas verification",
-        "body": "Ask how any absent heir completes required biometric or identity checks and whether a mission facilitates them."
-      },
-      {
-        "title": "Seek legal advice where contested",
-        "body": "If the estate or heirs are disputed, or a special court process applies, consult a qualified succession lawyer."
-      }
-    ],
-    "checklist": [
-      "Death certificate",
-      "Deceased person’s CNIC cancellation certificate",
-      "Family Registration Certificate",
-      "IDs and contact details of all heirs",
-      "Asset descriptions and ownership proof",
-      "Authorization/affidavit required by the process"
-    ],
-    "watch": [
-      "Do not treat a property deed as proof that all succession issues are resolved.",
-      "A family dispute may require legal proceedings outside the streamlined process.",
-      "Fees, province-specific processes and verification methods can change."
-    ],
-    "faqs": [
-      {
-        "q": "Can heirs living overseas participate?",
-        "a": "NADRA identifies overseas biometric facilitation in mission contexts; confirm exact arrangements with the designated centre."
-      },
-      {
-        "q": "Is a Succession Certificate the same as a Letter of Administration?",
-        "a": "NADRA distinguishes movable-asset succession certificates from immovable-asset letters of administration."
-      },
-      {
-        "q": "Does one heir have to attend Pakistan?",
-        "a": "NADRA currently describes a designated-site visit by one heir in most cases, with specified local exceptions."
-      }
-    ],
-    "sources": [
-      "nadra_succ",
-      "nadra_frc",
-      "mofa_missions"
-    ],
-    "tags": [
-      "inheritance",
-      "succession",
-      "legal heirs"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "ibcc-equivalence-foreign-school",
-    "title": "IBCC equivalence for children who studied abroad",
-    "category": "family",
-    "deck": "How to prepare overseas school qualifications for admission in Pakistan.",
-    "answer": "The Inter Boards Coordination Commission (IBCC) assesses equivalence of qualifying foreign and local secondary/higher-secondary qualifications with Pakistan’s SSC and HSSC levels. Applicants can start through its official online portal.",
-    "context": [
-      "Families returning from the United States, United Kingdom, Canada, Gulf states and elsewhere may have very different transcripts. IBCC evaluates subjects and awarding bodies, so not every school transcript automatically receives the requested equivalence.",
-      "IBCC provides an application process with online, appointment and courier options; the document list can vary by education system. Checking the exact qualification rules before leaving the old school can prevent delays."
-    ],
-    "steps": [
-      {
-        "title": "Confirm the receiving institution’s need",
-        "body": "Ask the Pakistani school, college or university which SSC/HSSC equivalence and subject group are required."
-      },
-      {
-        "title": "Check the awarding body",
-        "body": "Review IBCC’s recognized qualifications and country-specific requirements."
-      },
-      {
-        "title": "Collect complete education history",
-        "body": "Keep official Grades 9–12 records as applicable, transcripts, certificates and subject descriptions; request verification from the issuing body early."
-      },
-      {
-        "title": "Prepare translations and attestations",
-        "body": "If records are not in English or Urdu, check IBCC’s translation policy. Some foreign qualifications require specific verification or attestations."
-      },
-      {
-        "title": "Apply through IBCC’s portal",
-        "body": "Choose the available online, appointment or courier submission method based on your document requirements."
-      },
-      {
-        "title": "Track questions and deficiencies",
-        "body": "Respond to IBCC requests for missing subjects, verification or corrections before arranging admission deadlines."
-      }
-    ],
-    "checklist": [
-      "Official transcripts and final certificates",
-      "Relevant passport/identity information",
-      "Earlier school qualifications",
-      "Awarding-body verification",
-      "Required translations/attestations",
-      "Target course admission requirements"
-    ],
-    "watch": [
-      "IBCC handles qualifications generally up to HSSC; foreign higher-education degrees are a different process.",
-      "Do not assume online application means no original or verified records will ever be required.",
-      "Requirements differ for O/A Levels, American and other systems."
-    ],
-    "faqs": [
-      {
-        "q": "Is equivalence available for American or Canadian school credentials?",
-        "a": "IBCC states it handles recognized foreign secondary qualifications; exact criteria depend on the awarding system."
-      },
-      {
-        "q": "Can I apply before moving to Pakistan?",
-        "a": "IBCC offers online submission routes; the required document verification and any in-person component depend on the case."
-      },
-      {
-        "q": "Is a bachelor’s degree handled by IBCC?",
-        "a": "No. Higher education degree equivalence generally falls under HEC instead."
-      }
-    ],
-    "sources": [
-      "ibcc",
-      "ibcc_faq"
-    ],
-    "tags": [
-      "IBCC",
-      "school equivalence",
-      "returning students"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "hec-degree-attestation-overseas",
-    "title": "HEC degree attestation: the online process for overseas applicants",
-    "category": "family",
-    "deck": "A clear route through the new e-attestation system and common document problems.",
-    "answer": "HEC describes a fully online, paperless degree-attestation system for eligible Pakistani higher-education credentials. The published steps are online application, HEC scrutiny, university verification and issuance of an electronic attestation certificate.",
-    "context": [
-      "Some older online guides still describe physically submitting original degrees by courier or at a counter. HEC’s current attestation page states that its new system issues e-attestation and does not require hard-copy submissions for this workflow.",
-      "This distinction matters when someone abroad is about to pay an agent. Use HEC’s actual portal rather than websites that imitate government branding."
-    ],
-    "steps": [
-      {
-        "title": "Establish which service you need",
-        "body": "Attestation of a Pakistani degree is different from equivalence of a foreign degree; HEC says foreign credentials are not directly attested as Pakistani degrees."
-      },
-      {
-        "title": "Check record consistency",
-        "body": "Make sure name, ID, degree, transcript and institution details are accurate. Correct institutional errors before applying."
-      },
-      {
-        "title": "Open the official HEC e-services portal",
-        "body": "Access it from HEC’s degree-attestation page and sign in securely."
-      },
-      {
-        "title": "Submit the required records",
-        "body": "Provide the degree, transcript and other evidence requested by the application."
-      },
-      {
-        "title": "Wait for HEC and university verification",
-        "body": "Track scrutiny and awarding-university authentication in the system."
-      },
-      {
-        "title": "Download and verify your certificate",
-        "body": "Retrieve the e-attestation certificate after issuance and follow the foreign recipient’s rules for additional authentication, if any."
-      }
-    ],
-    "checklist": [
-      "Degree and transcript details",
-      "Identity documents requested by HEC",
-      "Accurate university/institution information",
-      "Official portal login",
-      "Recipient’s country-specific document requirements"
-    ],
-    "watch": [
-      "HEC warns that fake websites and callers impersonate its attestation services.",
-      "A foreign university degree may require an equivalence process instead.",
-      "Do not share OTPs, passwords or bank details with a supposed HEC representative calling you."
-    ],
-    "faqs": [
-      {
-        "q": "Must I courier original degrees to HEC?",
-        "a": "HEC’s current degree-attestation page describes a fully online paperless system. Follow its latest instructions for your case."
-      },
-      {
-        "q": "Does HEC attest a foreign university degree?",
-        "a": "HEC says it issues foreign-degree equivalence letters rather than directly attesting foreign degrees."
-      },
-      {
-        "q": "Which portal is genuine?",
-        "a": "HEC identifies eservices.hec.gov.pk as its official service portal."
-      }
-    ],
-    "sources": [
-      "hec",
-      "hec_scam",
-      "mofa_attest"
-    ],
-    "tags": [
-      "HEC",
-      "degree",
-      "attestation"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "complain-to-opf-from-abroad",
-    "title": "How to file an overseas Pakistani complaint with OPF",
-    "category": "support",
-    "deck": "Find the correct channel for property, document, fraud and administrative grievances.",
-    "answer": "OPF maintains a complaint cell and Online Complaint Management System to coordinate grievances from overseas Pakistanis with relevant Pakistani departments. According to OPF’s February 2026 notice, its online complaint process is free.",
-    "context": [
-      "A complaint should make one request to one relevant authority clear. OPF’s role is to coordinate and follow up, not to issue court judgments or guarantee relief.",
-      "OPF lists proof of identity and overseas status, supporting documents and a focal contact in Pakistan among its complaint requirements."
-    ],
-    "steps": [
-      {
-        "title": "Identify the subject and existing authority",
-        "body": "Decide whether your issue concerns land, an agency, a document, an employer or a bank. Use the primary regulator first where appropriate."
-      },
-      {
-        "title": "Organize documents chronologically",
-        "body": "Create a concise account of dates, events, previous complaints and desired outcome. Keep original supporting papers."
-      },
-      {
-        "title": "Check the official OPF route",
-        "body": "Start from opf.org.pk and follow the Complaint Cell / OCMS instructions to the official complaint system."
-      },
-      {
-        "title": "Submit your identity and evidence",
-        "body": "Provide required identification, overseas-status proof and documents; avoid unnecessary unrelated personal material."
-      },
-      {
-        "title": "Record your complaint number",
-        "body": "Save acknowledgments and allow the responsible department time to respond."
-      },
-      {
-        "title": "Escalate safely",
-        "body": "If you suspect fraud by someone claiming to be from OPF, use OPF’s published official contacts; the agency says it does not demand payment for complaint processing."
-      }
-    ],
-    "checklist": [
-      "Complaint summary in plain language",
-      "CNIC/NICOP and overseas-status evidence",
-      "Case numbers and previous correspondence",
-      "Relevant receipts/contracts/records",
-      "A Pakistan-based focal contact if available"
-    ],
-    "watch": [
-      "OPF says its complaint portal is free: never pay an “expediting fee”.",
-      "OPF facilitation is not legal representation and does not stop a court deadline.",
-      "Avoid duplicate or contradictory submissions with missing evidence."
-    ],
-    "faqs": [
-      {
-        "q": "Who can complain?",
-        "a": "OPF describes services for eligible overseas Pakistanis and related authorized applicants; check its requirements."
-      },
-      {
-        "q": "Are OPF complaint fees payable?",
-        "a": "OPF’s 2026 notice explicitly says online complaint registration and processing are free."
-      },
-      {
-        "q": "Can I raise a property problem?",
-        "a": "Yes. OPF lists property disputes among matters it can coordinate."
-      }
-    ],
-    "sources": [
-      "opf",
-      "opf_free",
-      "citizen"
-    ],
-    "tags": [
-      "OPF",
-      "complaints",
-      "public services"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "apostille-vs-attestation-pakistan",
-    "title": "Apostille or general attestation? Pakistan’s updated document process",
-    "category": "support",
-    "deck": "A guide to choosing the right service under MOFA’s newer 2026 digital system.",
-    "answer": "The Ministry of Foreign Affairs has digital attestation services for Apostille and General Attestation. The correct choice depends on the destination country, whether the Apostille Convention applies, and what the receiving institution specifically accepts.",
-    "context": [
-      "MOFA announced a new digital attestation system effective October 12, 2026 for Islamabad and listed liaison offices. Other MOFA pages describe online registration, review and appointment rules; follow the currently active portal instructions for your document and service.",
-      "An Apostille authenticates the origin of an eligible public document. It does not certify that every statement in the document is true or guarantee acceptance by a foreign university, employer or immigration authority."
-    ],
-    "steps": [
-      {
-        "title": "Ask the recipient first",
-        "body": "Get the receiving institution’s exact requested form: Apostille, general attestation, translation or additional legalization."
-      },
-      {
-        "title": "Check the country directory",
-        "body": "Use MOFA’s current attestation portal and destination guidance to see whether Apostille applies."
-      },
-      {
-        "title": "Confirm your document is eligible",
-        "body": "Birth, degree, police and commercial records may require prior authentication by the issuing authority before MOFA can process them."
-      },
-      {
-        "title": "Create the official digital application",
-        "body": "Use MOFA’s official attestation portal to enter details and upload required documents."
-      },
-      {
-        "title": "Follow the live submission route",
-        "body": "Comply with the current digital certificate, appointment or collection instructions shown for your category; procedures have changed during 2026."
-      },
-      {
-        "title": "Keep verification evidence",
-        "body": "Save the issued certificate, reference and the receiving office’s acceptance requirements."
-      }
-    ],
-    "checklist": [
-      "Destination country and receiving institution",
-      "Original document and issuing authority",
-      "Any required pre-attestation or translation",
-      "MOFA portal account",
-      "Current appointment/payment instructions"
-    ],
-    "watch": [
-      "Do not follow an old article claiming walk-in attestation is always available.",
-      "Apostille is not accepted for every destination or every document.",
-      "Published 2026 procedures have changed; check the official portal when applying."
-    ],
-    "faqs": [
-      {
-        "q": "What changed in October 2026?",
-        "a": "MOFA announced a digital attestation system effective October 12, 2026. Follow its current portal rather than older counter-only instructions."
-      },
-      {
-        "q": "Do all countries accept Apostille?",
-        "a": "No. MOFA provides destination guidance; acceptance also depends on the receiving authority and applicable treaty relationships."
-      },
-      {
-        "q": "Does Apostille replace a certified translation?",
-        "a": "Not necessarily. The receiving institution may still require a translation."
-      }
-    ],
-    "sources": [
-      "mofa_attest",
-      "mofa_portal"
-    ],
-    "tags": [
-      "apostille",
-      "MOFA",
-      "document attestation",
-      "2026"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "find-pakistani-embassy-abroad",
-    "title": "Finding the right Pakistani embassy or consulate when you need help",
-    "category": "support",
-    "deck": "Locate your mission, decide whether an appointment is needed and prepare a useful request.",
-    "answer": "MOFA publishes an overseas-missions directory. Use the mission for your actual location and confirm its current service jurisdiction, opening hours and contact method on the mission’s own website.",
-    "context": [
-      "An embassy or consulate may assist with passports, consular documents, specific civil-status matters and welfare concerns, but the services offered and application channels differ by mission.",
-      "A service that exists in one city may be online-only in another. For example, some NADRA identity applications are handled primarily through PakID rather than a walk-in consular counter."
-    ],
-    "steps": [
-      {
-        "title": "Find the mission geographically",
-        "body": "Use MOFA’s official country and city directory rather than an old phone number copied from social media."
-      },
-      {
-        "title": "Choose the exact service",
-        "body": "Look for a passport, attestation, emergency welfare, citizenship or visa section on the mission’s website."
-      },
-      {
-        "title": "Read location-specific requirements",
-        "body": "Check appointment methods, opening times, document lists and whether originals, witnesses or fees are required."
-      },
-      {
-        "title": "Write a concise email",
-        "body": "Include the type of service, country/city, relevant case or application reference and your question. Avoid emailing sensitive identity scans until the mission requests them securely."
-      },
-      {
-        "title": "For urgent emergencies, call",
-        "body": "Where there is immediate danger, contact local emergency services first; then use the mission’s current emergency or duty contact."
-      },
-      {
-        "title": "Keep a case log",
-        "body": "Record whom you contacted, when and any follow-up commitment."
-      }
-    ],
-    "checklist": [
-      "Your city and country",
-      "Service or emergency type",
-      "Passport/NADRA references if relevant",
-      "Official mission webpage",
-      "Appointment confirmation if required"
-    ],
-    "watch": [
-      "Do not assume a mission in another country can handle your case.",
-      "Mission staffing and phone numbers change: rely on the active official page.",
-      "For immediate danger abroad, use local emergency services first."
-    ],
-    "faqs": [
-      {
-        "q": "Where is the official mission directory?",
-        "a": "MOFA’s Overseas Missions page lists Pakistani missions by country and city."
-      },
-      {
-        "q": "Can I simply walk in for NADRA services?",
-        "a": "Not always. Check the mission page and NADRA’s online PakID process."
-      },
-      {
-        "q": "Who handles emergencies outside office hours?",
-        "a": "The relevant mission may publish a duty or emergency channel; verify it from its current site."
-      }
-    ],
-    "sources": [
-      "mofa_missions",
-      "nadra_services"
-    ],
-    "tags": [
-      "embassy",
-      "consulate",
-      "emergency"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "moving-back-to-pakistan-checklist",
-    "title": "Returning to Pakistan after years abroad: a 60-day planning checklist",
-    "category": "support",
-    "deck": "Prepare identity, school, banking and records before the move—not after the flight.",
-    "answer": "If you are returning to Pakistan, tackle the paperwork that cannot easily be recreated after leaving your current country: education records, financial statements, civil-status documents and authenticated records.",
-    "context": [
-      "The right order depends on your household. A family with school-age children needs equivalence planning early; a person relocating investments should review bank and tax status before closing accounts.",
-      "Your citizenship, tax residency and residence-permit status may all change on different timelines. Do not treat the move as a single administrative switch."
-    ],
-    "steps": [
-      {
-        "title": "About 60 days out: make a document inventory",
-        "body": "List passports, NICOP/POC, birth and marriage records, driving documents, education certificates, medical summaries and financial account statements."
-      },
-      {
-        "title": "About 45 days out: plan education",
-        "body": "Ask Pakistani schools or universities what equivalence or attestation they require; contact IBCC or HEC before originals become hard to obtain."
-      },
-      {
-        "title": "About 30 days out: review money",
-        "body": "Check the terms of overseas and Pakistani accounts, recurring payments, remittance evidence and any Roshan Digital Account status implications."
-      },
-      {
-        "title": "Before departure: fix mismatches",
-        "body": "Resolve spelling or birth-date inconsistencies between foreign and NADRA documents."
-      },
-      {
-        "title": "Before tickets become fixed: review entry",
-        "body": "Check passport validity, citizenship documents and the requirements of each traveler, especially foreign-national relatives."
-      },
-      {
-        "title": "After arrival: update services deliberately",
-        "body": "Review local address, phone, banking, educational enrollment and tax obligations under current rules."
-      }
-    ],
-    "checklist": [
-      "Identity and citizenship documents for each family member",
-      "Official school transcripts and credentials",
-      "Civil-status certificates and any needed attestations",
-      "Bank statements and source-of-funds records",
-      "Current tax-residency advice",
-      "Housing and school arrangements"
-    ],
-    "watch": [
-      "Do not close every overseas bank account before settling transfer, tax and recurring-payment obligations.",
-      "Foreign-national spouses or children may have separate entry requirements.",
-      "A relocation date alone does not determine tax residency under every rule."
-    ],
-    "faqs": [
-      {
-        "q": "Do I need to switch NICOP to CNIC?",
-        "a": "Check NADRA’s current guidance for permanent return and your personal status rather than automatically applying."
-      },
-      {
-        "q": "Will my child’s foreign school records transfer automatically?",
-        "a": "Not necessarily. Ask about IBCC equivalence and school-specific requirements."
-      },
-      {
-        "q": "Should I terminate an RDA when returning?",
-        "a": "Contact your participating bank and review eligibility and status change conditions before acting."
-      }
-    ],
-    "sources": [
-      "nadra_nicop",
-      "ibcc",
-      "hec",
-      "sbp_rda",
-      "fbr_residency"
-    ],
-    "tags": [
-      "returning home",
-      "relocation",
-      "moving"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
-  },
-  {
-    "slug": "overseas-job-scam-warning",
-    "title": "Avoid overseas recruitment scams: what to verify before paying",
-    "category": "support",
-    "deck": "Protect yourself and family members from fake foreign job offers and impersonated agencies.",
-    "answer": "For employment abroad from Pakistan, check whether the recruiter is appropriately authorized through the Bureau of Emigration & Overseas Employment (BEOE) and confirm the employer and offer independently.",
-    "context": [
-      "Job scams often imitate real employers, offer unrealistic pay, and request fees urgently before a contract or visa can be verified. A genuine-looking letterhead or WhatsApp profile is not official confirmation.",
-      "The recruitment route, required protection process and restrictions differ by country and role. Use BEOE’s current information and the destination country’s own official visa guidance."
-    ],
-    "steps": [
-      {
-        "title": "Verify the actual recruiter",
-        "body": "Begin at beoe.gov.pk and locate the current official information for licensed overseas employment promoters. Check the licence identity and active status—not just a business card."
-      },
-      {
-        "title": "Validate the employer separately",
-        "body": "Use an independently found company website or official switchboard rather than a phone number in the offer message."
-      },
-      {
-        "title": "Check visa and job conditions",
-        "body": "Compare the offer against destination-country government rules, including visa type, salary conditions and any worker protections."
-      },
-      {
-        "title": "Ask for a written breakdown",
-        "body": "Get the contract, duties, workplace, costs, refund rules and required process in writing before paying anything."
-      },
-      {
-        "title": "Never share account access",
-        "body": "Do not provide banking OTPs, passwords or remote-control access to someone offering a job."
-      },
-      {
-        "title": "Record and report suspicious approaches",
-        "body": "Keep transaction and message evidence. Contact the relevant regulator, law enforcement or mission if fraud is suspected."
-      }
-    ],
-    "checklist": [
-      "Recruiter name and licence number",
-      "Independent employer verification",
-      "Written contract and visa category",
-      "Itemized official costs",
-      "Payment receipts and secure communication"
-    ],
-    "watch": [
-      "Being listed on a website is not necessarily proof of a currently valid licence; check active status.",
-      "A job or visa cannot be guaranteed merely by paying a private agent.",
-      "This guide does not provide country-specific immigration eligibility advice."
-    ],
-    "faqs": [
-      {
-        "q": "Is any advance payment safe?",
-        "a": "Verify the specific official charge and who is permitted to collect it; never send money on a promise alone."
-      },
-      {
-        "q": "Where should I confirm a Pakistani recruiter?",
-        "a": "Start with the official Bureau of Emigration & Overseas Employment website."
-      },
-      {
-        "q": "What if I already paid a scammer?",
-        "a": "Preserve evidence, contact your payment provider immediately and report to relevant enforcement authorities."
-      }
-    ],
-    "sources": [
-      "beoe",
-      "fia",
-      "mofa_missions"
-    ],
-    "tags": [
-      "recruitment",
-      "job scam",
-      "BEOE"
-    ],
-    "published": "2026-11-10",
-    "reviewed": "2026-11-10"
+    "slug": "pakistani-traditions-for-kids-abroad",
+    "title": "Sharing Pakistani family traditions with children abroad",
+    "cat": "culture",
+    "image": 6,
+    "summary": "Small activities around food, language, memories and family stories.",
+    "sections": [
+      [
+        "Begin with your own family",
+        "Pakistan has many regions, languages and customs. Start by asking relatives which traditions are personally meaningful to them rather than presenting one household's habits as universal."
+      ],
+      [
+        "Use food to tell stories",
+        "Cook one family recipe together and ask where it came from. Write down who taught it, what ingredients changed over time and which celebrations it accompanied. Keep children's tasks age appropriate."
+      ],
+      [
+        "Create a short story archive",
+        "With permission, record a relative describing a photograph, a childhood street or a favorite celebration. Respect privacy and avoid publishing identifiable family information without explicit consent."
+      ],
+      [
+        "Keep language welcoming",
+        "Learn a few phrases each week in the language spoken by the child's grandparents. Music, games, shared calls and everyday routines often create more connection than strict memorization."
+      ]
+    ],
+    "list": "One family recipe; one recorded memory with permission; three language phrases; a photo conversation; one recurring family activity.",
+    "qa": [
+      "Are all Pakistani traditions the same?",
+      "No. Customs differ across regions, households, languages, generations and beliefs."
+    ],
+    "refs": [
+      "ptdc"
+    ]
   }
 ]
