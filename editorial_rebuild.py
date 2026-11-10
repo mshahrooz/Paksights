@@ -154,6 +154,13 @@ for f in sorted(ROOT.rglob('*.html')):
     if original_header:original_header.decompose()
     h=soup.select_one('header.site-header')
     if h:h.replace_with(BeautifulSoup(site_header(prefix),'html.parser'))
+    # Keep a single keyboard skip link and point home links at the canonical root URL.
+    skip_links=soup.select('a.skip-link[href="#main"]')
+    for duplicate in skip_links[1:]:
+        duplicate.decompose()
+    for home_link in soup.find_all('a',href=True):
+        if home_link['href']==prefix+'index.html':
+            home_link['href']=prefix or './'
     # Ads: Auto Ads script is loaded by Google; don't hardcode ad slots or fake placements.
     script=soup.new_tag('script',async_=None)
     script.attrs={'async':'','src':'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9019132490898610','crossorigin':'anonymous'}
@@ -193,6 +200,22 @@ for f in sorted(ROOT.rglob('*.html')):
             # Links to photo in social preview: all thumbnails are from general nonofficial scenes.
             op=soup.head.find('meta',attrs={'property':'og:image'})
             if op:op['content']=img_src(a,1200)
+            # Match the visible research-desk byline and add the article's actual hero
+            # illustration to the existing structured data (not a generic site logo).
+            for ldscript in soup.head.find_all('script',attrs={'type':'application/ld+json'}):
+                try:
+                    ld=json.loads(ldscript.string or ldscript.get_text())
+                except (ValueError,TypeError):
+                    continue
+                objects=ld if isinstance(ld,list) else [ld]
+                modified=False
+                for obj in objects:
+                    if isinstance(obj,dict) and obj.get('@type') in ('Article','BlogPosting','NewsArticle'):
+                        obj['image']=[img_src(a,1200)]
+                        obj['author']={'@type':'Organization','name':'PakSights research desk','url':'https://paksights.com/about.html'}
+                        modified=True
+                if modified:
+                    ldscript.string=json.dumps(ld,ensure_ascii=False).replace('</','<\\/')
     if depth==1 and f.parent.name=='guides' and f.name=='index.html':
         ph=soup.select_one('.page-hero h1')
         if ph:ph.string='Guides for Pakistanis living abroad'
@@ -213,6 +236,12 @@ for f in sorted(ROOT.rglob('*.html')):
         credit=soup.new_tag('p',attrs={'class':'footer-photo-credit'})
         credit.string='Editorial illustrations: photographs from Unsplash. Ads may appear via Google AdSense.'
         bottom.insert_after(credit)
+    # Establish the connection to the photographic CDN early without making
+    # editorial content or core navigation dependent on any third-party script.
+    if soup.select_one('img[src*="images.unsplash.com"]'):
+        if not soup.head.find('link',attrs={'rel':'preconnect','href':'https://images.unsplash.com'}):
+            hint=soup.new_tag('link',rel='preconnect',href='https://images.unsplash.com')
+            soup.head.append(hint)
     f.write_text(str(soup),encoding='utf-8')
 assert (ROOT/'ads.txt').is_file(), 'Missing root ads.txt; keep the uploaded file in the repository.'
 print('Applied classic editorial blog layout, real photographic thumbnails, Adsense Auto Ads and ads.txt')
