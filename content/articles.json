@@ -550,5 +550,33 @@
     "refs": [
       "ptdc"
     ]
+  },
+  {
+    "slug": "top-rated-desi-restaurants-islamabad",
+    "title": "Top-rated desi restaurants in Islamabad: 7 well-reviewed places (2026)",
+    "cat": "places",
+    "image": 0,
+    "summary": "A researched Islamabad desi dining guide comparing reported Google ratings, review volume, dishes, locations and balanced diner-feedback themes at seven restaurants.",
+    "sections": [
+      [
+        "How we chose these restaurants",
+        "A research-led shortlist based on publicly reported ratings, review volumes and different dining styles."
+      ],
+      [
+        "Restaurant comparison",
+        "Seven distinct Islamabad desi dining choices with location-specific advice and review themes."
+      ]
+    ],
+    "list": "Check opening hours, menus, reservations, taxes and payment options before visiting.",
+    "qa": [
+      "Are these live Google ratings?",
+      "No. Rating snapshots are from November 2026, with direct links for current Google Maps information."
+    ],
+    "refs": [
+      "https://mulk.pk/guides/desi-restaurants-islamabad",
+      "https://restaurantguru.com/Islamabad"
+    ],
+    "published": "2026-11-11",
+    "reviewed": "2026-11-11"
   }
 ]
