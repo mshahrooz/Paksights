@@ -1,25 +1,31 @@
-# PakSights: the overseas family travel blog
+# PakSights — Free Responsive Website Preview
 
-New editorial focus: visiting Pakistan, children and family, shopping and gifts, city planning and culture. This site is a fully static set of HTML pages for GitHub Pages.
+Primary live tool: https://paksights.com/
 
-- 16 published articles and five category pages.
-- Family trip-budget calculator and private packing checklist.
-- Supplied original PakSights logo at assets/logo.webp.
-- SEO titles, descriptions, canonical URLs, Article schema, sitemap, RSS and robots.
-- Google AdSense Auto Ads is embedded on every HTML page; the existing ads.txt and CNAME are preserved.
+PakSights is a static GitHub Pages site with a browser-based responsive device preview and the existing Worksheet Rescue, trip-budget and packing-list tools. The user-provided logo, domain `paksights.com`, root CNAME, AdSense Auto Ads and ads.txt remain unchanged.
 
-## Editing
+## Device preview features
 
-HTML files are already rendered. Articles are also archived in content/articles.json for future editing and assisted regeneration. Changing the JSON alone does not update the published HTML; update the corresponding HTML or regenerate it.
+- 26 viewport presets across phones, tablets, laptops and desktops; searchable categories.
+- Single-device view or compare up to four simultaneously.
+- Portrait/landscape rotation, reload, fit/50/75/100/125% zoom.
+- Custom width and height, save custom device presets locally.
+- Preview an embeddable HTTP(S) website directly in an iframe, with shareable URL setups.
+- Preview uploaded/pasted standalone HTML in a restricted iframe. JavaScript disabled by default and requires opt-in.
+- Sample responsive demo for first-time visitors.
 
-## Deployment
+### Important limitations
 
-GitHub Actions deploys the checked-in HTML and assets from this same repository. Do not delete CNAME, ads.txt or .nojekyll. Use the existing GitHub Pages custom-domain settings.
+This is a CSS **viewport simulator**, not an emulator of iOS, Android, Safari or real touch devices. Many websites prohibit embedding via `X-Frame-Options` or CSP `frame-ancestors`; browser restrictions cannot be bypassed from static GitHub Pages. HTTP pages may be blocked as mixed content on HTTPS. Cross-origin website screenshots cannot be captured or exported from a normal browser iframe. Local standalone HTML previews may need inline assets or absolute URLs; separate relative files will not automatically resolve. We do not claim complete browser testing.
 
-## Important
+## Privacy & storage
 
-These are newly written editorial guides, not accounts of firsthand visits. Illustrative photographs are loaded from the Unsplash CDN and are not necessarily images of places mentioned. Travel advisories and regulations require rechecking. For visitors in the EEA/UK/Switzerland, configure a Google-certified CMP through AdSense. Review old URL traffic in Search Console before implementing individual redirects.
+The URL preview loads directly in the visitor's browser (not through a PakSights proxy). Pasted/uploaded HTML stays local and does not get added to share URLs. Recent URLs and custom devices are optionally saved in browser localStorage. Third-party sites and Google AdSense make their own network requests.
 
-## Worksheet Rescue (11 November 2026)
+## Hosting and editing
 
-The new main product is /tools/worksheet-rescue.html. It runs fully client-side: perspective crop, contrast/shadow cleanup, selected-color reduction, manual eraser, multi-page A4/US Letter PDF and PNG downloads. Supported upload images: JPEG, PNG, WebP and browser-supported formats (up to 20 images, 25 MB each). PDF input and automatic handwriting reconstruction are not supported. Files are not uploaded by the editor. AdSense and existing CNAME / ads.txt remain unchanged.
+The existing `.github/workflows/pages.yml` copies checked-in static pages and assets and deploys to the **existing** GitHub Pages site. Site source is `index.html`, `assets/device-preview.css`, and `assets/device-preview.js`. Other tools and old article URLs remain available. Keep `CNAME`, `ads.txt`, and `.nojekyll` at the repo root.
+
+## Next improvements
+
+Test on physical mobile devices, review broken iframe and local HTML edge cases, and add persistent per-device comparison options if supported by user feedback. Verified SEO demand is not yet established and traffic is not guaranteed.

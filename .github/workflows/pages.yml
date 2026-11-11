@@ -22,6 +22,7 @@ jobs:
         run: |
           node --check assets/worksheet-rescue.js
           node --check assets/site.js
+          node --check assets/device-preview.js
           python qa_tools.py
       - name: Prepare published files
         run: |

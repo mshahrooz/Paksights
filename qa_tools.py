@@ -43,3 +43,14 @@ assert "paksights.com" == (ROOT/"CNAME").read_text(encoding="utf-8").strip()
 assert "pub-9019132490898610" in (ROOT/"ads.txt").read_text(encoding="utf-8")
 assert "https://paksights.com/tools/worksheet-rescue.html" in (ROOT/"sitemap.xml").read_text()
 print("PakSights tool assets, links, upload/download controls, domain and ads configuration: OK")
+
+# Device Preview: every statically referenced control exists in the homepage.
+preview_html=(ROOT/"index.html").read_text(encoding="utf-8")
+preview_js=(ROOT/"assets/device-preview.js").read_text(encoding="utf-8")
+scan=Scan();scan.feed(preview_html)
+for name in re.findall(r'\$\("([^"]+)"\)',preview_js):
+    assert name in set(scan.ids), ("device preview control missing from HTML",name)
+assert "https://paksights.com/" in (ROOT/"sitemap.xml").read_text(encoding="utf-8")
+assert "assets/device-preview.css" in preview_html
+assert "assets/device-preview.js" in preview_html
+print("PakSights Device Preview controls and assets: OK")

@@ -5,3 +5,6 @@
 
 /* PakSights tool navigation for existing static article pages. */
 (()=>{const container=document.querySelector("header nav .wrap");if(container&&!container.querySelector('a[href="/tools/worksheet-rescue.html"]')){const a=document.createElement("a");a.href="/tools/worksheet-rescue.html";a.textContent="Worksheet Rescue";a.className="wr-nav-primary";container.insertBefore(a,container.firstChild)}const mast=document.querySelector("header .mast > p");if(mast&&/Real-life planning for trips back home/.test(mast.textContent)){mast.innerHTML="Free tools that make work easier.<small>Clean, print, download.</small>"}})();
+
+/* Add primary device preview navigation to all legacy PakSights pages. */
+(()=>{const nav=document.querySelector("header nav .wrap");if(nav&&!nav.querySelector('a[href="/"]')){const link=document.createElement("a");link.href="/";link.textContent="Device Preview";link.style.fontWeight="800";link.style.color="#348208";nav.insertBefore(link,nav.firstChild)}})();
