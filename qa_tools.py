@@ -28,7 +28,7 @@ for filename in ["index.html","tools/index.html","tools/worksheet-rescue.html"]:
     for path in p.links:
         if path.startswith(("https:","http:","//","#","data:","mailto:","tel:")):
             continue
-        local=ROOT/path.lstrip("/") if path.startswith("/") else (ROOT/filename).parent/path
+        local=(ROOT/"index.html") if path=="/" else (ROOT/path.lstrip("/") if path.startswith("/") else (ROOT/filename).parent/path)
         assert local.is_file(), (filename,"missing link or asset",path)
 
 html=(ROOT/"tools/worksheet-rescue.html").read_text(encoding="utf-8")
