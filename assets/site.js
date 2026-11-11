@@ -2,3 +2,6 @@
 
 /* Accessible, manually controlled review-theme sliders, not fake customer quotations. */
 (()=>{document.querySelectorAll('[data-r-slider]').forEach(widget=>{const items=[...widget.querySelectorAll('.r-slide')];const pos=widget.querySelector('.slide-position');let current=0;const render=()=>{items.forEach((s,i)=>{s.hidden=i!==current});pos.textContent=(current+1)+' / '+items.length};widget.querySelector('.slide-prev').addEventListener('click',()=>{current=(current-1+items.length)%items.length;render()});widget.querySelector('.slide-next').addEventListener('click',()=>{current=(current+1)%items.length;render()});render()})})();
+
+/* PakSights tool navigation for existing static article pages. */
+(()=>{const container=document.querySelector("header nav .wrap");if(container&&!container.querySelector('a[href="/tools/worksheet-rescue.html"]')){const a=document.createElement("a");a.href="/tools/worksheet-rescue.html";a.textContent="Worksheet Rescue";a.className="wr-nav-primary";container.insertBefore(a,container.firstChild)}const mast=document.querySelector("header .mast > p");if(mast&&/Real-life planning for trips back home/.test(mast.textContent)){mast.innerHTML="Free tools that make work easier.<small>Clean, print, download.</small>"}})();

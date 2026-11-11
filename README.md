@@ -19,3 +19,7 @@ GitHub Actions deploys the checked-in HTML and assets from this same repository.
 ## Important
 
 These are newly written editorial guides, not accounts of firsthand visits. Illustrative photographs are loaded from the Unsplash CDN and are not necessarily images of places mentioned. Travel advisories and regulations require rechecking. For visitors in the EEA/UK/Switzerland, configure a Google-certified CMP through AdSense. Review old URL traffic in Search Console before implementing individual redirects.
+
+## Worksheet Rescue (11 November 2026)
+
+The new main product is /tools/worksheet-rescue.html. It runs fully client-side: perspective crop, contrast/shadow cleanup, selected-color reduction, manual eraser, multi-page A4/US Letter PDF and PNG downloads. Supported upload images: JPEG, PNG, WebP and browser-supported formats (up to 20 images, 25 MB each). PDF input and automatic handwriting reconstruction are not supported. Files are not uploaded by the editor. AdSense and existing CNAME / ads.txt remain unchanged.
