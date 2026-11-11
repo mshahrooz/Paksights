@@ -42,7 +42,7 @@ input.addEventListener("change",()=>{addFiles(input.files);input.value=""});
 drop.addEventListener("dragover",e=>{e.preventDefault();drop.classList.add("dragging")});
 drop.addEventListener("dragleave",()=>drop.classList.remove("dragging"));
 drop.addEventListener("drop",e=>{e.preventDefault();drop.classList.remove("dragging");addFiles(e.dataTransfer.files)});
-drop.addEventListener("click",e=>{if(e.target===drop||e.target.closest(".wr-drop-prompt"))input.click()});
+drop.addEventListener("click",()=>input.click());
 drop.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();input.click()}});
 function drawList(){
  list.innerHTML="";
