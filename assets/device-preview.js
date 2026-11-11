@@ -136,7 +136,7 @@ function build(){
   frame.append(chromeEl,iframe,bottom);wrapper.append(frame);stage.append(wrapper);
   const footer=document.createElement("div");footer.className="dp-card-footer";
   const label=document.createElement("span");label.textContent=w+" × "+h;
-  const open=button("Open ↗","Open original website",()=>openUrl());open.disabled=state.source!=="url";
+  const open=button("Sized window ↗","Try in a separate browser window at roughly this size",()=>openSized(w,h));open.disabled=state.source!=="url";
   footer.append(label,open);card.append(heading,stage,footer);grid.append(card);
   frames.push({card,stage,wrapper,frame,iframe,outerW,outerH,w,h,slot});
   if(state.source==="url")iframe.src=state.url;else iframe.srcdoc=state.source==="html"?state.html:demo;
@@ -165,6 +165,12 @@ function rotateAll(){
  else state.compare.forEach((_,i)=>state.rotation[String(i)]=!state.rotation[String(i)]);
  build();
 }
+function openSized(w,h){
+ if(state.source!=="url")return;
+ const features="popup=yes,width="+Math.max(300,Math.round(w+75))+",height="+Math.max(400,Math.round(h+105))+",noopener,noreferrer";
+ window.open(state.url,"_blank",features);
+ report("Requested an approximately sized browser window. Some browsers open a normal tab or ignore the requested size; the CSS viewport may differ.","warn");
+}
 function openUrl(){if(state.source!=="url")return;window.open(state.url,"_blank","noopener,noreferrer")}
 function customDims(save){
  const w=Number($("dp-width").value),h=Number($("dp-height").value);
@@ -183,7 +189,7 @@ function share(){
  const u=new URL(location.href);u.search="";
  if(state.source==="url")u.searchParams.set("url",state.url);
  u.searchParams.set("view",state.mode);u.searchParams.set("device",state.single);
- u.searchParams.set("compare",state.compare.join(","));u.searchParams.set("zoom",state.zoom);
+ u.searchParams.set("compare",state.compare.join(","));u.searchParams.set("zoom",state.zoom);u.searchParams.set("rot",state.rotation.single?"1":"0");u.searchParams.set("rots",state.compare.map((_,i)=>state.rotation[String(i)]?"1":"0").join(""));
  const text=u.href;
  const fallback=()=>{const a=document.createElement("textarea");a.value=text;a.style.position="fixed";a.style.opacity="0";document.body.append(a);a.select();const ok=document.execCommand("copy");a.remove();if(!ok)throw Error("Copy denied")};
  Promise.resolve(navigator.clipboard?.writeText?navigator.clipboard.writeText(text):Promise.reject()).catch(fallback).then(()=>{
@@ -199,7 +205,7 @@ function initFromLink(){
   if(ids.length)state.compare=ids;
  }
  if(["fit","0.5","0.75","1","1.25"].includes(p.get("zoom")))state.zoom=p.get("zoom");
- if(p.has("url")){try{state.url=normalize(p.get("url"));state.source="url";$("dp-url").value=state.url}catch(e){}}
+ if(p.get("rot")==="1")state.rotation.single=true;const rots=p.get("rots")||"";for(let i=0;i<Math.min(4,rots.length);i++)state.rotation[String(i)]=rots[i]==="1";if(p.has("url")){try{state.url=normalize(p.get("url"));state.source="url";$("dp-url").value=state.url}catch(e){}}
 }
 function init(){
  initFromLink();
