@@ -18,6 +18,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Validate Worksheet Rescue and site assets
+        run: |
+          node --check assets/worksheet-rescue.js
+          node --check assets/site.js
+          python qa_tools.py
       - name: Prepare published files
         run: |
           mkdir public
