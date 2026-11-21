@@ -41,3 +41,11 @@ Use GitHub Issues for corrections and repository management; do not post private
 - Five reported opening mission titles, user-added missions, local state, JSON export. No claim of full coverage.
 - Homepage featured tools, navigation throughout site, contextual links, 8 added sitemap entries, JS syntax checking and updated Pages publish file copy.
 - Progress is stored only in visitor browser localStorage. Maintain citations and verify source reports before further additions.
+
+## Editorial imagery upgrade — November 21, 2026
+
+- `assets/site.js` now maps each published HTML route to a relevant Rockstar GTA VI hero image and supporting screenshots; it adds image elements after HTML parsing without changing the article text or interactive tool behavior. Existing defer loading covers every page.
+- `assets/style.css` includes responsive high-resolution cinematic hero layers with mobile overlays, gallery layout, image captions and accessibility/contrast rules.
+- All game images reference Rockstar Games first-party `/VI/_next/static/media` paths and are credited as © Rockstar Games. Responsive srcset hints use 640–1920 widths; supporting images lazy-load, hero eager loads with priority.
+- Source gallery: https://www.rockstargames.com/VI/media/screenshots . Game imagery is not claimed as independently licensed. CDN links can change, so verify periodically. Fallback local SVG is used if a Rockstar asset cannot load.
+- The new imagery is injected client-side. For previewers or social crawlers without JavaScript, existing server-rendered article feature images and static OG images remain available.
