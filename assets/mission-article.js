@@ -1,0 +1,10 @@
+(()=>{"use strict";
+const query=document.getElementById("mission-query");
+const entries=[...document.querySelectorAll(".gta-mission")];
+const folds=[...document.querySelectorAll("details.gta-mission-reveal")];
+const count=document.getElementById("gta-search-counter");
+const apply=()=>{let q=query?.value.toLowerCase().trim()||"",found=0;entries.forEach(item=>{const show=item.textContent.toLowerCase().includes(q);item.hidden=!show;if(show)found++});if(q)folds.forEach(d=>d.open=true);if(count)count.textContent=q?found+" matching mission"+(found===1?"":"s")+" out of "+entries.length:entries.length+" core missions across five chapters."};
+query?.addEventListener("input",apply);
+document.getElementById("expand-chapters")?.addEventListener("click",()=>folds.forEach(d=>d.open=true));
+document.getElementById("collapse-chapters")?.addEventListener("click",()=>{folds.forEach(d=>d.open=false);query.value="";apply()});
+})();

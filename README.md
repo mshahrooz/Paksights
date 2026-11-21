@@ -49,3 +49,10 @@ Use GitHub Issues for corrections and repository management; do not post private
 - All game images reference Rockstar Games first-party `/VI/_next/static/media` paths and are credited as © Rockstar Games. Responsive srcset hints use 640–1920 widths; supporting images lazy-load, hero eager loads with priority.
 - Source gallery: https://www.rockstargames.com/VI/media/screenshots . Game imagery is not claimed as independently licensed. CDN links can change, so verify periodically. Fallback local SVG is used if a Rockstar asset cannot load.
 - The new imagery is injected client-side. For previewers or social crawlers without JavaScript, existing server-rendered article feature images and static OG images remain available.
+
+## Research feature: GTA VI All Missions (Nov 21, 2026)
+
+- `/articles/gta-vi-all-missions.html`: original, long-form 91-core-mission guide grouped into five chapters, with mission-by-mission summaries, 14 linked editorial/primary walkthrough references, a 91-vs-93-vs-95 counting explanation, optional mission differences, chapter highlights, spoiler folds and FAQ.
+- `assets/mission-article.css`, `assets/mission-article.js`: responsive editorial guide and local, no-login mission search/spoiler toggles.
+- New article featured on homepage, guides and search archive; included in RSS and sitemap; unique canonical, Article/Breadcrumb/FAQ structured data.
+- Secondary sources used: PC Gamer, Push Square, VGC, PowerPyx published Nov 18–21, 2026. Story mission list remains attributed and can differ from in-game task recap lists. No Leonida Ledger hands-on testing claimed. Sources and spoilers are labeled.

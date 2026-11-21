@@ -46,6 +46,7 @@ const THEMES={
   'guides/kingpin-bowling-safe-code.html':['portnight','port','citystreets','portstory'],
   'guides/brooks-boatworks-safe-code.html':['port','portstory','portnight','jason'],
   'guides/la-cascara-motel-safe-code.html':['portstory','port','portnight','citynight'],
+  'articles/gta-vi-all-missions.html':['together','citynight','keys','portstory'],
   'articles/gta-6-out-now-release-date.html':['citynight','together','citystreets','cover'],
   'articles/gta-6-pc-release-status.html':['jasoncar','citycoast','citystreets','mountain'],
   'articles/gta-6-price-editions-standard-ultimate.html':['cover','motel','jason','citynight'],
