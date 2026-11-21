@@ -31,3 +31,13 @@ Each article is an HTML file with its own canonical URL, metadata and source lin
 ## Questions
 
 Use GitHub Issues for corrections and repository management; do not post private data in public issues.
+
+## November 21, 2026 — Interactive player tools
+
+- 5 pages under /tools/: landing hub, schematic region explorer, spoiler-aware code finder, customizable mission tracker, console cheat guide.
+- 3 original Port Gellhorn walkthrough pages for Kingpin Bowling, Brooks Boatworks and La Cascara Motel.
+- 6 externally reported keypad/safe codes, with source caveats, hint-first reveals and local solved state.
+- Officially named regions with a not-to-scale diagram, not fabricated geographical pins. Local visited state.
+- Five reported opening mission titles, user-added missions, local state, JSON export. No claim of full coverage.
+- Homepage featured tools, navigation throughout site, contextual links, 8 added sitemap entries, JS syntax checking and updated Pages publish file copy.
+- Progress is stored only in visitor browser localStorage. Maintain citations and verify source reports before further additions.
