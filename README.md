@@ -1,31 +1,33 @@
-# PakSights — Free Responsive Website Preview
+# Leonida Ledger — Unofficial GTA VI editorial publication
 
-Primary live tool: https://paksights.com/
+A source-checked, responsive editorial website on **https://paksights.com**, published with GitHub Pages.
 
-PakSights is a static GitHub Pages site with a browser-based responsive device preview and the existing Worksheet Rescue, trip-budget and packing-list tools. The user-provided logo, domain `paksights.com`, root CNAME, AdSense Auto Ads and ads.txt remain unchanged.
+## Site map
 
-## Device preview features
+- Home: index.html
+- Latest news: news/index.html
+- Practical guides: guides/index.html
+- World and characters: world/index.html
+- Features: features/index.html
+- Searchable archive: articles/index.html
+- 13 individual source-linked articles, with BlogPosting structured data
+- About, contact, editorial policy, media credits and privacy pages
+- robots.txt, sitemap.xml, feed.xml, ads.txt
 
-- 26 viewport presets across phones, tablets, laptops and desktops; searchable categories.
-- Single-device view or compare up to four simultaneously.
-- Portrait/landscape rotation, reload, fit/50/75/100/125% zoom.
-- Custom width and height, save custom device presets locally.
-- Preview an embeddable HTTP(S) website directly in an iframe, with shareable URL setups.
-- Preview uploaded/pasted standalone HTML in a restricted iframe. JavaScript disabled by default and requires opt-in.
-- Sample responsive demo for first-time visitors.
+## Deployment
 
-### Important limitations
+Changes to the main branch automatically publish via .github/workflows/pages.yml. CNAME is set to paksights.com and the site's Google AdSense publisher record was carried forward from the old site. **This build has already replaced the old public site; the previous site is preserved in the backup-paksights-before-gta6-2026-11-21 branch.**
 
-This is a CSS **viewport simulator**, not an emulator of iOS, Android, Safari or real touch devices. Many websites prohibit embedding via `X-Frame-Options` or CSP `frame-ancestors`; browser restrictions cannot be bypassed from static GitHub Pages. HTTP pages may be blocked as mixed content on HTTPS. Cross-origin website screenshots cannot be captured or exported from a normal browser iframe. Local standalone HTML previews may need inline assets or absolute URLs; separate relative files will not automatically resolve. We do not claim complete browser testing.
+## Image sourcing
 
-## Privacy & storage
+Official GTA VI imagery is referenced from Rockstar's website for editorial use; image attribution and an unofficial affiliation disclaimer appear throughout the site. Images are loaded from an external server and could be blocked or moved by the source; an original fallback SVG is included. Please review use rights as appropriate for commercial publication.
 
-The URL preview loads directly in the visitor's browser (not through a PakSights proxy). Pasted/uploaded HTML stays local and does not get added to share URLs. Recent URLs and custom devices are optionally saved in browser localStorage. Third-party sites and Google AdSense make their own network requests.
+## Editorial and advertising
 
-## Hosting and editing
+Google AdSense publisher ID: ca-pub-9019132490898610. Auto Ads will display if enabled in your account. The site has informational ad placeholders that are not live ad units. Google-certified CMP requirements must be configured separately for relevant jurisdictions. Google Search Console setup and live ad serving require external account configuration.
 
-The existing `.github/workflows/pages.yml` copies checked-in static pages and assets and deploys to the **existing** GitHub Pages site. Site source is `index.html`, `assets/device-preview.css`, and `assets/device-preview.js`. Other tools and old article URLs remain available. Keep `CNAME`, `ads.txt`, and `.nojekyll` at the repo root.
+Each article is an HTML file with its own canonical URL, metadata and source links. Update dates, claims, image links and links to sources when publishing new editorial content. Do not fabricate walkthrough claims or publish bulk near-duplicate pages for SEO.
 
-## Next improvements
+## Questions
 
-Test on physical mobile devices, review broken iframe and local HTML edge cases, and add persistent per-device comparison options if supported by user feedback. Verified SEO demand is not yet established and traffic is not guaranteed.
+Use GitHub Issues for corrections and repository management; do not post private data in public issues.
