@@ -23,6 +23,8 @@ jobs:
           node --check assets/site.js
           node --check assets/tools.js
           node --check assets/mission-article.js
+          node --check assets/prologue.js
+          test -s articles/gta-6-prologue-mission-1-walkthrough.html
           test -s articles/gta-vi-all-missions.html
           test -s tools/index.html
           test -s tools/leonida-map.html

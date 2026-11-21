@@ -56,3 +56,11 @@ Use GitHub Issues for corrections and repository management; do not post private
 - `assets/mission-article.css`, `assets/mission-article.js`: responsive editorial guide and local, no-login mission search/spoiler toggles.
 - New article featured on homepage, guides and search archive; included in RSS and sitemap; unique canonical, Article/Breadcrumb/FAQ structured data.
 - Secondary sources used: PC Gamer, Push Square, VGC, PowerPyx published Nov 18–21, 2026. Story mission list remains attributed and can differ from in-game task recap lists. No Leonida Ledger hands-on testing claimed. Sources and spoilers are labeled.
+
+## Prologue illustrated guide — Nov 21, 2026
+
+- `/articles/gta-6-prologue-mission-1-walkthrough.html`: source-backed first-mission walkthrough; Prologue and Gone Fishing naming explained.
+- Seven official Rockstar GTA VI trailer/promotional scene frames and three video thumbnails, each explicitly labeled by type with source attribution. The pictures come from third-party remote media hosts and can fail to load; fallback SVG is configured. No creator-owned footage is downloaded or rehosted.
+- Three independently verified creator YouTube video IDs: `Zh6VrJuW_i8` (standalone Prologue by GTA Series Videos), `vfJ3BBxrvCQ` (Kephket first hour), `YDNs_sPEcJc` (MKIceAndFire gameplay Part 1). Click-to-load privacy-conscious YouTube embeds with direct links and optional timestamp anchors.
+- New gallery filter/lightbox and full responsive Prologue CSS/JS, VideoObject, BreadcrumbList, BlogPosting and FAQ JSON-LD, Open Graph, sitemap, RSS, homepage promotion and guide/archive cards.
+- No claim that trailer frames are from the playable prologue or that creator thumbnails are original Leonida Ledger screenshots.
