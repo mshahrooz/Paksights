@@ -64,3 +64,10 @@ Use GitHub Issues for corrections and repository management; do not post private
 - Three independently verified creator YouTube video IDs: `Zh6VrJuW_i8` (standalone Prologue by GTA Series Videos), `vfJ3BBxrvCQ` (Kephket first hour), `YDNs_sPEcJc` (MKIceAndFire gameplay Part 1). Click-to-load privacy-conscious YouTube embeds with direct links and optional timestamp anchors.
 - New gallery filter/lightbox and full responsive Prologue CSS/JS, VideoObject, BreadcrumbList, BlogPosting and FAQ JSON-LD, Open Graph, sitemap, RSS, homepage promotion and guide/archive cards.
 - No claim that trailer frames are from the playable prologue or that creator thumbnails are original Leonida Ledger screenshots.
+
+## GTA VI-labeled deep-sea fishing gallery — Nov 21, 2026
+- `/articles/gta6-deep-sea-fishing-100-screenshots.html`: 100 distinct 1600×900 sharpened/upscaled WebP frames from the user-supplied 720p fishing gameplay recording. Captured at 5-second steps 03:30–11:45, with 100 time-specific captions.
+- The underlying 17m19s full video is reduced from about 173 MiB to 17 MiB (640×360 H.264/AAC) for mobile playback.
+- 30 binary segments live in `assets/gta6-deep-sea-fishing/_video-parts/`. GitHub Pages Actions concatenates them in sorted order to form `assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4` for visitors. Segment bytes are each 600000 except the final segment; expected complete MP4 size is 17794634 bytes. The deployment removes the unused segments from the published artifact to save bandwidth.
+- This is an independent fishing outing in the supplied video, **not** proof of Rockstar's scripted opening Gone Fishing mission. Site copy does not identify it as that mission.
+- Images are upscaled with Lanczos and lightly sharpened from the original 1280×720 source, not fabricated native 1600×900 captures.

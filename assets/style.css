@@ -110,3 +110,14 @@
 
 
 .p1-home-promo{margin-top:34px;background:#d8e8cb;display:grid;grid-template-columns:1fr 1fr;min-height:330px;border:1px solid #a5bca0}.p1-home-photo{position:relative;overflow:hidden}.p1-home-photo>img{width:100%;height:100%;min-height:330px;object-fit:cover}.p1-home-photo>span{position:absolute;bottom:12px;left:13px;font-size:9px;font-weight:900;background:#1d2c21c9;color:#fff;padding:8px}.p1-home-desc{padding:33px clamp(25px,4vw,55px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.p1-home-desc>span{font-size:10px;font-weight:900;letter-spacing:.12em}.p1-home-desc h2{font:900 clamp(50px,5.4vw,75px)/.9 var(--display);margin:19px 0}.p1-home-desc h2 em{font-style:normal;color:#718f30}.p1-home-desc p{font-size:14px;max-width:410px;line-height:1.7}.p1-home-desc a{margin-top:8px}@media(max-width:700px){.p1-home-promo{grid-template-columns:1fr}.p1-home-photo>img{min-height:220px;max-height:250px}.p1-home-desc{padding:26px}}
+
+/* User-supplied actual fishing footage: 100-image gallery promotion */
+.fishing-promo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#dceccf;border:1px solid #adc2a2;margin-top:36px;margin-bottom:30px;overflow:hidden}
+.fishing-promo-image{display:block;min-height:330px;overflow:hidden}
+.fishing-promo-image img{display:block;width:100%;height:100%;object-fit:cover;min-height:330px}
+.fishing-promo-content{padding:32px clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.fishing-promo-content>span{font-size:10px;letter-spacing:.12em;font-weight:900}
+.fishing-promo-content h2{font:900 clamp(52px,5.5vw,83px)/.86 var(--display);text-transform:uppercase;margin:21px 0 14px}
+.fishing-promo-content h2 em{font-style:normal;color:#638b2e}
+.fishing-promo-content p{font-size:14px;line-height:1.8;max-width:420px;margin:0 0 24px;color:#415343}
+@media(max-width:710px){.fishing-promo{grid-template-columns:1fr}.fishing-promo-image{min-height:180px;max-height:270px}.fishing-promo-image img{min-height:190px;max-height:270px}.fishing-promo-content{padding:25px}.fishing-promo-content h2{font-size:65px}}

@@ -26,6 +26,10 @@ jobs:
           node --check assets/prologue.js
           test -s articles/gta-6-prologue-mission-1-walkthrough.html
           test -s articles/gta-vi-all-missions.html
+          test -s articles/gta6-deep-sea-fishing-100-screenshots.html
+          test -s assets/gta6-deep-sea-fishing/images/frame-001.webp
+          test -s assets/gta6-deep-sea-fishing/images/frame-100.webp
+          test -s assets/gta6-deep-sea-fishing/_video-parts/part-030.bin
           test -s tools/index.html
           test -s tools/leonida-map.html
           test -s tools/safe-codes.html
@@ -37,6 +41,10 @@ jobs:
         run: |
           mkdir public
           cp -R assets articles news guides world features tools public/
+          # Reassemble the compressed 17 MB user-provided fishing video from Git blobs.
+          cat public/assets/gta6-deep-sea-fishing/_video-parts/part-*.bin > public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4
+          test "$(stat -c%s public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4)" -eq 17794634
+          rm -rf public/assets/gta6-deep-sea-fishing/_video-parts
           cp *.html *.xml *.txt CNAME .nojekyll public/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
