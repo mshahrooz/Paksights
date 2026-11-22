@@ -1,42 +1,6 @@
 (()=>{
 'use strict';
-const API='https://paksights-gta-portrait-api.vercel.app/api/generate';
-const statusElement=document.getElementById('portrait-service-status');
-let serviceConfigured=null;
-async function checkServiceStatus(){
-  if(!statusElement)return;
-  statusElement.textContent='Checking AI service availability…';
-  try{
-    const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(),7000);
-    let response;
-    try{response=await fetch('https://paksights-gta-portrait-api.vercel.app/api/health',{cache:'no-store',signal:controller.signal});}
-    finally{clearTimeout(timer);}
-    if(!response.ok)throw new Error('Health check failed');
-    const info=await response.json();
-    serviceConfigured=info.generationAvailable === true ? true : info.generationAvailable === false ? false : (info.configured ? null : false);
-    const gen=document.getElementById('portrait-generate');
-    if (serviceConfigured === true) {
-      statusElement.textContent='AI generation is currently available. Each request uses third-party image processing.';
-      statusElement.className='portrait-service-status portrait-service-ready';
-      if (gen) gen.disabled=false;
-    } else if (serviceConfigured === false) {
-      statusElement.textContent=info.configured
-        ? 'Image generation is temporarily unavailable until AI Gateway credits are enabled. You can still copy your personalized prompt and use it in ChatGPT or Gemini.'
-        : 'Image generation setup is incomplete. You can still customize and copy your prompt below.';
-      statusElement.className='portrait-service-status portrait-service-paused';
-      if (gen) {gen.disabled=true;gen.setAttribute('aria-disabled','true');}
-    } else {
-      statusElement.textContent='The AI service is connected but credit availability could not be verified. You may try generating an image, or use prompt export instead.';
-      statusElement.className='portrait-service-status portrait-service-unknown';
-      if (gen) gen.disabled=false;
-    }
-  }catch(e){
-    serviceConfigured=null;
-    statusElement.textContent='Service availability cannot be checked right now; the generation option may be limited. The prompt-copy alternative is always available.';
-    statusElement.className='portrait-service-status portrait-service-unknown';
-  }
-}
+const serviceConfigured=true; // Fully local, no paid API or credentials.
 const fileInput=document.getElementById('portrait-file');
 if(!fileInput)return;
 const upload=document.getElementById('portrait-upload');
@@ -54,7 +18,7 @@ const copy=document.getElementById('portrait-copy-prompt');
 const promptBox=document.getElementById('portrait-prompt-box');
 const notes=document.getElementById('portrait-notes');
 const frame=()=>document.querySelector('input[name="portrait-frame"]:checked')?.value||'portrait';
-checkServiceStatus();
+document.getElementById('portrait-service-status').textContent='100% FREE · AI runs in your browser · No payments, API keys, photo uploads or per-image charges. First model load needs internet.';
 const styleLabels={
  'sunset-poster':'Warm sunset key art with palm trees and a coastal city skyline',
  'neon-nights':'Neon night street with pink-blue lights and wet reflections',
@@ -100,25 +64,166 @@ copy.addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText(value);copy.textContent='Prompt copied ✓';setTimeout(()=>copy.textContent='Copy my AI prompt',2000)}
  catch(e){copy.textContent='Select and copy the prompt below';}
 });
+
+/* Free browser portrait renderer: Magenta neural art + MediaPipe segmentation.
+   Neither a user photo nor the result leaves this browser. */
+const ART={
+ 'sunset-poster':{src:'/assets/original-gta6-fanart/hero-outlaws.webp',title:'SUNSET CITY',sub:'COASTAL NIGHTS · ORIGINAL FAN ART',accent:'#ffacc1',power:.66},
+ 'neon-nights':{src:'/assets/original-gta6-fanart/vice-city-skyline.webp',title:'NEON AFTER DARK',sub:'ELECTRIC CITY · ORIGINAL FAN ART',accent:'#83e7f4',power:.76},
+ 'beach-days':{src:'/assets/original-gta6-fanart/leonida-coast.webp',title:'COASTAL DREAM',sub:'TROPICAL LIGHT · ORIGINAL FAN ART',accent:'#ffe3aa',power:.58},
+ 'street-racer':{src:'/assets/original-gta6-fanart/neon-chase.webp',title:'STREET LEGEND',sub:'MIDNIGHT RUN · ORIGINAL FAN ART',accent:'#ff94bb',power:.78},
+ 'coastal-keys':{src:'/assets/original-gta6-fanart/leonida-coast.webp',title:'BLUE HORIZON',sub:'WILD COAST · ORIGINAL FAN ART',accent:'#9ef8e0',power:.60},
+ 'wanted-noir':{src:'/assets/original-gta6-fanart/port-night.webp',title:'AFTER DARK',sub:'CRIME NOIR · ORIGINAL FAN ART',accent:'#f6ae8a',power:.77}
+};
+const SIZES={portrait:[900,1125],story:[810,1440],square:[1080,1080],landscape:[1440,810]};
+let neuralModelPromise=null,segmenterPromise=null,lastObjectURL=null;
+const canvas=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c};
+const image=(src)=>new Promise((resolve,reject)=>{
+ const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(new Error('Illustration resources could not load.'));i.src=src;
+});
+function cover(ctx,i,w,h){const iw=i.naturalWidth||i.width,ih=i.naturalHeight||i.height;const s=Math.max(w/iw,h/ih),dw=iw*s,dh=ih*s;ctx.drawImage(i,(w-dw)/2,(h-dh)/2,dw,dh);}
+function getMagenta(){
+ if(neuralModelPromise)return neuralModelPromise;
+ neuralModelPromise=(async()=>{
+  if(!window.mi?.ArbitraryStyleTransferNetwork){
+   await new Promise((ok,no)=>{
+    const s=document.createElement('script');
+    s.src='https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1';s.async=true;
+    s.onload=ok;s.onerror=()=>no(new Error('Model download blocked'));
+    document.head.appendChild(s);
+   });
+  }
+  if(!window.mi?.ArbitraryStyleTransferNetwork)throw Error('Neural model unavailable');
+  const model=new window.mi.ArbitraryStyleTransferNetwork();
+  await model.initialize();return model;
+ })().catch(e=>{neuralModelPromise=null;throw e;});
+ return neuralModelPromise;
+}
+function getSegmenter(){
+ if(segmenterPromise)return segmenterPromise;
+ segmenterPromise=(async()=>{
+  const module=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/vision_bundle.mjs');
+  const files=await module.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/wasm');
+  return module.ImageSegmenter.createFromOptions(files,{
+   baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_segmenter/float16/latest/selfie_segmenter.tflite',delegate:'CPU'},
+   runningMode:'IMAGE',outputCategoryMask:false,outputConfidenceMasks:true
+  });
+ })().catch(e=>{segmenterPromise=null;throw e;});
+ return segmenterPromise;
+}
+function fallbackIllustrate(source){
+ const c=canvas(source.width,source.height),g=c.getContext('2d');
+ g.filter='contrast(1.25) saturate(1.48)';g.drawImage(source,0,0);g.filter='none';
+ const im=g.getImageData(0,0,c.width,c.height);
+ for(let k=0;k<im.data.length;k+=4){for(let z=0;z<3;z++){im.data[k+z]=Math.min(255,Math.round(im.data[k+z]/23)*23);}}
+ g.putImageData(im,0,0);return c;
+}
+async function stylePhoto(source,styleRef,power){
+ const model=await getMagenta();
+ const style=canvas(300,300);cover(style.getContext('2d'),styleRef,300,300);
+ const out=await model.stylize(source,style,power);
+ if(!out||!out.width||!out.height)throw Error('AI did not output an image.');
+ const c=canvas(out.width,out.height);c.getContext('2d').putImageData(out,0,0);return c;
+}
+async function maskedPerson(source){
+ const engine=await getSegmenter();let found=null;
+ const cb=(r)=>{
+   const m=r?.confidenceMasks?.[1]||r?.confidenceMasks?.[0];
+   if(m)found={mask:new Float32Array(m.getAsFloat32Array()),width:m.width,height:m.height};
+ };
+ const ret=engine.segment(source,cb);if(!found&&ret)cb(ret);
+ if(!found)throw Error('Person separation unavailable.');
+ const g=canvas(found.width,found.height),ctx=g.getContext('2d'),im=ctx.createImageData(g.width,g.height);
+ let minX=g.width,minY=g.height,maxX=0,maxY=0,count=0;
+ for(let i=0;i<found.mask.length;i++){
+   const confidence=Math.max(0,Math.min(1,(found.mask[i]-.20)/.66));
+   const a=Math.round(255*confidence*confidence*(3-2*confidence));
+   const idx=i*4;im.data[idx]=255;im.data[idx+1]=255;im.data[idx+2]=255;im.data[idx+3]=a;
+   if(confidence>.42){
+    const x=i%g.width,y=(i/g.width)|0;
+    minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);count++;
+   }
+ }
+ if(count<g.width*g.height*.024)return null;
+ ctx.putImageData(im,0,0);
+ return {mask:g,bounds:{x:minX,y:minY,w:maxX-minX+1,h:maxY-minY+1}};
+}
+function compose(background,source,stylized,segmented,ref,size,usedNeural){
+ const [W,H]=SIZES[size]||SIZES.portrait,out=canvas(W,H),g=out.getContext('2d');
+ g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';
+ cover(g,background,W,H);
+ const dim=g.createLinearGradient(0,0,0,H);
+ dim.addColorStop(0,'rgba(12,18,36,.37)');dim.addColorStop(.52,'rgba(7,12,27,.05)');dim.addColorStop(1,'rgba(8,13,29,.68)');
+ g.fillStyle=dim;g.fillRect(0,0,W,H);
+ const mix=canvas(source.width,source.height),mx=mix.getContext('2d');
+ mx.drawImage(stylized,0,0,mix.width,mix.height);
+ mx.globalAlpha=.17;mx.drawImage(source,0,0);mx.globalAlpha=1;
+ if(segmented?.mask){
+  const cut=canvas(mix.width,mix.height),cx=cut.getContext('2d');
+  cx.drawImage(mix,0,0);cx.globalCompositeOperation='destination-in';cx.filter='blur(1px)';
+  cx.drawImage(segmented.mask,0,0,mix.width,mix.height);cx.filter='none';cx.globalCompositeOperation='source-over';
+  const b=segmented.bounds,scaleX=mix.width/segmented.mask.width,scaleY=mix.height/segmented.mask.height;
+  const px=mix.width*.045,py=mix.height*.03;
+  const sx=Math.max(0,b.x*scaleX-px),sy=Math.max(0,b.y*scaleY-py);
+  const sw=Math.min(mix.width-sx,b.w*scaleX+px*2),sh=Math.min(mix.height-sy,b.h*scaleY+py*2);
+  const zoom=Math.min(W*.90/sw,H*.84/sh,2.8);
+  const dw=sw*zoom,dh=sh*zoom;
+  g.save();g.shadowColor='rgba(9,14,26,.6)';g.shadowBlur=W*.035;g.shadowOffsetY=10;
+  g.drawImage(cut,sx,sy,sw,sh,(W-dw)/2,H-dh+H*.04,dw,dh);g.restore();
+ }else{
+  const scale=Math.min(W*.79/mix.width,H*.72/mix.height);
+  const dw=mix.width*scale,dh=mix.height*scale;
+  const x=(W-dw)/2,y=(H-dh)/2;
+  g.fillStyle='#0e142eaa';g.fillRect(x-9,y-9,dw+18,dh+18);
+  g.drawImage(mix,x,y,dw,dh);
+  g.strokeStyle=ref.accent;g.lineWidth=Math.max(3,W*.004);g.strokeRect(x-9,y-9,dw+18,dh+18);
+ }
+ const m=W*.055;
+ g.textAlign='left';g.textBaseline='alphabetic';g.shadowColor='rgba(0,0,0,.65)';g.shadowBlur=10;
+ g.font='900 '+Math.round(W*.027)+'px Arial,sans-serif';g.fillStyle='#fff';
+ g.fillText('PAKSIGHTS  /  CHARACTER STUDIO',m,m*1.24);
+ g.shadowBlur=0;g.fillStyle=ref.accent;g.fillRect(m,m*1.42,W*.13,Math.max(4,W*.005));
+ g.font='900 '+Math.round(W*.088)+'px Impact,Arial Black,sans-serif';
+ if(g.measureText(ref.title).width>W-m*2)g.font='900 '+Math.round(W*.066)+'px Impact,Arial Black,sans-serif';
+ g.fillStyle='#fff';g.shadowBlur=12;g.fillText(ref.title,m,H-m*1.75);g.shadowBlur=0;
+ g.font='800 '+Math.round(W*.017)+'px Arial,sans-serif';g.fillStyle=ref.accent;g.fillText(ref.sub,m,H-m);
+ g.textAlign='right';g.font='700 '+Math.max(11,Math.round(W*.012))+'px Arial,sans-serif';
+ g.fillStyle='#f1f4f8';g.fillText('AI-ASSISTED FAN ART · NOT GAMEPLAY',W-m,H-m*.52);
+ return out;
+}
 generate.addEventListener('click',async()=>{
  if(requestActive)return;
- if(serviceConfigured===false)return error('AI generation needs activation. Use Copy My AI Prompt to generate in ChatGPT or Gemini.');
- if(!photoData)return error('Upload your photograph first.');
- if(!consent.checked)return error('Please confirm that you own this photo or have the person’s permission.');
- requestActive=true;generate.disabled=true;message.hidden=true;progress.setAttribute('aria-hidden','false');progress.querySelector('span:last-child').textContent='Creating your portrait with AI…';
- resultPanel.hidden=true;resultTools.hidden=true;previewPanel.hidden=false;
- const controller=new AbortController();
- const timer=setTimeout(()=>controller.abort(),75000);
+ message.hidden=true;
+ if(!photoData)return error('Please upload your photograph first.');
+ if(!consent.checked)return error('Confirm that this photograph is yours or that you have permission.');
+ requestActive=true;generate.disabled=true;resultPanel.hidden=true;resultTools.hidden=true;previewPanel.hidden=false;
+ const progressText=t=>{progress.setAttribute('aria-hidden','false');progress.querySelector('span:last-child').textContent=t;};
  try{
-  const response=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({photo:photoData,consent:true,style:selected,frame:frame(),notes:notes.value.trim().slice(0,180)}),signal:controller.signal,cache:'no-store',mode:'cors'});
-  const data=await response.json();
-  if(!response.ok||!data.image||!data.image.startsWith('data:image/'))throw new Error(data.error||'The service did not return an image.');
-  resultImg.src=data.image;
-  download.href=data.image;
-  download.download='paksights-original-gta-inspired-portrait.'+(data.image.startsWith('data:image/jpeg')?'jpg':'png');
+  const ref=ART[selected];progressText('Loading free AI models on your device…');
+  const [src,bg]=await Promise.all([image(photoData),image(ref.src)]);
+  const ratio=Math.min(1,520/Math.max(src.naturalWidth,src.naturalHeight));
+  const photo=canvas(Math.max(1,Math.round(src.naturalWidth*ratio)),Math.max(1,Math.round(src.naturalHeight*ratio)));
+  photo.getContext('2d').drawImage(src,0,0,photo.width,photo.height);
+  const outcomes=await Promise.allSettled([stylePhoto(photo,bg,ref.power),maskedPerson(photo)]);
+  const aiWorked=outcomes[0].status==='fulfilled';
+  const painted=aiWorked?outcomes[0].value:fallbackIllustrate(photo);
+  const segmentation=outcomes[1].status==='fulfilled'?outcomes[1].value:null;
+  progressText('Creating your original illustrated character poster…');
+  const result=compose(bg,photo,painted,segmentation,ref,frame(),aiWorked);
+  const blob=await new Promise((ok,no)=>result.toBlob(b=>b?ok(b):no(Error('Could not export the picture.')),'image/png'));
+  if(lastObjectURL)URL.revokeObjectURL(lastObjectURL);
+  lastObjectURL=URL.createObjectURL(blob);
+  resultImg.src=lastObjectURL;download.href=lastObjectURL;download.download='paksights-'+selected+'-free.png';
+  resultPanel.querySelector('span').textContent=aiWorked
+     ?'ON-DEVICE NEURAL ART · ORIGINAL FAN CREATION · NOT GAMEPLAY'
+     :'BASIC ILLUSTRATION FALLBACK · NEURAL MODEL UNAVAILABLE · NOT GAMEPLAY';
   previewPanel.hidden=true;resultPanel.hidden=false;resultTools.hidden=false;
-  resultPanel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
- }catch(e){error(e.name==='AbortError'?'The image service timed out. Please try again.':e.message||'Could not generate. Use the prompt option below.');}
- finally{clearTimeout(timer);requestActive=false;generate.disabled=serviceConfigured===false;progress.setAttribute('aria-hidden','true');}
+  document.getElementById('portrait-service-status').textContent=aiWorked
+   ?'Your artwork was created locally using neural style transfer. No photo was uploaded.'
+   :'Your free poster is ready. The AI model was unavailable, so a basic graphic effect was used.';
+  resultPanel.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }catch(e){error(e?.message||'Unable to finish this illustration. Try another photo.');}
+ finally{requestActive=false;generate.disabled=false;progress.setAttribute('aria-hidden','true');}
 });
+window.addEventListener('pagehide',()=>{if(lastObjectURL)URL.revokeObjectURL(lastObjectURL)},{once:true});
 })();

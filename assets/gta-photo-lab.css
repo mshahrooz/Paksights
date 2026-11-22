@@ -86,3 +86,9 @@
 .portrait-service-status{font-size:12px;line-height:1.65;margin:11px 0 0;color:#4c6075;padding:10px 12px;border-radius:7px;background:#f1f5fa;border:1px solid #e0e6ed}
 .portrait-service-status.portrait-service-ready{background:#f0f8f3;border-color:#c4ddcb;color:#24593a}
 .portrait-service-status.portrait-service-paused{background:#fff8ed;border-color:#ecd7af;color:#735224}
+
+/* Zero-cost browser generation UI */
+.portrait-service-status,.portrait-service-status.portrait-service-ready{background:#f1f6fc;border-color:#c9dced;color:#244465}
+.portrait-generate{background:#1b3351}
+.portrait-generate:focus-visible{outline:3px solid #4288c6;outline-offset:2px}
+.portrait-hero-tags span:last-child{background:#ffffff18;border-color:#ffffff95}
