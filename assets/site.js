@@ -70,6 +70,8 @@ const THEMES={
 };
 const raw=decodeURI(location.pathname).replace(/^\/+/,'');
 const path=raw===''?'index.html':(raw.endsWith('/')?raw+'index.html':raw);
+// This one editorial report uses its own original AI-generated illustrations.
+if(path==='articles/gta-6-news-today-november-22-2026.html')return;
 const images=THEMES[path]||['city','keys','citynight','together'];
 const makeSrc=(key,width)=>ROOT+ASSETS[key][0]+'?akim=1&imwidth='+width;
 const makeImg=(key,critical=false)=>{if(!ASSETS[key])key='city';const img=document.createElement('img');img.src=makeSrc(key,critical?1920:1200);img.srcset=[640,960,1200,1920].map(n=>makeSrc(key,n)+' '+n+'w').join(', ');img.sizes=critical?'100vw':'(max-width:700px) 100vw, 720px';img.alt=ASSETS[key][1];img.width=1600;img.height=900;img.loading=critical?'eager':'lazy';img.decoding='async';if(critical)img.setAttribute('fetchpriority','high');img.addEventListener('error',()=>{if(img.dataset.fallback)return;img.dataset.fallback='1';img.removeAttribute('srcset');img.removeAttribute('sizes');img.src='/assets/visual-fallback.svg'});return img};
