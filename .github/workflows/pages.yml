@@ -7,6 +7,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: read
 concurrency:
   group: github-pages
   cancel-in-progress: false
@@ -66,5 +67,22 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
+      - name: Wait for Pages artifact visibility
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # The Pages API can lag behind successful artifact uploads.
+          # Wait until this exact workflow run exposes exactly one github-pages artifact.
+          count=0
+          for attempt in $(seq 1 15); do
+            count=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' || echo 0)
+            echo "Pages artifact visibility attempt ${attempt}: ${count}"
+            if [ "${count}" = "1" ]; then
+              sleep 5
+              break
+            fi
+            sleep 5
+          done
+          test "${count}" = "1"
       - id: deployment
         uses: actions/deploy-pages@v4
