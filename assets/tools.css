@@ -33,3 +33,6 @@
 .pt-tile h2{font-size:clamp(38px,10vw,58px)}
 .pt-lead h2,.pt-heading h2,.pt-map-side h2,.pt-add-mission h2,.pt-article h2{font-size:clamp(35px,10vw,53px)}
 }
+
+/* Keep map artwork on a dark canvas so its light SVG features remain legible. */
+.pt-map-art{background:#103339}
