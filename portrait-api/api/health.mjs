@@ -1,4 +1,10 @@
 export default function handler(req,res) {
+  const origin=req.headers.origin;
+  const allowed=new Set(['https://paksights.com','https://www.paksights.com','https://mshahrooz.github.io']);
+  if(origin && allowed.has(origin)){
+    res.setHeader('Access-Control-Allow-Origin',origin);
+    res.setHeader('Vary','Origin');
+  }
   res.setHeader('Cache-Control','no-store');
   res.status(200).json({
     ok:true, service:'PakSights original character portrait API',

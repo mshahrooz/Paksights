@@ -14,7 +14,7 @@
 <div class="portrait-field"><span class="portrait-field-label">PICK AN IMAGE FORMAT</span><div class="portrait-framing"><label><input type="radio" name="portrait-frame" value="portrait" checked> 4:5 Poster</label><label><input type="radio" name="portrait-frame" value="story"> 9:16 Story</label><label><input type="radio" name="portrait-frame" value="square"> 1:1 Profile</label><label><input type="radio" name="portrait-frame" value="landscape"> 16:9 Wide</label></div></div>
 <div class="portrait-field"><label class="portrait-field-label" for="portrait-notes">EXTRA DETAILS (OPTIONAL)</label><textarea id="portrait-notes" class="portrait-prompt-notes" maxlength="180" placeholder="Example: keep my glasses; black jacket; purple sports car in the background."></textarea></div>
 <label class="portrait-consent"><input type="checkbox" id="portrait-consent"/><span>I own this photograph or have permission from the person pictured. I understand it will be sent to an AI image provider solely to create my requested artwork.</span></label>
-<button type="button" id="portrait-generate" class="portrait-generate">✦ GENERATE MY AI CHARACTER</button>
+<button type="button" id="portrait-generate" class="portrait-generate">✦ GENERATE MY AI CHARACTER</button><p id="portrait-service-status" class="portrait-service-status" role="status" aria-live="polite">Checking AI service availability…</p>
 <div class="portrait-progress" id="portrait-progress" aria-hidden="true" role="status" aria-live="polite"><span class="portrait-spinner" aria-hidden="true"></span><span>Creating your portrait…</span></div>
 <div class="portrait-error" id="portrait-error" role="alert" hidden></div>
 </div></section>
