@@ -95,3 +95,92 @@ document.querySelectorAll('[data-region].pt-card').forEach(card=>{if(card.queryS
 document.querySelectorAll('.pt-safe.pt-card').forEach(card=>{if(card.querySelector('.gta-card-photo'))return;const query=card.dataset.search||'';const key=query.includes('Port Gellhorn')?'portnight':query.includes('Keys')?'keys':'citystreets';const image=makeImg(key);image.classList.add('gta-card-photo');const head=card.querySelector('.pt-card-top');if(head)head.insertAdjacentElement('afterend',image)});
 /* Maintain the original video and card imagery; update only first-party image semantics. */
 })();
+
+/* GTA VI fan counter: transparent illustrative model, not a live API feed.
+   Source anchors (Nov 19 2026): Take-Two retail sales $3.79B and
+   Sensor Tower estimated ~24.6M digital copies sold.
+   Post-launch rate: explicitly hypothetical 150k digital copies/day x $96.
+   This is NOT a count of completed downloads, publisher net receipts or profit. */
+(() => {
+  'use strict';
+  const ID = 'gta-vi-sales-counter';
+  if (!document.body || document.getElementById(ID)) return;
+  const BASE_UTC = Date.UTC(2026, 10, 19, 23, 59, 59);
+  const BASE_DIGITAL_COPIES = 24600000;
+  const BASE_RETAIL_USD = 3790000000;
+  const MODEL_COPIES_PER_DAY = 150000; // Illustrative, not measured.
+  const MODEL_PRICE_USD = 96; // Rounded from Sensor Tower's $2.36B / 24.6M estimate.
+  const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  const root = document.createElement('aside');
+  root.id = ID;
+  root.className = 'gc-widget';
+  root.setAttribute('aria-label', 'GTA VI illustrative downloads and sales tracker');
+  root.innerHTML = [
+    '<div class="gc-panel">',
+      '<div class="gc-top">',
+        '<div class="gc-mark" aria-hidden="true"><span>VI</span><i>✦</i></div>',
+        '<div class="gc-heading"><strong>GTA VI <em>SALES PULSE</em></strong>',
+          '<small><span class="gc-pulse" aria-hidden="true"></span> LIVE-ANIMATED FAN ESTIMATE</small>',
+        '</div>',
+        '<button class="gc-close" type="button" aria-label="Minimize GTA VI counter" title="Minimize counter">×</button>',
+      '</div>',
+      '<div class="gc-metrics">',
+        '<div class="gc-metric">',
+          '<span>EST. DIGITAL COPIES <span class="gc-star">*</span></span>',
+          '<strong class="gc-dl" aria-label="Modeled digital copies sold">24,600,000</strong>',
+          '<small>Download-sales proxy, not verified installs</small>',
+        '</div>',
+        '<div class="gc-metric">',
+          '<span>PROJECTED GROSS SALES <span class="gc-star">*</span></span>',
+          '<strong class="gc-rev" aria-label="Projected gross retail revenue">$3,790,000,000</strong>',
+          '<small>Retail value in USD · not profit</small>',
+        '</div>',
+      '</div>',
+      '<div class="gc-bottom">',
+        '<span>Illustrative model · not Rockstar live data</span>',
+        '<button type="button" class="gc-method-toggle" aria-expanded="false" aria-controls="gc-method">How calculated <span aria-hidden="true">⌄</span></button>',
+      '</div>',
+      '<div id="gc-method" class="gc-method" hidden>',
+        '<p><b>Reference points (Nov 19, 2026):</b> Take-Two reported $3.79 billion in estimated day-one <em>retail sales</em>. Sensor Tower separately estimated about 24.6 million <em>digital copies sold</em> (including preorders), not confirmed file downloads.</p>',
+        '<p><b>Animation method:</b> adds an <em>assumed</em> 150,000 digital purchases per day after Nov 19 and $96 gross retail value per additional copy. These are illustrative assumptions, not an observed sales rate. The model continues with time and may diverge from reality. It is not an official revenue, profit, download or player count.</p>',
+        '<p><a href="https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records" target="_blank" rel="noopener noreferrer">Take-Two sales statement ↗</a><a href="https://apnews.com/article/15c69f76548ab5659bc3fe44a69756d8" target="_blank" rel="noopener noreferrer">AP / Sensor Tower estimate ↗</a></p>',
+        '<p class="gc-stamp">Model established Nov 22, 2026 · Leonida Ledger, independent fan publication.</p>',
+      '</div>',
+    '</div>',
+    '<button class="gc-minimized" type="button" aria-label="Show GTA VI sales counter" hidden><span class="gc-pulse" aria-hidden="true"></span> GTA VI <b>SALES PULSE</b> <span aria-hidden="true">↗</span></button>'
+  ].join('');
+  document.body.appendChild(root);
+  const panel = root.querySelector('.gc-panel');
+  const minimized = root.querySelector('.gc-minimized');
+  const minimizeButton = root.querySelector('.gc-close');
+  const toggleButton = root.querySelector('.gc-method-toggle');
+  const details = root.querySelector('.gc-method');
+  const digitalEl = root.querySelector('.gc-dl');
+  const grossEl = root.querySelector('.gc-rev');
+  const STATE_KEY = 'leonida-sales-counter-minimized-v1';
+  function setMinimized(yes) {
+    panel.hidden = yes;
+    minimized.hidden = !yes;
+    try { localStorage.setItem(STATE_KEY, yes ? '1' : '0'); } catch (_) {}
+  }
+  minimizeButton.addEventListener('click', () => setMinimized(true));
+  minimized.addEventListener('click', () => setMinimized(false));
+  toggleButton.addEventListener('click', () => {
+    const showing = details.hidden;
+    details.hidden = !showing;
+    toggleButton.setAttribute('aria-expanded', String(showing));
+  });
+  try { if (localStorage.getItem(STATE_KEY) === '1') setMinimized(true); } catch (_) {}
+  function render() {
+    if (panel.hidden || document.hidden) return;
+    const daysSince = Math.max(0, (Date.now() - BASE_UTC) / 86400000);
+    const modeledDigital = Math.floor(BASE_DIGITAL_COPIES + daysSince * MODEL_COPIES_PER_DAY);
+    const modeledRetail = Math.floor(BASE_RETAIL_USD + (modeledDigital - BASE_DIGITAL_COPIES) * MODEL_PRICE_USD);
+    digitalEl.textContent = formatter.format(modeledDigital);
+    grossEl.textContent = '$' + formatter.format(modeledRetail);
+  }
+  render();
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setInterval(render, reduced ? 15000 : 750);
+  document.addEventListener('visibilitychange', render, { passive: true });
+})();

@@ -121,3 +121,45 @@
 .fishing-promo-content h2 em{font-style:normal;color:#638b2e}
 .fishing-promo-content p{font-size:14px;line-height:1.8;max-width:420px;margin:0 0 24px;color:#415343}
 @media(max-width:710px){.fishing-promo{grid-template-columns:1fr}.fishing-promo-image{min-height:180px;max-height:270px}.fishing-promo-image img{min-height:190px;max-height:270px}.fishing-promo-content{padding:25px}.fishing-promo-content h2{font-size:65px}}
+
+/* GTA VI continuously animated but explicitly illustrative sales tracker */
+.gc-widget{position:fixed;right:20px;bottom:calc(19px + env(safe-area-inset-bottom,0px));z-index:88;width:min(465px,calc(100vw - 36px));font-family:var(--body,"DM Sans",Arial,sans-serif);color:#f5f7ed;isolation:isolate}
+.gc-widget *{box-sizing:border-box}
+.gc-widget [hidden]{display:none!important}
+.gc-panel{overflow:hidden;border:1px solid #61755a;background:linear-gradient(120deg,#111c1d 0%,#19252a 54%,#27202e 100%);box-shadow:0 18px 45px #05131075,0 4px 10px #0004;border-radius:15px;position:relative}
+.gc-panel:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c7f45a 0%,#6be3c6 50%,#ee7e9c 100%);pointer-events:none}
+.gc-top{padding:13px 15px 8px;display:flex;gap:10px;align-items:center}
+.gc-mark{width:39px;height:39px;display:grid;place-items:center;background:#c7f45a;color:#11211d;border-radius:9px;flex:0 0 39px;position:relative;transform:skew(-5deg)}
+.gc-mark span{font:900 24px/.9 "Barlow Condensed",Impact,sans-serif}
+.gc-mark i{position:absolute;right:3px;bottom:1px;font:900 9px Arial}
+.gc-heading{flex:1;min-width:0}
+.gc-heading strong{font:900 20px/.95 "Barlow Condensed",Impact,sans-serif;letter-spacing:.035em;display:block}
+.gc-heading strong em{color:#cef76d;font-style:normal}
+.gc-heading small{display:flex;align-items:center;gap:7px;color:#b5c7bd;font-size:9px;letter-spacing:.075em;font-weight:800;margin-top:7px}
+.gc-pulse{height:7px;width:7px;background:#c7f45a;border-radius:50%;display:inline-block;flex:none;box-shadow:0 0 0 3px #c7f45a22;animation:gc-pulse 1.8s infinite}
+@keyframes gc-pulse{0%,100%{box-shadow:0 0 0 2px #c7f45a33}50%{box-shadow:0 0 0 6px #c7f45a09}}
+.gc-close{appearance:none;width:30px;height:30px;display:grid;place-items:center;padding:0;border:1px solid #78847a77;border-radius:7px;background:#ffffff09;color:#dce4d8;font-size:20px;line-height:1;flex:none}
+.gc-close:hover,.gc-close:focus-visible{background:#ffffff22}
+.gc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:4px 12px 11px}
+.gc-metric{background:#e6eee90c;border:1px solid #d7ffd025;border-radius:9px;min-width:0;padding:12px 10px 11px}
+.gc-metric>span{font-size:9px;font-weight:800;letter-spacing:.065em;white-space:nowrap;color:#b7c7bb;display:block}
+.gc-star{color:#d0fa74}
+.gc-metric strong{display:block;white-space:nowrap;letter-spacing:-.025em;font:900 clamp(21px,2.1vw,27px)/1.18 "Barlow Condensed",Impact,sans-serif;font-variant-numeric:tabular-nums;color:#f3f9ed;margin:6px 0 5px}
+.gc-metric:nth-child(2) strong{color:#d6fb8e}
+.gc-metric small{display:block;font-size:9px;line-height:1.4;color:#b0c0b6}
+.gc-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 13px 10px;border-top:1px solid #ffffff1a}
+.gc-bottom>span{color:#c2c9c2;font-size:9px;font-weight:700;line-height:1.45}
+.gc-method-toggle{background:transparent;border:0;padding:5px 2px;color:#d7f69b;font-size:10px;text-decoration:underline;text-underline-offset:3px;white-space:nowrap;font-weight:800}
+.gc-method-toggle[aria-expanded="true"] span{display:inline-block;transform:rotate(180deg)}
+.gc-method{border-top:1px solid #ffffff22;background:#111918;padding:13px 15px 14px;max-height:min(340px,44vh);overflow-y:auto}
+.gc-method p{font:400 11px/1.65 "DM Sans",Arial,sans-serif;color:#d8ded4;margin:0 0 11px}
+.gc-method p:last-child{margin-bottom:0}
+.gc-method a{display:inline-block;color:#cef97e;text-decoration:underline;text-underline-offset:3px;font-weight:700;margin:0 13px 5px 0}
+.gc-method .gc-stamp{font-size:9px;color:#a4ada1}
+.gc-minimized{display:flex;align-items:center;justify-content:center;gap:9px;margin-left:auto;background:#192923;border:1px solid #8fad74;color:#eef6e6;box-shadow:0 6px 20px #0005;border-radius:40px;padding:11px 15px;cursor:pointer;font:800 12px "DM Sans",Arial,sans-serif;letter-spacing:.04em}
+.gc-minimized b{color:#c7f45a}
+.gc-minimized:hover,.gc-minimized:focus-visible{border-color:#ccf887;background:#23392e}
+.gc-widget button:focus-visible,.gc-widget a:focus-visible{outline:3px solid #c7f45a;outline-offset:2px}
+@media(max-width:640px){.gc-widget{right:11px;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(420px,calc(100vw - 22px))}.gc-top{padding:10px 11px 7px}.gc-mark{width:32px;height:32px;flex-basis:32px}.gc-mark span{font-size:20px}.gc-heading strong{font-size:17px}.gc-metrics{padding:3px 9px 7px;gap:6px}.gc-metric{padding:9px 8px}.gc-metric>span{font-size:8px}.gc-metric strong{font-size:clamp(18px,5.2vw,24px);letter-spacing:-.035em}.gc-metric small{font-size:8px}.gc-bottom{padding:7px 10px 8px}.gc-bottom>span{font-size:8px}.gc-method{max-height:36vh}.gc-minimized{font-size:10px}}
+@media(max-width:360px){.gc-metric strong{font-size:18px}.gc-heading small{font-size:8px}.gc-bottom>span{max-width:165px}}
+@media(prefers-reduced-motion:reduce){.gc-pulse{animation:none}}
