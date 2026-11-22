@@ -10,11 +10,6 @@ export default function handler(req,res) {
     ok:true, service:'PakSights original character portrait API',
     model:'google/gemini-3.1-flash-image',
     configured:Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN || req.headers['x-vercel-oidc-token']),
-    authSources:{
-      gatewayApiKey:Boolean(process.env.AI_GATEWAY_API_KEY),
-      runtimeOidcEnv:Boolean(process.env.VERCEL_OIDC_TOKEN),
-      runtimeOidcHeader:Boolean(req.headers['x-vercel-oidc-token'])
-    },
     disclaimer:'Independent fan portrait generator, not affiliated with Rockstar Games'
   });
 }

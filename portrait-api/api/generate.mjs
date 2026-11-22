@@ -56,7 +56,7 @@ export default async function handler(req,res) {
   if(!origin || !origins.has(origin)) return respond(res,403,{error:'Open the tool from PakSights.com.'});
   const rawlen=Number(req.headers['content-length']||0);
   if(rawlen > 3_000_000) return respond(res,413,{error:'Photo is too large. Please use a smaller photo.'});
-  const token=process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
+  const token=process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN || req.headers['x-vercel-oidc-token'];
   if(!token)return respond(res,503,{error:'AI service has not yet been enabled by the site owner. The prompt-export option is available meanwhile.'});
   if(active>=MAX_ACTIVE) return respond(res,429,{error:'The generator is busy. Please retry shortly.'});
   const body=req.body && typeof req.body==='object' ? req.body : {};
