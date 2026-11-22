@@ -163,3 +163,117 @@
 @media(max-width:640px){.gc-widget{right:11px;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(420px,calc(100vw - 22px))}.gc-top{padding:10px 11px 7px}.gc-mark{width:32px;height:32px;flex-basis:32px}.gc-mark span{font-size:20px}.gc-heading strong{font-size:17px}.gc-metrics{padding:3px 9px 7px;gap:6px}.gc-metric{padding:9px 8px}.gc-metric>span{font-size:8px}.gc-metric strong{font-size:clamp(18px,5.2vw,24px);letter-spacing:-.035em}.gc-metric small{font-size:8px}.gc-bottom{padding:7px 10px 8px}.gc-bottom>span{font-size:8px}.gc-method{max-height:36vh}.gc-minimized{font-size:10px}}
 @media(max-width:360px){.gc-metric strong{font-size:18px}.gc-heading small{font-size:8px}.gc-bottom>span{max-width:165px}}
 @media(prefers-reduced-motion:reduce){.gc-pulse{animation:none}}
+
+/* White editorial theme and readability refresh — 2026-11-22 */
+:root{--paper:#fff;--ink:#191d24;--muted:#4b5563;--line:#e0e5eb;--acid:#e7eef8;--lime:#e7eef8;--orange:#ee765c}
+html,body,.site-header,.mobile-nav,.masthead,.archive-head,.simple-hero{background:#fff;color:#191d24}
+.masthead h1 em,.section-heading h2 em,.archive-head h1 em,.newsletter h2 em{color:#225c98}
+.desktop-nav a:hover,.desktop-nav a[aria-current],.text-link:hover,.card-body h3 a:hover,.mini-story h3 a:hover{color:#225c98}
+.pill,.cat-label,.mast-index span:first-child{background:#e9eff8;color:#18334e;border-color:#d4deea}
+.archive-head{border-bottom:1px solid var(--line)}
+.archive-head .eyebrow,.section-heading .eyebrow{color:#495f75}
+.masthead p,.archive-head p,.simple-hero p,.simple-main p,.article-dek{color:#2f3a46}
+.masthead p{font-size:17px;line-height:1.8}
+.archive-head p,.simple-hero p{font-size:17px;line-height:1.8}
+.simple-main{font-size:17px;line-height:1.9}
+.simple-main p,.simple-main li{color:#293541}
+.simple-main .legal-note{background:#f7f9fc;border:1px solid #dde4eb}
+.masthead h1{font-size:clamp(76px,10vw,148px);line-height:.81}
+.archive-head h1{font-size:clamp(67px,7.6vw,114px);line-height:.87}
+.simple-hero h1{font-size:clamp(54px,7.2vw,103px)}
+.section-heading h2{font-size:clamp(38px,4.5vw,63px);line-height:1}
+.hero-feature{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-feature-copy{background:#fff;color:#191d24}
+.hero-feature-copy h2{font-size:clamp(71px,7.2vw,119px);line-height:.89}
+.hero-feature-copy h2 em{color:#225c98}
+.hero-feature-copy p{font-size:17px;line-height:1.8;color:#303d4c}
+.story-kicker,.world-banner h2 em,.kicker-light{color:#225c98}
+.story-kicker>span:not(.live-pulse){color:#657487}
+.live-pulse{background:#ec765c}
+.hero-serial{color:#647386}
+.feature-arrow{background:#1b2c40;color:#fff}
+.feature-arrow:hover{background:#225c98;color:#fff}
+.quickfacts{background:#fff}
+.fact-id,.facts-grid small{color:#526171}
+.facts-grid a:hover,.button-outline:hover,.pill:hover{background:#f4f7fb;color:#20476f}
+.card-body h3{font-size:29px;line-height:1.08}
+.lead-card h3{font-size:39px}
+.mini-story h3{font-size:clamp(22px,2.05vw,28px)}
+.card-body>p{font-size:15px;line-height:1.78;color:#344253}
+.card-meta,.card-foot,.micro-cat{color:#536476}
+.world-banner{background:#fff;color:#191d24;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.world-banner h2{font-size:clamp(65px,7.2vw,108px);line-height:.9}
+.world-banner p{font-size:17px;line-height:1.82;color:#303d4c}
+.world-banner .button-light{background:#1b2c40;color:#fff;border-color:#1b2c40}
+.world-banner .button-light:hover{background:#edf3fa;color:#1b2c40}
+.newsletter{background:#fff;border:1px solid var(--line)}
+.newsletter h2{font-size:70px;line-height:.9}
+.newsletter h2 em{color:#225c98}
+.newsletter p{font-size:17px;line-height:1.8;color:#303d4c}
+.ad-zone{background:#fafbfc;border-color:#dce3eb;color:#758394}
+.ad-zone p{color:#83909d}
+.homepage-tool,.homepage-tool:nth-child(2),.homepage-tool:nth-child(3),.homepage-tool:nth-child(4){background:#fff;border:1px solid #dce3eb}
+.homepage-tool:hover{box-shadow:0 12px 25px #112b421c}
+.homepage-promo{background:#fff;border-color:#dce3eb}
+.gta-missions-promo,.p1-home-promo,.fishing-promo{background:#fff;border:1px solid #dce3eb}
+.gta-missions-promo-copy p,.p1-home-desc p,.fishing-promo-content p{font-size:16px;line-height:1.8;color:#303d4c}
+.article-header h1{font-size:clamp(54px,6.6vw,101px);line-height:.94}
+.article-dek{font-size:19px;line-height:1.75}
+.lead-paragraph{font-size:21px;line-height:1.72;color:#202b37}
+.article-content section h2{font-size:clamp(29px,2.9vw,40px);line-height:1.12}
+.article-content section h2 span{color:#225c98}
+.article-content section p{font-size:17px;line-height:1.9;color:#25313f}
+.article-content p,.article-content li{color:#25313f}
+.article-content .trend-summary-list{font-size:16px;line-height:1.85;color:#25313f}
+.verif-note,.article-sources,.article-content .trend-note{background:#f7f9fc;border-color:#ccd9e6}
+.verif-note>span{background:#225c98}
+.verif-note p{font-size:14px!important;line-height:1.75!important;color:#364555!important}
+.article-sources>p{font-size:14px;line-height:1.75;color:#364555}
+.article-sources li{border-color:#dce4ee}
+.article-sources li>span,.article-sources h2 span{color:#225c98}
+.article-content .trend-stats{background:#e3e8ee;border-color:#e3e8ee}
+.article-content .trend-fact{color:#38495b!important;border-color:#bbcfe1}
+.article-content .trend-note p{color:#303d4c!important}
+.article-side-right .side-profile{background:#1b2c40}
+.reading-progress{background:#225c98}
+.gta-imagery-frame,.pt-card .gta-card-photo{background:#eff3f8}
+.gc-panel{background:#fff;color:#1c2c3d;border-color:#dce4ec;box-shadow:0 12px 30px #162d4328,0 3px 8px #162d430d}
+.gc-panel:before{background:linear-gradient(90deg,#225c98,#ef886c)}
+.gc-mark{background:#1b3550;color:#fff}
+.gc-heading strong{color:#1c2c3d}
+.gc-heading strong em,.gc-star,.gc-metric:nth-child(2) strong{color:#225c98}
+.gc-heading small,.gc-metric>span,.gc-metric small,.gc-bottom>span{color:#546476}
+.gc-pulse{background:#ee765c}
+.gc-close{background:#f5f7fa;color:#253449;border-color:#dce4ed}
+.gc-metric{background:#f8fafc;border-color:#e2e7ef}
+.gc-metric strong{color:#1c2c3d}
+.gc-bottom,.gc-method{border-color:#e1e6ed}
+.gc-method{background:#f8fafc}
+.gc-method p,.gc-method .gc-stamp{color:#334155}
+.gc-method-toggle,.gc-method a{color:#225c98}
+.gc-minimized{background:#fff;color:#1c2c3d;border-color:#dce4ec}
+.gc-minimized b{color:#225c98}
+.gc-minimized:hover{background:#f4f7fb}
+@media(max-width:900px){.hero-feature-copy h2{font-size:clamp(58px,7.5vw,97px)}.masthead h1{font-size:clamp(65px,11.4vw,113px)}}
+@media(max-width:640px){
+.masthead h1{font-size:clamp(61px,15vw,91px);line-height:.85}
+.masthead p{font-size:16px}
+.section-heading h2{font-size:40px}
+.archive-head h1{font-size:clamp(56px,12vw,84px)}
+.archive-head p,.simple-hero p{font-size:16px}
+.hero-feature-copy h2{font-size:clamp(63px,16.5vw,80px)}
+.hero-feature-copy p{font-size:15.5px;line-height:1.8}
+.world-banner h2{font-size:clamp(60px,13vw,76px)}
+.world-banner p,.newsletter p{font-size:16px}
+.newsletter h2{font-size:clamp(56px,12vw,66px)}
+.article-header h1{font-size:clamp(44px,10.6vw,70px);line-height:.94}
+.article-dek{font-size:17px;line-height:1.8}
+.lead-paragraph{font-size:19px}
+.article-content section h2{font-size:clamp(29px,7.6vw,37px)}
+.article-content section p{font-size:16.5px;line-height:1.9}
+.article-content .trend-summary-list{font-size:15.5px}
+.card-body h3{font-size:28px}
+.lead-card h3{font-size:34px}
+.simple-main{font-size:16.5px}
+.gta-missions-promo-copy p,.p1-home-desc p,.fishing-promo-content p{font-size:15.5px}
+}
