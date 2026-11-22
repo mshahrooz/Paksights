@@ -71,3 +71,11 @@ Use GitHub Issues for corrections and repository management; do not post private
 - 30 binary segments live in `assets/gta6-deep-sea-fishing/_video-parts/`. GitHub Pages Actions concatenates them in sorted order to form `assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4` for visitors. Segment bytes are each 600000 except the final segment; expected complete MP4 size is 17794634 bytes. The deployment removes the unused segments from the published artifact to save bandwidth.
 - This is an independent fishing outing in the supplied video, **not** proof of Rockstar's scripted opening Gone Fishing mission. Site copy does not identify it as that mission.
 - Images are upscaled with Lanczos and lightly sharpened from the original 1280×720 source, not fabricated native 1600×900 captures.
+
+## Full-length fishing gallery — November 22, 2026
+
+- New accurate gallery: `/articles/gta6-deep-sea-fishing-52-screenshots-20-seconds.html`, based entirely on the uploaded 1038.94-second fishing video.
+- 52 genuine unique screenshots at seconds 0,20,...1020, reprocessed as 1920×1080 WebP with mild sharpening from source 1280×720 (no fabricated native pixels).
+- All 52 photo descriptions and timestamps are based on inspecting the supplied video, rather than assuming this is the scripted GTA VI story Prologue or Gone Fishing mission.
+- Image payload is transferred in 8 SHA-verified GitHub blobs. `scripts/assemble-fishing-frames.py` expands them in the Pages workflow. The workflow also attempts to commit all 52 individual image files back to main and remove source parts; if GitHub blocks this write, deployed Pages images still work.
+- Existing ultra-compressed full-duration MP4 remains `/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4` via 30 existing Git chunks; the original 100 partial-run screenshots have been superseded and archive links updated.

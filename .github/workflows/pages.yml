@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -26,9 +26,8 @@ jobs:
           node --check assets/prologue.js
           test -s articles/gta-6-prologue-mission-1-walkthrough.html
           test -s articles/gta-vi-all-missions.html
-          test -s articles/gta6-deep-sea-fishing-100-screenshots.html
-          test -s assets/gta6-deep-sea-fishing/images/frame-001.webp
-          test -s assets/gta6-deep-sea-fishing/images/frame-100.webp
+          test -s articles/gta6-deep-sea-fishing-52-screenshots-20-seconds.html
+          test -s scripts/assemble-fishing-frames.py
           test -s assets/gta6-deep-sea-fishing/_video-parts/part-030.bin
           test -s tools/index.html
           test -s tools/leonida-map.html
@@ -37,6 +36,22 @@ jobs:
           test -s index.html
           test -s sitemap.xml
           test -s ads.txt
+      - name: Verify and assemble 52 enhanced screenshots
+        run: |
+          python scripts/assemble-fishing-frames.py
+      - name: Commit expanded screenshots into GitHub
+        continue-on-error: true
+        run: |
+          if test -d assets/media-source/gta6-fishing; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/gallery/gta6-fishing-20s
+            git rm -r --quiet assets/media-source/gta6-fishing
+            if ! git diff --cached --quiet; then
+              git commit -m "Store 52 enhanced 20-second screenshot files"
+              git push origin HEAD:main
+            fi
+          fi
       - name: Prepare published site
         run: |
           mkdir public
@@ -45,6 +60,7 @@ jobs:
           cat public/assets/gta6-deep-sea-fishing/_video-parts/part-*.bin > public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4
           test "$(stat -c%s public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4)" -eq 17794634
           rm -rf public/assets/gta6-deep-sea-fishing/_video-parts
+          rm -rf public/assets/media-source
           cp *.html *.xml *.txt CNAME .nojekyll public/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
