@@ -5,7 +5,7 @@ const fileInput=document.getElementById('portrait-file');
 if(!fileInput)return;
 const upload=document.getElementById('portrait-upload');
 const preview=document.getElementById('portrait-upload-preview');
-const generate=document.getElementById('portrait-generate');
+const generate=document.getElementById('portrait-local-generate');
 const consent=document.getElementById('portrait-consent');
 const message=document.getElementById('portrait-error');
 const progress=document.getElementById('portrait-progress');
@@ -18,7 +18,7 @@ const copy=document.getElementById('portrait-copy-prompt');
 const promptBox=document.getElementById('portrait-prompt-box');
 const notes=document.getElementById('portrait-notes');
 const frame=()=>document.querySelector('input[name="portrait-frame"]:checked')?.value||'portrait';
-document.getElementById('portrait-service-status').textContent='100% FREE · AI runs in your browser · No payments, API keys, photo uploads or per-image charges. First model load needs internet.';
+// The local button remains available without any account or payment.
 const styleLabels={
  'sunset-poster':'Warm sunset key art with palm trees and a coastal city skyline',
  'neon-nights':'Neon night street with pink-blue lights and wet reflections',
@@ -218,7 +218,7 @@ generate.addEventListener('click',async()=>{
      ?'ON-DEVICE NEURAL ART · ORIGINAL FAN CREATION · NOT GAMEPLAY'
      :'BASIC ILLUSTRATION FALLBACK · NEURAL MODEL UNAVAILABLE · NOT GAMEPLAY';
   previewPanel.hidden=true;resultPanel.hidden=false;resultTools.hidden=false;
-  document.getElementById('portrait-service-status').textContent=aiWorked
+  document.getElementById('portrait-local-status').textContent=aiWorked
    ?'Your artwork was created locally using neural style transfer. No photo was uploaded.'
    :'Your free poster is ready. The AI model was unavailable, so a basic graphic effect was used.';
   resultPanel.scrollIntoView({behavior:'smooth',block:'nearest'});

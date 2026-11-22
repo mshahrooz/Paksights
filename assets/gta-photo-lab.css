@@ -92,3 +92,22 @@
 .portrait-generate{background:#1b3351}
 .portrait-generate:focus-visible{outline:3px solid #4288c6;outline-offset:2px}
 .portrait-hero-tags span:last-child{background:#ffffff18;border-color:#ffffff95}
+
+/* Puter real generative AI tier + truly free local fallback */
+.portrait-mode-card,.portrait-local-card{border:1px solid #cedae6;border-radius:12px;padding:18px;margin-top:20px;background:linear-gradient(135deg,#f0f5fb 0%,#fff 78%);box-shadow:0 6px 18px #153b5d0a}
+.portrait-local-card{background:#fff;border-color:#dce4ec;margin-top:14px}
+.portrait-mode-heading{display:flex;align-items:center;gap:11px}
+.portrait-mode-heading .portrait-mode-spot{display:grid;place-items:center;flex-shrink:0;border-radius:7px;background:#1d4b78;color:#fff;font:900 11px var(--body);width:29px;height:29px}
+.portrait-local-card .portrait-mode-spot{background:#5a728a}
+.portrait-mode-heading strong{display:block;font:900 17px var(--display);letter-spacing:.015em;line-height:1.1;color:#1c3047}
+.portrait-mode-heading small{display:block;color:#51677c;font:600 11px/1.5 var(--body);margin-top:3px}
+.portrait-mode-best{margin-left:auto;white-space:nowrap;font-size:9px;font-weight:900;color:#15466d;background:#d8eafa;padding:7px 8px;border-radius:50px}
+.portrait-mode-description{font-size:12px;line-height:1.72;color:#46596e;margin:13px 0 0}
+.portrait-mode-description b{color:#273b51}
+.portrait-mode-card .portrait-generate{margin:17px 0 0}
+.portrait-local-generate{width:100%;margin-top:15px;padding:13px 14px;border-radius:7px;border:1px solid #6986a1;background:#fff;color:#244c71;font:900 11px var(--body);letter-spacing:.04em;cursor:pointer}
+.portrait-local-generate:hover,.portrait-local-generate:focus-visible{background:#eff5fa;outline-offset:2px}
+.portrait-local-generate:disabled{opacity:.5;cursor:wait}
+.portrait-local-status{font:600 11px/1.65 var(--body);color:#5a6c7f;margin:10px 0 0}
+.portrait-mode-card .portrait-service-status{margin-top:10px}
+@media(max-width:480px){.portrait-mode-card,.portrait-local-card{padding:15px}.portrait-mode-best{font-size:8px}.portrait-mode-heading strong{font-size:16px}}

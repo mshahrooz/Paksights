@@ -23,6 +23,7 @@ jobs:
         run: |
           node --check assets/site.js
           node --check assets/gta-photo-lab.js
+          node --check assets/gta-photo-lab-cloud.js
           node --check assets/tools.js
           node --check assets/mission-article.js
           node --check assets/prologue.js
