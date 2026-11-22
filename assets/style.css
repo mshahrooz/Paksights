@@ -277,3 +277,14 @@ html,body,.site-header,.mobile-nav,.masthead,.archive-head,.simple-hero{backgrou
 .simple-main{font-size:16.5px}
 .gta-missions-promo-copy p,.p1-home-desc p,.fishing-promo-content p{font-size:15.5px}
 }
+
+/* Remove remaining green tint from photographic hero overlays and dark editorial panels. */
+.gta-with-hero{background:#142337!important;color:#fff}
+.gta-with-hero::after{background:linear-gradient(90deg,rgba(14,25,42,.95) 0%,rgba(14,25,42,.82) 30%,rgba(14,25,42,.46) 60%,rgba(14,25,42,.10) 100%)}
+.masthead.gta-with-hero h1 em,.archive-head.gta-with-hero h1 em,.pt-hero.gta-with-hero h1 em{color:#d0e5ff}
+.masthead.gta-with-hero p,.masthead.gta-with-hero .mast-eyebrow,.archive-head.gta-with-hero p,.archive-head.gta-with-hero .eyebrow,.pt-hero.gta-with-hero p{color:#f0f4fa}
+.article-header.gta-with-hero .cat-label{background:#e5effa;color:#1e3c5e}
+.site-footer{background:#151e2a}
+.gta-guide-side-feature,.gta-guide-end,.p1-side-cta,.p1-last,.p1-objectives,.pt-article-aside{background:#1b2d43}
+@media(max-width:940px){.gta-with-hero::after{background:linear-gradient(90deg,rgba(14,25,42,.96),rgba(14,25,42,.75) 58%,rgba(14,25,42,.40))}}
+@media(max-width:640px){.gta-with-hero::after{background:linear-gradient(90deg,rgba(14,25,42,.92),rgba(14,25,42,.75))}}
