@@ -288,3 +288,14 @@ html,body,.site-header,.mobile-nav,.masthead,.archive-head,.simple-hero{backgrou
 .gta-guide-side-feature,.gta-guide-end,.p1-side-cta,.p1-last,.p1-objectives,.pt-article-aside{background:#1b2d43}
 @media(max-width:940px){.gta-with-hero::after{background:linear-gradient(90deg,rgba(14,25,42,.96),rgba(14,25,42,.75) 58%,rgba(14,25,42,.40))}}
 @media(max-width:640px){.gta-with-hero::after{background:linear-gradient(90deg,rgba(14,25,42,.92),rgba(14,25,42,.75))}}
+/* Prominent free GTA AI portrait creator link across the editorial navigation. */
+.desktop-nav a.nav-ai-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#214e80;color:#fff;border:1px solid #214e80;border-radius:999px;padding:11px 13px;box-shadow:0 3px 10px rgba(30,76,125,.14);font-size:11px;font-weight:900;line-height:1;letter-spacing:.025em;text-decoration:none;transition:background .18s,color .18s,transform .18s}
+.desktop-nav a.nav-ai-link:hover,.desktop-nav a.nav-ai-link:focus-visible,.desktop-nav a.nav-ai-link[aria-current="page"]{background:#112f50;color:#fff;border-color:#112f50;transform:translateY(-1px)}
+.desktop-nav a.nav-ai-link[aria-current="page"]::after{display:none}
+.desktop-nav .nav-ai-link .nav-ai-star{color:#f8d49c;font-size:15px;line-height:1}
+.mobile-nav a.nav-ai-link{display:flex;align-items:center;gap:8px;margin-top:9px;border:1px solid #214e80;border-radius:9px;background:#214e80;color:#fff;padding:14px 16px;font-size:13px;letter-spacing:.025em}
+.mobile-nav a.nav-ai-link:hover,.mobile-nav a.nav-ai-link:focus-visible{background:#113452;color:#fff}
+.mobile-nav a.nav-ai-link .nav-ai-star{color:#ffdb9f}
+@media (min-width:901px) and (max-width:1210px){.desktop-nav{gap:9px}.desktop-nav a{font-size:11px;letter-spacing:.015em}.desktop-nav a.nav-ai-link{font-size:10px;padding:10px 9px}.header-inner{gap:10px}.nav-actions{gap:9px}}
+@media (min-width:901px) and (max-width:1050px){.brand-words{font-size:23px}}
+
