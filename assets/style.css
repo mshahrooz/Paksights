@@ -853,3 +853,71 @@ body{background:#fff;color:var(--ink)}
  .article-header.gta-with-hero{width:calc(100% - 34px);border-radius:12px}
  .gta-with-hero .gta-hero-media>img{object-fit:contain!important}
 }
+
+/* Rockstar Games official trailer: 16:9 uncropped cinematic homepage header */
+.page-home .hp-motion{position:relative;padding-top:23px}
+.page-home .hp-motion-stage{position:relative;isolation:isolate;aspect-ratio:16/9;background:#142740;border-radius:20px;overflow:hidden;box-shadow:0 20px 47px #152a4430}
+.page-home .hp-motion-poster,.page-home .hp-motion-player,.page-home .hp-motion-shade{position:absolute;inset:0}
+.page-home .hp-motion-poster{z-index:0;transition:opacity .3s ease}
+.page-home .hp-motion-poster img{display:block;width:100%;height:100%;object-fit:contain;background:#142740}
+.page-home .hp-motion-player{z-index:1;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.page-home .hp-motion-player iframe{display:block;width:100%;height:100%;border:0;pointer-events:none}
+.page-home .hp-motion.hp-motion-playing .hp-motion-player{opacity:1}
+.page-home .hp-motion.hp-motion-playing .hp-motion-poster{opacity:0}
+.page-home .hp-motion-shade{z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(7,17,31,.87),rgba(8,18,34,.52) 46%,transparent 85%),linear-gradient(0deg,#0715279c,transparent 28%)}
+.page-home .hp-motion-content{position:absolute;top:50%;transform:translateY(-50%);left:clamp(34px,6.3vw,85px);z-index:4;max-width:560px;width:55%;color:#fff;pointer-events:none}
+.page-home .hp-motion-content a{pointer-events:auto}
+.page-home .hp-motion-kicker{display:block;font:850 10px/1.5 var(--body);letter-spacing:.12em;text-transform:uppercase;color:#d2e5f7}
+.page-home .hp-motion h1{font:850 clamp(42px,5.35vw,78px)/1.04 var(--body);letter-spacing:-.064em;color:#fff;margin:17px 0 18px;text-transform:none}
+.page-home .hp-motion h1 em{font-style:normal;color:#f5adbd}
+.page-home .hp-motion-content p{font:500 clamp(14px,1.3vw,17px)/1.75 var(--body);max-width:475px;color:#ecf3fa;margin:0}
+.page-home .hp-motion-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.page-home .hp-motion-actions a{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:12px 16px;font:800 11px/1.2 var(--body);transition:background .2s,transform .2s}
+.page-home .hp-motion-actions a:hover{transform:translateY(-2px)}
+.page-home .hp-motion-primary{background:#fff;border:1px solid #fff;color:#19354f}
+.page-home .hp-motion-secondary{background:#102a4560;border:1px solid #d1e3f1b0;color:#fff}
+.page-home .hp-motion-secondary:hover{background:#ffffff24}
+.page-home .hp-motion-controls{position:absolute;z-index:5;left:24px;right:22px;bottom:15px;display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:none}
+.page-home .hp-motion-credit{font:800 9px/1.6 var(--body);letter-spacing:.05em;color:#fff;text-shadow:0 1px 6px #0009}
+.page-home .hp-motion-credit b{font-weight:600;opacity:.77;padding-left:7px}
+.page-home .hp-motion-buttons{display:flex;gap:7px;pointer-events:auto}
+.page-home .hp-motion-buttons button{display:inline-flex;align-items:center;gap:7px;justify-content:center;min-height:38px;border:1px solid #ffffff7c;background:#12283cbf;color:#fff;border-radius:99px;padding:8px 12px;cursor:pointer;font:780 11px var(--body);backdrop-filter:blur(8px)}
+.page-home .hp-motion-buttons button:hover,.page-home .hp-motion-buttons button:focus-visible{background:#2a4c70;border-color:#fff}
+.page-home .hp-motion-buttons button:disabled{opacity:.45;cursor:default}
+.page-home .hp-motion-newsline{display:flex;gap:16px;align-items:center;border-bottom:1px solid #e8edf4;padding-top:16px;padding-bottom:17px}
+.page-home .hp-motion-newsline>span{font:850 10px/1.4 var(--body);letter-spacing:.045em;color:#2d6394;white-space:nowrap}
+.page-home .hp-motion-newsline>a{font:800 13px/1.55 var(--body);color:#21344b}
+.page-home .hp-motion-newsline>a:hover{color:#285e90}
+.page-home .hp-topics{padding-top:17px}
+@media(max-width:930px){
+ .page-home .hp-motion-content{left:30px;width:64%}
+ .page-home .hp-motion h1{font-size:clamp(36px,5.6vw,51px);margin:12px 0}
+ .page-home .hp-motion-content p{font-size:13px}
+ .page-home .hp-motion-actions{margin-top:15px;gap:7px}
+ .page-home .hp-motion-actions a{padding:10px 12px;font-size:10px}
+ .page-home .hp-motion-controls{left:16px;right:15px;bottom:10px}
+}
+@media(max-width:650px){
+ .page-home .hp-motion{padding-top:12px}
+ .page-home .hp-motion-stage{aspect-ratio:16/9;border-radius:13px}
+ .page-home .hp-motion-shade{background:linear-gradient(0deg,#081626aa,transparent 37%)}
+ .page-home .hp-motion-content{position:static;transform:none;width:100%;max-width:none;color:#1e3147;padding:23px 1px 5px;pointer-events:auto}
+ .page-home .hp-motion-kicker{color:#53799d;font-size:9px}
+ .page-home .hp-motion h1{font-size:clamp(34px,8.5vw,47px);color:#172b43;margin:9px 0}
+ .page-home .hp-motion h1 em{color:#296696}
+ .page-home .hp-motion-content p{font-size:14px;line-height:1.7;color:#66778a}
+ .page-home .hp-motion-actions{margin-top:15px}
+ .page-home .hp-motion-actions a{font-size:11px}
+ .page-home .hp-motion-primary{background:#244f79;color:#fff;border-color:#244f79}
+ .page-home .hp-motion-secondary{background:#fff;color:#245d90;border-color:#cbd9e6}
+ .page-home .hp-motion-controls{bottom:6px;left:8px;right:8px}
+ .page-home .hp-motion-credit{font-size:7px;letter-spacing:0;max-width:56%}
+ .page-home .hp-motion-credit b{display:block;padding-left:0;font-size:6px}
+ .page-home .hp-motion-buttons{gap:5px}
+ .page-home .hp-motion-buttons button{min-height:32px;padding:6px 9px;font-size:10px}
+ .page-home .hp-motion-play-label,.page-home .hp-motion-sound-label{display:none}
+ .page-home .hp-motion-newsline{display:block;padding-top:13px;padding-bottom:14px}
+ .page-home .hp-motion-newsline>span{display:block;margin-bottom:6px}
+ .page-home .hp-motion-newsline>a{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.page-home .hp-motion-player,.page-home .hp-motion-poster{transition:none}}
