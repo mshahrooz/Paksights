@@ -24,3 +24,6 @@
 .gta-guide-prose h2,.gta-chapter>h2{font-family:var(--body);font-weight:800;letter-spacing:-.05em;line-height:1.15}
 .gta-mission,.gta-chapter-callout,.gta-guide-controls{border-radius:13px}
 @media(max-width:650px){.gta-missions-page-hero h1{font-size:clamp(36px,8.8vw,51px)!important}}
+/* Mission titles use the correct nested heading level while retaining styling. */
+.gta-mission h3{font:900 26px/.98 var(--display);margin:0;text-transform:uppercase}
+@media(max-width:650px){.gta-mission h3{font-size:24px}}

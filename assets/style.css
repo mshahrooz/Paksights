@@ -707,3 +707,7 @@ body{background:#fff;color:var(--ink)}
  .article-header.gta-with-hero h1{font-size:clamp(34px,8.8vw,49px)}
  .article-header.gta-with-hero .article-dek{font-size:16px}
 }
+/* SEO accessibility: visible archive section labels and semantic footer captions. */
+.archive-content-heading{font:800 16px/1.35 var(--body);letter-spacing:-.02em;color:#304e70;margin:0 0 18px}
+.site-footer .footer-links .footer-col-caption{font:800 11px/1.4 var(--body);letter-spacing:.11em;color:#e6edf7;margin:2px 0 15px;text-transform:uppercase}
+@media(max-width:650px){.archive-content-heading{font-size:15px;margin-bottom:13px}}

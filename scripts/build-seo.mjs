@@ -186,7 +186,26 @@ for(const p of allPaths){
  }
  h+='<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c')+'</script>';
  // Keep the exact Search Console ownership tag, body copy, dates and page design.
- const updated=h+rest;
+ let updated=h+rest;
+ // Restore logical heading hierarchy while keeping visible headings/visual design.
+ // The repeated footer labels are navigation captions, not sections of the story.
+ const footerStart=updated.indexOf('<footer class="site-footer"');
+ const footerEnd=footerStart>=0?updated.indexOf('</footer>',footerStart):-1;
+ if(footerStart>=0&&footerEnd>footerStart){
+  const oldFooter=updated.slice(footerStart,footerEnd);
+  const footer=oldFooter.replace(/<h4>EXPLORE<\/h4>/g,'<p class="footer-col-caption">EXPLORE</p>')
+   .replace(/<h4>THE PUBLICATION<\/h4>/g,'<p class="footer-col-caption">THE PUBLICATION</p>');
+  updated=updated.slice(0,footerStart)+footer+updated.slice(footerEnd);
+ }
+ if(collection && updated.includes('<div id="story-grid" class="card-grid archive-grid">')){
+  const names={'news/index.html':'Latest verified news','articles/index.html':'Browse all GTA VI articles',
+   'guides/index.html':'Find a walkthrough','features/index.html':'Latest analysis','world/index.html':'Explore the world'};
+  const name=names[p]||'Browse stories';
+  updated=updated.replace('<div id="story-grid" class="card-grid archive-grid">',
+   '<h2 class="archive-content-heading">'+esc(name)+'</h2><div id="story-grid" class="card-grid archive-grid">');
+ }
+ if(p==='articles/gta-vi-all-missions.html')
+  updated=updated.replace(/(<div class="gta-mission-title">)<h4>([\s\S]*?)<\/h4>/g,'$1<h3>$2</h3>');
  fs.writeFileSync(file,updated);
  if(excluded)continue;
  records.push({path:p,url,title,description,keywords:config.keywords,category:config.category,
