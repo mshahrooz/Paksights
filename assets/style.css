@@ -921,3 +921,54 @@ body{background:#fff;color:var(--ink)}
  .page-home .hp-motion-newsline>a{font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){.page-home .hp-motion-player,.page-home .hp-motion-poster{transition:none}}
+
+/* Full-bleed GTA VI video hero: viewport-width, flush edges, no clipped trailer. */
+.page-home .hp-main>.hp-motion.hp-motion-fullbleed{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+}
+.page-home .hp-motion-fullbleed .hp-motion-stage{
+  width:100%;
+  max-width:none;
+  aspect-ratio:16/9;
+  border-radius:0;
+  box-shadow:none;
+}
+.page-home .hp-motion-fullbleed .hp-motion-content{
+  left:max(34px,calc((100% - var(--max))/2));
+  width:min(565px,47%);
+}
+.page-home .hp-motion-fullbleed .hp-motion-controls{
+  left:max(24px,calc((100% - var(--max))/2));
+  right:max(24px,calc((100% - var(--max))/2));
+}
+@media(max-width:930px){
+  .page-home .hp-motion-fullbleed .hp-motion-content{
+    left:30px;
+    width:64%;
+  }
+  .page-home .hp-motion-fullbleed .hp-motion-controls{
+    left:16px;
+    right:16px;
+  }
+}
+@media(max-width:650px){
+  .page-home .hp-main>.hp-motion.hp-motion-fullbleed{padding:0}
+  .page-home .hp-motion-fullbleed .hp-motion-stage{
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:0;
+  }
+  .page-home .hp-motion-fullbleed .hp-motion-content{
+    width:calc(100% - 34px);
+    max-width:none;
+    margin:0 auto;
+    padding:23px 0 5px;
+  }
+  .page-home .hp-motion-fullbleed .hp-motion-controls{
+    left:9px;
+    right:9px;
+  }
+}
