@@ -175,3 +175,7 @@
  .portrait-stage{min-height:310px}
  .portrait-mode-card,.portrait-local-card{padding:15px}
 }
+
+/* Full-width studio hero art without image clipping on smaller screens. */
+.portrait-hero img{width:100%;height:100%;object-fit:contain!important;object-position:center!important;background:#17293f}
+@media(max-width:650px){.portrait-hero img{height:auto;min-height:0;max-height:none;aspect-ratio:16/9;object-fit:contain!important}}
