@@ -1,0 +1,253 @@
+{
+  "publication": "Leonida Ledger",
+  "publisherAlias": "PakSights",
+  "domain": "https://paksights.com",
+  "pages": {
+    "index.html": {
+      "title": "GTA VI News, Guides & Map | Leonida Ledger",
+      "description": "Latest GTA VI news, updates, walkthroughs, missions, Leonida maps and free player tools. Independent, source-checked coverage from Leonida Ledger.",
+      "keywords": "GTA VI news, GTA 6 guides, Leonida map",
+      "category": "Features"
+    },
+    "news/index.html": {
+      "title": "GTA VI News, Updates & Patches | Leonida Ledger",
+      "description": "Follow the latest GTA VI news, patches, verified launch developments, gaming industry headlines and fact-checked reports from our independent newsroom.",
+      "keywords": "GTA VI news, GTA 6 updates, GTA 6 patches",
+      "category": "Features"
+    },
+    "articles/index.html": {
+      "title": "GTA VI News & Guides: Article Archive | Leonida Ledger",
+      "description": "Browse GTA VI news reports, character analysis, missions, game guides, reviews and explainers in the complete Leonida Ledger article archive.",
+      "keywords": "GTA VI articles, GTA 6 news, GTA VI guide archive",
+      "category": "Features"
+    },
+    "guides/index.html": {
+      "title": "GTA VI Walkthroughs & Mission Guides | Leonida Ledger",
+      "description": "Find GTA VI walkthroughs, reported safe codes, mission help, controls, spoiler-light tips and practical guidance for exploring Leonida.",
+      "keywords": "GTA VI walkthroughs, GTA 6 missions, GTA VI safe codes",
+      "category": "Guide"
+    },
+    "tools/index.html": {
+      "title": "Free GTA VI Map, Cheats & Tools | Leonida Ledger",
+      "description": "Use free GTA VI companion tools including an interactive map, mission tracker, safe-code finder, cheat guide and AI character-photo creator.",
+      "keywords": "GTA VI tools, GTA 6 map, GTA VI mission tracker",
+      "category": "Guide"
+    },
+    "features/index.html": {
+      "title": "GTA VI Features & Analysis | Leonida Ledger",
+      "description": "Read GTA VI analysis and features on Leonida locations, Jason and Lucia, gameplay systems, fact-checks and the game's wider cultural impact.",
+      "keywords": "GTA VI features, GTA 6 analysis, GTA 6 gameplay",
+      "category": "Features"
+    },
+    "world/index.html": {
+      "title": "GTA VI Leonida Map & Locations | Leonida Ledger",
+      "description": "Explore Vice City, the Leonida Keys and other regions, plus GTA VI characters and the setting with source-based location explainers.",
+      "keywords": "GTA VI Leonida map, GTA 6 Vice City, GTA VI regions",
+      "category": "Features"
+    },
+    "about.html": {
+      "title": "About Leonida Ledger | Independent GTA VI News",
+      "description": "Meet the Leonida Ledger research desk, learn about our independent GTA VI coverage on PakSights, and discover how our reporting is sourced.",
+      "keywords": "Leonida Ledger, about PakSights, independent GTA VI news",
+      "category": "Features"
+    },
+    "contact.html": {
+      "title": "Contact Leonida Ledger | News Tips & Corrections",
+      "description": "Send Leonida Ledger a source-backed GTA VI news tip, correction request, source question or rights concern through our public contact channels.",
+      "keywords": "Leonida Ledger contact, GTA VI tips, editorial corrections",
+      "category": "Features"
+    },
+    "editorial-policy.html": {
+      "title": "Editorial Policy & Corrections | Leonida Ledger",
+      "description": "Read our source-checking practices, corrections policy, spoiler safeguards, AI fan-art labeling and editorial independence standards.",
+      "keywords": "Leonida Ledger editorial standards, GTA VI fact checking",
+      "category": "Features"
+    },
+    "privacy.html": {
+      "title": "Privacy Policy & AI Tools | Leonida Ledger",
+      "description": "Learn how PakSights handles website privacy, advertising, analytics and image processing through its optional Puter and local AI photo tools.",
+      "keywords": "PakSights privacy policy, GTA VI AI photo privacy",
+      "category": "Features"
+    },
+    "media-credits.html": {
+      "title": "Image Credits & AI Art Policy | Leonida Ledger",
+      "description": "See the credits and disclosures for official GTA VI media, original AI-generated fan illustrations and editorial visual assets used on PakSights.",
+      "keywords": "GTA VI image credits, AI fan art disclosure",
+      "category": "Features"
+    },
+    "tools/gta-vi-ai-photo-generator.html": {
+      "title": "GTA VI AI Photo Generator | Leonida Ledger",
+      "description": "Turn your photo into original GTA VI-inspired character art with Puter cloud AI free allowance or a private, no-account browser-based option.",
+      "keywords": "GTA 6 AI photo generator, GTA VI character maker, AI selfie",
+      "category": "Guide"
+    },
+    "tools/cheat-codes.html": {
+      "title": "GTA VI Cheats for PS5 & Xbox | Leonida Ledger",
+      "description": "Review reportedly available GTA VI cheats, code input methods and unlock conditions, and learn how to avoid fake combinations or rumors.",
+      "keywords": "GTA VI cheats, GTA 6 Xbox cheats, GTA 6 PS5 cheat codes",
+      "category": "Guide"
+    },
+    "tools/leonida-map.html": {
+      "title": "GTA VI Interactive Leonida Map | Leonida Ledger",
+      "description": "Explore the six named GTA VI regions with an illustrative map, search filters and a locally saved checklist for tracking what you discover.",
+      "keywords": "GTA VI interactive map, Leonida location map",
+      "category": "Guide"
+    },
+    "tools/mission-tracker.html": {
+      "title": "GTA VI Mission Tracker & Checklist | Leonida Ledger",
+      "description": "Track GTA VI missions in a free, spoiler-light checklist that saves your story progress locally without creating an account.",
+      "keywords": "GTA VI mission tracker, GTA 6 checklist",
+      "category": "Guide"
+    },
+    "tools/safe-codes.html": {
+      "title": "GTA VI Safe Codes & Puzzle Finder | Leonida Ledger",
+      "description": "Search reported GTA VI safe and keypad codes at Kingpin Bowling, Brooks Boatworks and La Cascara Motel, with spoiler-aware puzzle hints.",
+      "keywords": "GTA VI safe codes, GTA 6 safe combinations",
+      "category": "Guide"
+    },
+    "guides/brooks-boatworks-safe-code.html": {
+      "title": "GTA VI Brooks Boatworks Safe Code | Leonida Ledger",
+      "description": "Read the reported Brooks Boatworks safe code, location clues and spoiler-aware step-by-step walkthrough, with clear verification notes.",
+      "keywords": "GTA 6 Brooks Boatworks safe combination",
+      "category": "Guide"
+    },
+    "guides/kingpin-bowling-safe-code.html": {
+      "title": "GTA VI Kingpin Bowling Safe Code | Leonida Ledger",
+      "description": "Find the reported Kingpin Bowling safe code, puzzle clues, location details and a practical spoiler-light GTA VI walkthrough.",
+      "keywords": "GTA 6 Kingpin Bowling safe combination",
+      "category": "Guide"
+    },
+    "guides/la-cascara-motel-safe-code.html": {
+      "title": "GTA VI La Cascara Motel Safe Code | Leonida Ledger",
+      "description": "Check the reported La Cascara Motel safe combination, relevant clues and GTA VI location walkthrough before opening the keypad.",
+      "keywords": "GTA 6 La Cascara Motel code",
+      "category": "Guide"
+    },
+    "articles/gta-6-accessibility-settings.html": {
+      "title": "GTA VI Accessibility Options & Tips | Leonida Ledger",
+      "description": "Review reported GTA VI accessibility options, captions, camera comfort, contrast and menu checks in a practical, evidence-led player guide.",
+      "keywords": "GTA VI accessibility settings, GTA 6 subtitles",
+      "category": "Features"
+    },
+    "articles/gta-6-beginner-settings-guide.html": {
+      "title": "GTA VI Best Beginner Settings Guide | Leonida Ledger",
+      "description": "Start GTA VI with sensible controls, camera settings, subtitles and accessibility checks. A spoiler-light guide to documented options.",
+      "keywords": "GTA VI beginner settings, GTA 6 controls",
+      "category": "Features"
+    },
+    "articles/gta-6-faq-release-pc-price-map.html": {
+      "title": "GTA VI FAQ: PC, Price, Platforms & Map | Leonida Ledger",
+      "description": "Get clear answers on GTA VI's launch, PC edition status, pricing, ratings and Leonida map with links to published sources.",
+      "keywords": "GTA 6 FAQ, GTA VI PC release, GTA 6 price",
+      "category": "Features"
+    },
+    "articles/gta-6-first-day-sales-record.html": {
+      "title": "GTA VI Day-One Sales: $3.79B Report | Leonida Ledger",
+      "description": "Take-Two's reported $3.79 billion GTA VI launch-sales milestone explained, including what gross retail sales mean and what remains unverified.",
+      "keywords": "GTA VI sales, GTA 6 day one revenue",
+      "category": "News"
+    },
+    "articles/gta-6-gameplay-confirmed-features.html": {
+      "title": "GTA VI Gameplay: Confirmed Features | Leonida Ledger",
+      "description": "Discover documented GTA VI gameplay features and footage details, with a clear distinction between confirmed mechanics and fan speculation.",
+      "keywords": "GTA 6 gameplay, GTA VI confirmed features",
+      "category": "Features"
+    },
+    "articles/gta-6-install-code-in-box-guide.html": {
+      "title": "GTA VI Installation & Code-in-Box Guide | Leonida Ledger",
+      "description": "Learn how GTA VI retail code-in-box purchases work, what to check before buying and where to find official installation support.",
+      "keywords": "GTA 6 installation, GTA VI physical edition",
+      "category": "Features"
+    },
+    "articles/gta-6-jason-lucia-characters.html": {
+      "title": "GTA VI Jason & Lucia: Character Guide | Leonida Ledger",
+      "description": "Meet GTA VI's central characters Jason and Lucia, review Rockstar's published details and avoid invented story spoilers.",
+      "keywords": "GTA VI Jason Lucia, GTA 6 protagonists",
+      "category": "Features"
+    },
+    "articles/gta-6-leonida-map-locations.html": {
+      "title": "GTA VI Map: Six Regions of Leonida | Leonida Ledger",
+      "description": "Explore the six regions of GTA VI's Leonida setting, including Vice City and the Keys, with official place references and maps.",
+      "keywords": "GTA VI Leonida map, GTA 6 map locations",
+      "category": "Features"
+    },
+    "articles/gta-6-news-today-november-22-2026.html": {
+      "title": "GTA VI News Nov 22: Sales & Xbox FPS | Leonida Ledger",
+      "description": "GTA VI November 22 news: Take-Two's $3.79B retail-sales estimate, internet traffic, reviews, an Xbox FPS glitch and PC status.",
+      "keywords": "GTA VI news November 22, GTA 6 Xbox FPS",
+      "category": "News"
+    },
+    "articles/gta-6-news-today-november-23-2026.html": {
+      "title": "GTA VI News Nov 23: Patch & FPS Glitch | Leonida Ledger",
+      "description": "GTA VI November 23 roundup: reported update 01.002.002, an Xbox FPS glitch, new reviews, launch sales and soundtrack coverage.",
+      "keywords": "GTA VI news November 23, GTA 6 patch 01.002.002",
+      "category": "News"
+    },
+    "articles/gta-6-out-now-release-date.html": {
+      "title": "GTA VI Release Date & Launch Facts | Leonida Ledger",
+      "description": "Review GTA VI's launch date, supported consoles, story setting and the official Rockstar details readers should know.",
+      "keywords": "GTA VI release date, GTA 6 platforms",
+      "category": "News"
+    },
+    "articles/gta-6-pc-release-status.html": {
+      "title": "GTA VI PC Release: Confirmed Status | Leonida Ledger",
+      "description": "What Rockstar has and has not confirmed about GTA VI for PC, plus current console availability and where to check announcements.",
+      "keywords": "GTA 6 PC release, GTA VI PC date",
+      "category": "Explainer"
+    },
+    "articles/gta-6-price-editions-standard-ultimate.html": {
+      "title": "GTA VI Price & Editions Explained | Leonida Ledger",
+      "description": "Compare reported GTA VI launch prices and editions, including code-in-box buying questions and regional purchase checks.",
+      "keywords": "GTA 6 price, GTA VI editions",
+      "category": "Features"
+    },
+    "articles/gta-6-prologue-mission-1-walkthrough.html": {
+      "title": "GTA VI Mission 1 Prologue Walkthrough | Leonida Ledger",
+      "description": "Follow the GTA VI prologue with a spoiler-aware walkthrough, step-by-step mission advice, reference images and relevant video sources.",
+      "keywords": "GTA VI mission 1, GTA 6 prologue walkthrough",
+      "category": "Features"
+    },
+    "articles/gta-6-rumors-fact-check.html": {
+      "title": "GTA VI Rumors vs Facts: Claim Checker | Leonida Ledger",
+      "description": "Fact-check GTA VI rumors about PC dates, features, map size and buying claims against official sources and clearly labeled reporting.",
+      "keywords": "GTA VI rumors, GTA 6 fact check",
+      "category": "Features"
+    },
+    "articles/gta-6-trailers-watch-order.html": {
+      "title": "GTA VI Trailers in Order: What They Show | Leonida Ledger",
+      "description": "Watch GTA VI's major trailers in order and compare what Rockstar actually revealed about Leonida, characters and gameplay.",
+      "keywords": "GTA VI trailers, GTA 6 trailer watch order",
+      "category": "Features"
+    },
+    "articles/gta-vi-ai-character-photo-trend-2026.html": {
+      "title": "GTA VI AI Photo Trend & Character Maker | Leonida Ledger",
+      "description": "Explore the GTA VI AI character selfie trend, how image editors work, privacy tips, strong original prompts and the free PakSights photo tool.",
+      "keywords": "GTA 6 AI photo trend, GTA VI AI portraits",
+      "category": "News"
+    },
+    "articles/gta-vi-all-missions.html": {
+      "title": "GTA VI Mission List & Story Checklist | Leonida Ledger",
+      "description": "Explore the reported GTA VI story mission list, chapter structure, optional jobs and spoiler-aware notes, with sources and updates.",
+      "keywords": "GTA VI all missions, GTA 6 mission list",
+      "category": "Guide"
+    },
+    "articles/gta6-deep-sea-fishing-52-screenshots-20-seconds.html": {
+      "title": "GTA VI Fishing Video: 52-Frame Gallery | Leonida Ledger",
+      "description": "Browse 52 frames taken every 20 seconds from a GTA VI-labeled fishing video, with captions, source details and AI-enhancement disclosures.",
+      "keywords": "GTA VI fishing gallery, GTA 6 screenshots",
+      "category": "Features"
+    },
+    "articles/gta6-deep-sea-fishing-100-screenshots.html": {
+      "title": "Fishing Gallery Moved | Leonida Ledger",
+      "description": "This old gallery URL redirects to the updated GTA VI fishing image gallery and walkthrough captions.",
+      "keywords": "GTA VI fishing gallery",
+      "category": "Features"
+    },
+    "404.html": {
+      "title": "Page Not Found | Leonida Ledger",
+      "description": "The requested PakSights page is unavailable. Browse GTA VI news, missions, player tools and the Leonida Ledger article archive.",
+      "keywords": "Leonida Ledger",
+      "category": "Features"
+    }
+  }
+}
