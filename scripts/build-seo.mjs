@@ -98,7 +98,38 @@ function makeBreadcrumb(p,name){
 const organization={'@type':'Organization','@id':orgId,'name':'Leonida Ledger','alternateName':'PakSights GTA VI News','url':DOMAIN+'/','description':'Independent GTA VI news, commentary and source-checked guides published on PakSights.','logo':{'@type':'ImageObject','url':DOMAIN+'/assets/publisher-logo.svg','width':512,'height':512},'contactPoint':{'@type':'ContactPoint','contactType':'editorial corrections and news tips','url':DOMAIN+'/contact.html'}};
 const website={'@type':'WebSite','@id':webId,'name':'Leonida Ledger','alternateName':'PakSights','url':DOMAIN+'/','publisher':{'@id':orgId},'inLanguage':'en'};
 
-const records=[],allPaths=Object.keys(cfg.pages);
+function discoverHtml(dir){
+ const found=[];
+ function walk(location){
+  if(!fs.existsSync(location))return;
+  for(const entry of fs.readdirSync(location,{withFileTypes:true})){
+   if(entry.name.startsWith('.'))continue;
+   const absolute=path.join(location,entry.name);
+   if(entry.isDirectory()){
+    if(!['assets','scripts','node_modules','.git'].includes(entry.name))walk(absolute);
+   }else if(entry.isFile()&&entry.name.endsWith('.html')){
+    found.push(path.relative(dir,absolute).split(path.sep).join('/'));
+   }
+  }
+ }
+ walk(dir);
+ return found;
+}
+function defaultMetadata(p,original){
+ const head=original.split(/<\/head>/i)[0];
+ const oldTitle=textOnly(original.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]||'');
+ const clean=(oldTitle||p.split('/').at(-1).replace(/\.html$/,'').replace(/-/g,' '))
+  .replace(/\s*\|\s*(Leonida Ledger|PakSights).*$/i,'').replace(/[.?!]\s*$/,'');
+ const title=truncate(clean,42)+' | Leonida Ledger';
+ const excerpt=findMeta(head,'name','description')||
+   textOnly(original.match(/<main[\s\S]*?<p\b[^>]*>([\s\S]*?)<\/p>/i)?.[1])||
+   'Source-checked Grand Theft Auto VI news, features, guides and interactive player tools.';
+ const tags=p.split('/').at(-1).replace(/\.html$/,'').replace(/-/g,' ').split(/\s+/).filter(Boolean).slice(0,6).join(' ');
+ const old=original.includes('"@type":"NewsArticle"')||original.includes('"@type": "NewsArticle"');
+ const isNews=p.startsWith('articles/')&&(old||/news-today|breaking-news|launch-news|patch-news/.test(p));
+ return {title,description:truncate(excerpt,151),keywords:'GTA VI, '+tags,category:isNews?'News':p.startsWith('articles/')?'Guides':'Features'};
+}
+const records=[],allPaths=[...new Set([...Object.keys(cfg.pages),...discoverHtml(root)])].sort();
 for(const p of allPaths){
  const file=path.join(root,p);
  if(!fs.existsSync(file)){console.warn('Not found:',p);continue;}
@@ -106,7 +137,7 @@ for(const p of allPaths){
  const end=orig.search(/<\/head>/i);
  if(end<0){console.warn('Missing head:',p);continue;}
  let h=orig.slice(0,end),rest=orig.slice(end);
- const config=cfg.pages[p];
+ const config=cfg.pages[p]||defaultMetadata(p,orig);
  const url=pathUrl(p), title=config.title,description=config.description, image=chooseImage(p,h);
  const ld=parseJsonLd(h);h=ld.stripped;
  const oldArticle=ld.nodes.find(n=>['NewsArticle','BlogPosting','Article'].includes(n['@type']));
@@ -119,7 +150,7 @@ for(const p of allPaths){
  const isNews=isArticleWithDate&&config.category==='News';
  const isTool=p.startsWith('tools/')&&p!=='tools/index.html';
  const collection=/^(news|articles|guides|tools|features|world)\/index\.html$/.test(p);
- const excluded=isExcluded(p);
+ const excluded=isExcluded(p)||/content=["']noindex/i.test(readTag(h,'meta','name','robots'))||/<meta[^>]*http-equiv=["']refresh/i.test(h);
  h=h.replace(/<title\b[^>]*>[\s\S]*?<\/title>/i,'<title>'+esc(title)+'</title>');
  h=setMeta(h,'description',description);
  h=setMeta(h,'keywords',config.keywords||'Grand Theft Auto VI, GTA 6');
