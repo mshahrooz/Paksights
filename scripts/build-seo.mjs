@@ -261,13 +261,14 @@ function rss(records,file,title,summary){
  const channel='<title>'+esc(title)+'</title><link>'+DOMAIN+'/</link><description>'+esc(summary)+'</description>'+
  '<language>en-us</language><lastBuildDate>'+now.toUTCString()+'</lastBuildDate>'+
  '<atom:link href="'+DOMAIN+'/'+file+'" rel="self" type="application/rss+xml"/>'+
- '<managingEditor>'+esc('Leonida Ledger Research Desk')+'</managingEditor>';
+ '<copyright>'+esc('Copyright 2026 Leonida Ledger / PakSights')+'</copyright>';
  const entries=records.slice(0,50).map(r=>{
   const content=shortContent(r).replace(/\]\]>/g,']]&gt;');
   return '<item><title>'+esc(r.title.split(' | ')[0])+'</title><link>'+esc(r.url)+'</link>'+
    '<guid isPermaLink="true">'+esc(r.url)+'</guid><pubDate>'+rfc(r.published)+'</pubDate>'+
    '<dc:creator>'+esc('Leonida Ledger Research Desk')+'</dc:creator>'+
    '<category>'+esc(r.category||'Features')+'</category>'+
+   '<category><![CDATA[AI-Assisted]]></category>'+ 
    '<description>'+esc(r.description)+'</description>'+
    '<content:encoded><![CDATA['+content+']]></content:encoded>'+
    (imageLocal(r)?'<media:content url="'+esc(r.image)+'" medium="image" />':'')+
@@ -283,7 +284,7 @@ rss(ranked.filter(r=>r.news),'feed-news.xml','Leonida Ledger - GTA VI Breaking N
 const atomEntries=ranked.slice(0,50).map(r=>'<entry><id>'+esc(r.url)+'</id><title>'+esc(r.title.split(' | ')[0])+'</title>'+
  '<link href="'+esc(r.url)+'"/><published>'+esc(r.published)+'</published>'+
  '<updated>'+esc(r.modified||r.published)+'</updated>'+
- '<author><name>Leonida Ledger Research Desk</name></author><summary>'+esc(r.description)+'</summary>'+
+ '<author><name>Leonida Ledger Research Desk</name></author><category term="AI-Assisted"/><summary>'+esc(r.description)+'</summary>'+
  '<content type="html">'+esc(shortContent(r))+'</content></entry>').join('\n');
 xmlWrite('atom.xml','<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">'+
  '<id>'+DOMAIN+'/</id><title>Leonida Ledger - GTA VI</title><subtitle>Independent GTA VI news and guides</subtitle>'+
@@ -293,7 +294,7 @@ xmlWrite('atom.xml','<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http:/
 const jf={'version':'https://jsonfeed.org/version/1.1','title':'Leonida Ledger - GTA VI Articles',
  'home_page_url':DOMAIN+'/','feed_url':DOMAIN+'/feed.json','description':'Independent GTA VI news, reviews, and guides',
  'items':ranked.slice(0,50).map(r=>({id:r.url,url:r.url,title:r.title.split(' | ')[0],
-   summary:r.description,content_html:shortContent(r),image:r.image,date_published:r.published,
+   summary:r.description,content_html:shortContent(r),image:r.image,tags:[r.category||'Features','AI-Assisted'],date_published:r.published,
    date_modified:r.modified||r.published,authors:[{name:'Leonida Ledger Research Desk',url:DOMAIN+'/about.html'}]}))};
 fs.writeFileSync(path.join(root,'feed.json'),JSON.stringify(jf,null,2)+'\n');
 fs.writeFileSync(path.join(root,'robots.txt'),
