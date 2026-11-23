@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Rebuild the Google News 48-hour sitemap daily while the workflow stays active.
+    - cron: '17 4 * * *'
 permissions:
   contents: write
   pages: write
@@ -19,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: Check JavaScript syntax and essentials
         run: |
           node --check assets/site.js
@@ -27,6 +32,10 @@ jobs:
           node --check assets/tools.js
           node --check assets/mission-article.js
           node --check assets/prologue.js
+          node --check scripts/build-seo.mjs
+          node --check scripts/submit-indexnow.mjs
+          test -s scripts/seo-page-data.json
+          test -s assets/publisher-logo.svg
           test -s articles/gta-6-prologue-mission-1-walkthrough.html
           test -s articles/gta-6-news-today-november-23-2026.html
           test -s assets/editorial/2026-11-23/gta-vi-monday-launch-roundup.avif
@@ -73,6 +82,20 @@ jobs:
           rm -rf public/assets/gta6-deep-sea-fishing/_video-parts
           rm -rf public/assets/media-source
           cp *.html *.xml *.txt CNAME .nojekyll public/
+          # Build clean page-level SEO metadata and feeds from actual HTML, preserving dates.
+          node scripts/build-seo.mjs public
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          import xml.etree.ElementTree as ET
+          root = Path('public')
+          for p in ['sitemap.xml','sitemap-news.xml','sitemap-index.xml','feed.xml','feed-news.xml','atom.xml']:
+              ET.parse(root / p)
+          assert len(list(ET.parse(root / 'sitemap.xml').getroot())) >= 35
+          assert len(json.loads((root / 'feed.json').read_text())['items']) >= 15
+          assert '<meta name="google-site-verification"' in (root / 'index.html').read_text()
+          print('SEO validation passed: XML feeds, sitemaps, JSON feed, homepage ownership tag.')
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -96,3 +119,6 @@ jobs:
           test "${count}" = "1"
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify IndexNow of newly published pages (best effort)
+        continue-on-error: true
+        run: node scripts/submit-indexnow.mjs
