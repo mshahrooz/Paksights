@@ -111,3 +111,67 @@
 .portrait-local-status{font:600 11px/1.65 var(--body);color:#5a6c7f;margin:10px 0 0}
 .portrait-mode-card .portrait-service-status{margin-top:10px}
 @media(max-width:480px){.portrait-mode-card,.portrait-local-card{padding:15px}.portrait-mode-best{font-size:8px}.portrait-mode-heading strong{font-size:16px}}
+
+/* A photo creator should feel like a focused studio, not a forms dashboard. */
+.portrait-lab{background:#fff;color:#193048}
+.portrait-hero{grid-template-columns:1fr 1fr;min-height:365px;background:#192d48;overflow:hidden}
+.portrait-hero-copy{padding:clamp(32px,4.5vw,65px) clamp(28px,5.5vw,81px)}
+.portrait-hero h1{font:800 clamp(43px,5.2vw,72px)/1.07 var(--body);letter-spacing:-.065em;margin:16px 0}
+.portrait-hero h1 em{color:#f7aabb}
+.portrait-hero p{font-size:16px;line-height:1.75}
+.portrait-hero img{min-height:365px;max-height:425px}
+.portrait-hero-tags span{border-radius:999px;font-size:10px;padding:8px 12px}
+.portrait-hero-note{margin-top:13px}
+.portrait-intro{padding:38px 0 20px}
+.portrait-intro h2{font:800 clamp(29px,3.8vw,44px)/1.15 var(--body);letter-spacing:-.05em;margin:9px 0}
+.portrait-intro p{font-size:15px;color:#5b6d80;max-width:810px}
+.portrait-workspace{grid-template-columns:minmax(0,1fr) minmax(0,.96fr);gap:22px;margin:12px auto 50px}
+.portrait-panel{border:1px solid #e7edf3;border-radius:21px;box-shadow:0 12px 36px #1736520c}
+.portrait-panel-head{padding:19px 24px;border-color:#e9eff5;background:#fbfcfe}
+.portrait-panel-head h3{font:800 22px var(--body);letter-spacing:-.035em}
+.portrait-panel-head>span{font-size:10px;color:#71839b}
+.portrait-panel-body{padding:22px 24px 26px}
+.portrait-upload{border-radius:15px;background:#f8fafc;border:1.5px dashed #bbcede;min-height:192px;padding:25px}
+.portrait-upload:hover,.portrait-upload.is-dragover{background:#f1f6fc;border-color:#4486bb}
+.portrait-upload.has-photo{min-height:190px}
+.portrait-preset-grid{gap:8px}
+.portrait-preset{min-height:59px;border-radius:12px;border-color:#e2e9f0;background:#f9fbfd;font-size:11px;padding:10px 9px}
+.portrait-preset[aria-pressed="true"]{background:#eaf3fb;color:#215787;border-color:#75a4ce;box-shadow:none}
+.portrait-framing label{border-radius:11px;background:#f9fbfd}
+.portrait-prompt-notes{border-radius:12px;border-color:#dfe7f0;min-height:78px;font-size:14px}
+.portrait-field{margin-top:23px}
+.portrait-field-label{font-size:11px;color:#465d78}
+.portrait-mode-card,.portrait-local-card{border-radius:16px;padding:19px;border-color:#e5ecf4;box-shadow:none}
+.portrait-mode-card{background:linear-gradient(135deg,#eef5fc 0%,#fff 100%)}
+.portrait-mode-heading strong{font:800 16px var(--body);letter-spacing:-.03em}
+.portrait-mode-heading small{font-size:11px}
+.portrait-mode-description{font-size:12px;line-height:1.72}
+.portrait-generate{border-radius:12px;font-size:12px;letter-spacing:.01em;text-transform:none;background:#205987}
+.portrait-generate:hover{background:#173d66}
+.portrait-local-generate{border-radius:11px;font-size:11px;background:#fff}
+.portrait-service-status{border-radius:10px}
+.portrait-stage{min-height:445px;background:#f6f9fc;padding:22px}
+.portrait-stage-empty h4{font:800 24px var(--body);letter-spacing:-.04em}
+.portrait-stage-demo{border-radius:13px;max-height:260px}
+.portrait-result img{border-radius:12px}
+.portrait-result-tools a,.portrait-result-tools button{border-radius:11px}
+.portrait-secondary{background:#fafbfd}
+.portrait-secondary h4{font:800 18px var(--body);letter-spacing:-.03em}
+.portrait-bottom-note{margin-bottom:55px}
+@media(max-width:970px){
+ .portrait-workspace{grid-template-columns:1fr;gap:16px}
+ .portrait-stage{min-height:345px}
+}
+@media(max-width:650px){
+ .portrait-hero{grid-template-columns:1fr}
+ .portrait-hero-copy{padding:34px 24px}
+ .portrait-hero h1{font-size:clamp(39px,10vw,59px)}
+ .portrait-hero p{font-size:15px}
+ .portrait-hero img{min-height:205px;max-height:250px}
+ .portrait-panel-head{padding:17px 19px}
+ .portrait-panel-body{padding:20px 18px}
+ .portrait-preset-grid{grid-template-columns:repeat(2,1fr)}
+ .portrait-intro{padding-top:28px}
+ .portrait-stage{min-height:310px}
+ .portrait-mode-card,.portrait-local-card{padding:15px}
+}

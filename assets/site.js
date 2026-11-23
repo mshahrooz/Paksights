@@ -184,3 +184,29 @@ document.querySelectorAll('.pt-safe.pt-card').forEach(card=>{if(card.querySelect
   setInterval(render, reduced ? 15000 : 750);
   document.addEventListener('visibilitychange', render, { passive: true });
 })();
+
+/* Consolidated Explore menu: keep all destinations available without
+   cramming seven competing links into the desktop header. */
+(()=>{
+  const nav=document.querySelector('.desktop-nav');
+  if(nav && !nav.querySelector('.nav-more')){
+    const more=document.createElement('details');
+    more.className='nav-more';
+    more.innerHTML='<summary>Explore</summary><div class="nav-more-panel"><a href="/world/index.html">Leonida world & map</a><a href="/features/index.html">Features & analysis</a><a href="/articles/index.html">All stories & archive</a></div>';
+    const aiLink=nav.querySelector('a.nav-ai-link');
+    nav.insertBefore(more,aiLink||null);
+    nav.classList.add('is-modern-nav');
+    document.addEventListener('click',(event)=>{
+      if(more.open && !more.contains(event.target)) more.open=false;
+    },{passive:true});
+    more.addEventListener('keydown',(event)=>{
+      if(event.key==='Escape'){more.open=false;more.querySelector('summary')?.focus()}
+    });
+  }
+  const mobile=document.querySelector('.mobile-nav');
+  if(mobile){
+    const aiLink=mobile.querySelector('a.nav-ai-link');
+    const toolsLink=mobile.querySelector('a[href="/tools/index.html"]');
+    if(aiLink&&toolsLink)mobile.insertBefore(toolsLink,aiLink);
+  }
+})();

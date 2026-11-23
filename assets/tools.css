@@ -36,3 +36,57 @@
 
 /* Keep map artwork on a dark canvas so its light SVG features remain legible. */
 .pt-map-art{background:#103339}
+
+/* Calm, spacious app-level visual language (tools, map, missions and guides). */
+.pt-hero:not(.gta-with-hero){background:#f6f9fc;color:#172c46;padding:47px 0 49px;border:0;border-bottom:1px solid #ecf1f5}
+.pt-hero:not(.gta-with-hero) .pt-eyebrow,.pt-kicker{color:#356d9e}
+.pt-hero:not(.gta-with-hero) .pt-crumb{color:#637a91}
+.pt-hero:not(.gta-with-hero) .pt-crumb a{color:#2b649a}
+.pt-hero h1{font:800 clamp(41px,5.8vw,74px)/1.05 var(--body);letter-spacing:-.064em;text-transform:none;margin:18px 0}
+.pt-hero h1 em{font-style:normal;color:#2b659b}
+.pt-hero p{font-size:16px;line-height:1.78;max-width:700px}
+.pt-hero-grid{margin-top:24px;align-items:center}
+.pt-hero-grid aside{border-radius:15px;border-color:#dce6ef;background:#fff;padding:21px}
+.pt-tabs{display:flex;overflow-x:auto;scrollbar-width:none;gap:8px;padding:20px 0}
+.pt-tabs::-webkit-scrollbar{display:none}
+.pt-tabs a{white-space:nowrap;border-radius:999px;border:0;background:#f3f6fa;font-size:12px;font-weight:750;padding:11px 16px}
+.pt-tabs a:hover,.pt-tabs a[aria-current]{background:#214d7a;color:#fff}
+.pt-main{padding-top:32px}
+.pt-lead{gap:32px;align-items:end}
+.pt-lead h2,.pt-heading h2{font:800 clamp(29px,4.2vw,49px)/1.12 var(--body);letter-spacing:-.053em}
+.pt-lead p{font-size:16px;line-height:1.82;color:#5b6e82}
+.pt-grid{gap:17px}
+.pt-tile,.pt-tile:nth-child(n){min-height:285px;border:1px solid #e7edf4;border-radius:20px;background:#fff;box-shadow:0 7px 24px #1c38550d;padding:26px;transition:transform .2s,box-shadow .2s}
+.pt-tile:hover{box-shadow:0 18px 35px #1c38551c;transform:translateY(-3px)}
+.pt-tile-top span:first-child,.pt-tile-foot small{color:#63819c;font-size:10px;letter-spacing:.045em}
+.pt-tile-top span:last-child{color:#2b669c;font-size:27px}
+.pt-tile h2{font:800 clamp(26px,3vw,39px)/1.16 var(--body);letter-spacing:-.05em;margin:30px 0 12px}
+.pt-tile h2 em{color:#2b669c}
+.pt-tile p{font-size:14px;line-height:1.78;color:#5c6e81}
+.pt-tile-foot strong{color:#275f93}
+.pt-section{padding-top:56px}
+.pt-3up{gap:14px}
+.pt-3up>div{background:#f7f9fc;border:1px solid #e8eef4;border-radius:15px;padding:21px}
+.pt-3up b{color:#3771a0;font-size:25px}
+.pt-3up h3{font:800 21px/1.22 var(--body);letter-spacing:-.035em;margin:15px 0 8px}
+.pt-3up p{font-size:14px;line-height:1.8;color:#5d6b79}
+.pt-disclosure,.pt-alert{border:1px solid #dce6f0;border-radius:15px;background:#f7faff;padding:23px}
+.pt-disclosure{margin-top:34px}
+.pt-card,.pt-tile,.pt-source-tile,.pt-mission-row{border-radius:17px}
+.pt-reveal-inner,.pt-hint,.pt-filter,.pt-add-mission,.pt-code-feature{border-radius:14px}
+.pt-dashboard,.pt-map-side{border-radius:17px}
+.pt-dashboard h2,.pt-map-side h2,.pt-article h2{font-family:var(--body);letter-spacing:-.05em;line-height:1.15}
+.pt-card h3{font-family:var(--body);letter-spacing:-.04em;font-size:clamp(20px,2.2vw,29px)}
+@media(max-width:760px){
+ .pt-hero:not(.gta-with-hero){padding:30px 0 33px}
+ .pt-hero h1{font-size:clamp(36px,8.5vw,56px);line-height:1.1}
+ .pt-hero-grid{display:block;margin-top:19px}
+ .pt-hero-grid aside{display:none}
+ .pt-tabs{padding:15px 0}
+ .pt-lead h2,.pt-heading h2{font-size:clamp(29px,7.8vw,39px)}
+ .pt-grid{grid-template-columns:1fr;gap:13px}
+ .pt-tile,.pt-tile:nth-child(n){min-height:214px;padding:22px}
+ .pt-tile h2{font-size:26px;margin:21px 0 9px}
+ .pt-lead p{font-size:15px}
+ .pt-3up{grid-template-columns:1fr}
+}
