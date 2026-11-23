@@ -28,8 +28,6 @@ jobs:
         run: |
           node --check assets/site.js
           node --check assets/home-video.js
-          node --check assets/gta-photo-lab.js
-          node --check assets/gta-photo-lab-cloud.js
           node --check assets/tools.js
           node --check assets/mission-article.js
           node --check assets/prologue.js
@@ -49,7 +47,6 @@ jobs:
           test -s scripts/assemble-fishing-frames.py
           test -s assets/gta6-deep-sea-fishing/_video-parts/part-030.bin
           test -s tools/index.html
-          test -s tools/gta-vi-ai-photo-generator.html
           test -s articles/gta-vi-ai-character-photo-trend-2026.html
           test -s tools/leonida-map.html
           test -s tools/safe-codes.html
