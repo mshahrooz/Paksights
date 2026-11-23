@@ -47,6 +47,19 @@ assert '<meta name="google-site-verification"' in (root/"index.html").read_text(
 print("Cloudflare build validated: pages, gallery, video, SEO, feeds.")
 PY
 
+# Cloudflare html_handling=none preserves the original .html article URLs, but
+# requires explicit internal rewrites for / and directory index pages.
+# Status 200 rewrites serve the same HTML without changing the visitor URL.
+cat > public/_redirects <<'ROUTES'
+/ /index.html 200
+/articles/ /articles/index.html 200
+/news/ /news/index.html 200
+/guides/ /guides/index.html 200
+/world/ /world/index.html 200
+/features/ /features/index.html 200
+/tools/ /tools/index.html 200
+ROUTES
+
 # GitHub Pages' CNAME is not a routing configuration for Cloudflare.
 rm -f public/CNAME
 echo "Cloudflare-ready output: ./public"
