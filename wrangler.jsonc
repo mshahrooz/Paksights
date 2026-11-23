@@ -1,9 +1,0 @@
-{
-  "name": "paksights",
-  "compatibility_date": "2026-11-19",
-  "assets": {
-    "directory": "./public",
-    "not_found_handling": "404-page",
-    "html_handling": "none"
-  }
-}
