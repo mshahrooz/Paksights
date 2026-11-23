@@ -206,6 +206,10 @@ for(const p of allPaths){
  }
  if(p==='articles/gta-vi-all-missions.html')
   updated=updated.replace(/(<div class="gta-mission-title">)<h4>([\s\S]*?)<\/h4>/g,'$1<h3>$2</h3>');
+ if(isArticleWithDate){
+  updated=updated.replace('<strong>Leonida Ledger Research Desk</strong>',
+   '<strong><a class="article-byline-link" href="/about.html">Leonida Ledger Research Desk</a></strong>');
+ }
  fs.writeFileSync(file,updated);
  if(excluded)continue;
  records.push({path:p,url,title,description,keywords:config.keywords,category:config.category,
