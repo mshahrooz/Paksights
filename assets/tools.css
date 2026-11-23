@@ -90,3 +90,9 @@
  .pt-lead p{font-size:15px}
  .pt-3up{grid-template-columns:1fr}
 }
+
+/* Image hero headings match the rest of the less crowded editorial system. */
+.pt-hero.gta-with-hero h1{font:800 clamp(42px,6vw,74px)/1.06 var(--body);letter-spacing:-.06em;color:#fff}
+.pt-hero.gta-with-hero h1 em{color:#dcecff}
+.pt-hero.gta-with-hero .pt-hero-grid aside{border-radius:15px}
+@media(max-width:650px){.pt-hero.gta-with-hero h1{font-size:clamp(37px,8.7vw,54px)}}

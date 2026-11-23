@@ -17,3 +17,9 @@
 
 /* Preserve contrast in the cinematic dark callouts. */
 .p1-objectives p,.p1-last p{color:#f4f9ee;line-height:1.8}
+
+/* More readable opening-mission typography; preserve cinematic photo. */
+.p1-hero h1{font:800 clamp(41px,5.5vw,69px)/1.09 var(--body)!important;letter-spacing:-.055em}
+.p1-article h2,.p1-step-body h3{font-family:var(--body);letter-spacing:-.047em;font-weight:800;line-height:1.14}
+.p1-callout,.p1-subhero,.p1-video-card,.p1-tips>div{border-radius:14px}
+@media(max-width:650px){.p1-hero h1{font-size:clamp(35px,8.8vw,51px)!important}}
