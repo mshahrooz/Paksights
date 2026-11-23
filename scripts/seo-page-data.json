@@ -29,8 +29,8 @@
     },
     "tools/index.html": {
       "title": "Free GTA VI Map, Cheats & Tools | Leonida Ledger",
-      "description": "Use free GTA VI companion tools including an interactive map, mission tracker, safe-code finder, cheat guide and AI character-photo creator.",
-      "keywords": "GTA VI tools, GTA 6 map, GTA VI mission tracker",
+      "description": "Use four GTA VI companion tools: interactive Leonida map, mission tracker, safe-code finder and source-checked cheat guide.",
+      "keywords": "GTA VI tools, GTA 6 map, GTA VI mission tracker, GTA VI safe codes, GTA VI cheats",
       "category": "Guide"
     },
     "features/index.html": {
@@ -65,7 +65,7 @@
     },
     "privacy.html": {
       "title": "Privacy Policy & AI Tools | Leonida Ledger",
-      "description": "Learn how PakSights handles website privacy, advertising, analytics and image processing through its optional Puter and local AI photo tools.",
+      "description": "Understand PakSights privacy practices, advertising, and historical processing details for the discontinued AI photo feature.",
       "keywords": "PakSights privacy policy, GTA VI AI photo privacy",
       "category": "Features"
     },
@@ -74,12 +74,6 @@
       "description": "See the credits and disclosures for official GTA VI media, original AI-generated fan illustrations and editorial visual assets used on PakSights.",
       "keywords": "GTA VI image credits, AI fan art disclosure",
       "category": "Features"
-    },
-    "tools/gta-vi-ai-photo-generator.html": {
-      "title": "GTA VI AI Photo Generator | Leonida Ledger",
-      "description": "Turn your photo into original GTA VI-inspired character art with Puter cloud AI free allowance or a private, no-account browser-based option.",
-      "keywords": "GTA 6 AI photo generator, GTA VI character maker, AI selfie",
-      "category": "Guide"
     },
     "tools/cheat-codes.html": {
       "title": "GTA VI Cheats for PS5 & Xbox | Leonida Ledger",
@@ -220,8 +214,8 @@
       "category": "Guides"
     },
     "articles/gta-vi-ai-character-photo-trend-2026.html": {
-      "title": "GTA VI AI Photo Trend & Character Maker | Leonida Ledger",
-      "description": "Explore the GTA VI AI character selfie trend, how image editors work, privacy tips, strong original prompts and the free PakSights photo tool.",
+      "title": "GTA VI AI Photo Trend: Prompts & Privacy | Leonida Ledger",
+      "description": "Explore the GTA VI-inspired AI character trend, original editing prompts, privacy considerations and creative tips for fan-art portraits.",
       "keywords": "GTA 6 AI photo trend, GTA VI AI portraits",
       "category": "News"
     },
