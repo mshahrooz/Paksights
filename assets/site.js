@@ -193,8 +193,8 @@ document.querySelectorAll('.pt-safe.pt-card').forEach(card=>{if(card.querySelect
     const more=document.createElement('details');
     more.className='nav-more';
     more.innerHTML='<summary>Explore</summary><div class="nav-more-panel"><a href="/world/index.html">Leonida world & map</a><a href="/features/index.html">Features & analysis</a><a href="/articles/index.html">All stories & archive</a></div>';
-    const aiLink=nav.querySelector('a.nav-ai-link');
-    nav.insertBefore(more,aiLink||null);
+    const toolsLink=nav.querySelector('a[href="/tools/index.html"]');
+    nav.insertBefore(more,toolsLink||null);
     nav.classList.add('is-modern-nav');
     document.addEventListener('click',(event)=>{
       if(more.open && !more.contains(event.target)) more.open=false;
@@ -202,11 +202,5 @@ document.querySelectorAll('.pt-safe.pt-card').forEach(card=>{if(card.querySelect
     more.addEventListener('keydown',(event)=>{
       if(event.key==='Escape'){more.open=false;more.querySelector('summary')?.focus()}
     });
-  }
-  const mobile=document.querySelector('.mobile-nav');
-  if(mobile){
-    const aiLink=mobile.querySelector('a.nav-ai-link');
-    const toolsLink=mobile.querySelector('a[href="/tools/index.html"]');
-    if(aiLink&&toolsLink)mobile.insertBefore(toolsLink,aiLink);
   }
 })();
