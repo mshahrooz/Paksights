@@ -28,6 +28,12 @@ jobs:
           node --check assets/mission-article.js
           node --check assets/prologue.js
           test -s articles/gta-6-prologue-mission-1-walkthrough.html
+          test -s articles/gta-6-news-today-november-23-2026.html
+          test -s assets/editorial/2026-11-23/gta-vi-monday-launch-roundup.avif
+          test -s assets/editorial/2026-11-23/gta-vi-xbox-framerate-glitch.avif
+          test -s assets/editorial/2026-11-23/gta-vi-character-critics.avif
+          test -s assets/editorial/2026-11-23/gta-vi-launch-city.avif
+          test -s assets/editorial/2026-11-23/gta-vi-soundtrack-vinyl.avif
           test -s articles/gta-vi-all-missions.html
           test -s articles/gta6-deep-sea-fishing-52-screenshots-20-seconds.html
           test -s scripts/assemble-fishing-frames.py
