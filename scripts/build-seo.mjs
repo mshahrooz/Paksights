@@ -210,6 +210,19 @@ for(const p of allPaths){
   updated=updated.replace('<strong>Leonida Ledger Research Desk</strong>',
    '<strong><a class="article-byline-link" href="/about.html">Leonida Ledger Research Desk</a></strong>');
  }
+
+ // Reserve the correct 16:9 space for our own optimized wide fan-art
+ // illustrations to avoid mobile layout shifts. Keep all visuals and credits.
+ updated=updated.replace(/<img\b[^>]*>/gi,tag=>{
+  let img=tag;
+  if(img.includes('/assets/original-gta6-fanart/')&&!/\bwidth=["']/.test(img)&&!/\bheight=["']/.test(img))
+   img=img.replace(/^<img\b/i,'<img width="1280" height="720"');
+  // Request appropriate official-image sizes for responsive story cards.
+  // Preserve original source and attribution rather than replacing imagery.
+  if(/class=["'][^"']*\bcard-img\b/.test(img)&&img.includes('www.rockstargames.com')&&/imwidth=(?:1440|1600|1920|2560)/.test(img))
+   img=img.replace(/imwidth=(?:1440|1600|1920|2560)/,'imwidth=960');
+  return img;
+ });
  fs.writeFileSync(file,updated);
  if(excluded)continue;
  records.push({path:p,url,title,description,keywords:config.keywords,category:config.category,
