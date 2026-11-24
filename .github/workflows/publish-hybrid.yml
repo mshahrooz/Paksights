@@ -1,0 +1,90 @@
+name: Publish PakSights hybrid hosting
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+    inputs:
+      netlify_backup:
+        description: "Publish Netlify production backup (uses deployment credits)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paksights-hybrid-publish
+  cancel-in-progress: false
+
+jobs:
+  package-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package static site
+        run: python3 scripts/package_paksights.py "$RUNNER_TEMP/paksights-site"
+      - name: Save packaged files for GitLab and Netlify
+        uses: actions/upload-artifact@v4
+        with:
+          name: paksights-static-site
+          path: ${{ runner.temp }}/paksights-site
+          retention-days: 7
+          if-no-files-found: error
+      - name: Publish prebuilt site to distribution branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch=paksights-deploy
+          dest="$RUNNER_TEMP/paksights-dist"
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+            git fetch --depth=1 origin "refs/heads/$branch"
+            git worktree add --detach "$dest" FETCH_HEAD
+          else
+            git worktree add --detach "$dest" HEAD
+          fi
+          git -C "$dest" rm -r --ignore-unmatch .
+          cp -a "$RUNNER_TEMP/paksights-site/." "$dest/"
+          git -C "$dest" add --all
+          if ! git -C "$dest" diff --cached --quiet; then
+            git -C "$dest" -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Publish static site from $GITHUB_SHA"
+          fi
+          git -C "$dest" push origin "HEAD:refs/heads/$branch"
+          echo "Prebuilt site ready: $(git -C "$dest" rev-parse HEAD)"
+      - name: Trigger GitLab Pages
+        env:
+          GITLAB_TRIGGER_TOKEN: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$GITLAB_TRIGGER_TOKEN" ]]; then
+            echo "::notice::GitLab trigger token not configured; distribution branch is ready."
+            exit 0
+          fi
+          curl --silent --show-error --fail --request POST \
+            --form "token=$GITLAB_TRIGGER_TOKEN" --form "ref=main" \
+            https://gitlab.com/api/v4/projects/89402411/trigger/pipeline \
+            | python3 -c 'import json,sys; x=json.load(sys.stdin); print("GitLab pipeline:", x.get("web_url"), x.get("status"))'
+      - name: Publish Netlify backup by explicit request only
+        if: github.event_name == 'workflow_dispatch' && inputs.netlify_backup
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: b81b5490-c543-46e3-90ce-d51320558cfa
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$NETLIFY_AUTH_TOKEN" ]]; then
+            echo "::error::NETLIFY_AUTH_TOKEN is missing"
+            exit 1
+          fi
+          (cd "$RUNNER_TEMP/paksights-site" && zip -qr "$RUNNER_TEMP/paksights.zip" .)
+          curl --silent --show-error --fail --request POST \
+            --header "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            --header "Content-Type: application/zip" \
+            --data-binary "@$RUNNER_TEMP/paksights.zip" \
+            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys" \
+            | python3 -c 'import json,sys; x=json.load(sys.stdin); print("Netlify deploy:", x.get("id"), x.get("state"), x.get("deploy_ssl_url"))'
