@@ -1,0 +1,72 @@
+name: One-time Cloudflare Pages direct upload export
+on:
+  push:
+    branches: [cloudflare-direct-export]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore original media and package website
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/assemble-fishing-frames.py
+          mkdir -p public
+          cp -R assets articles news guides world features tools public/
+          cp *.html *.xml *.txt public/
+          if [ -f public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4 ]; then
+            test -s public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4
+          else
+            cat public/assets/gta6-deep-sea-fishing/_video-parts/part-*.bin > public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4
+          fi
+          test "$(stat -c%s public/assets/gta6-deep-sea-fishing/gta6-deep-sea-fishing-ultra.mp4)" -eq 17794634
+          rm -rf public/assets/gta6-deep-sea-fishing/_video-parts public/assets/media-source
+          for f in *.json *.ico *.webmanifest; do
+            if [ -f "$f" ] && [[ "$f" != package* && "$f" != wrangler* && "$f" != tsconfig* ]]; then cp "$f" public/; fi
+          done
+          node scripts/build-seo.mjs public
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, json, zipfile, xml.etree.ElementTree as ET
+          from urllib.parse import urlsplit
+          root=Path('public')
+          # Pages normalizes .html and /index.html URLs; update absolute first-party URLs accordingly.
+          def canonical(m):
+              raw=m.group(0)
+              path=raw.split('paksights.com',1)[1]
+              if path.endswith('/index.html'):
+                  path=path[:-10]
+              elif path.endswith('.html'):
+                  path=path[:-5]
+              return 'https://www.paksights.com'+path
+          pat=re.compile(r'https://(?:www\.)?paksights\.com(?:/[^\s"\x27<>\\?#]*)?')
+          for p in root.rglob('*'):
+              if p.is_file() and p.suffix.lower() in {'.html','.js','.xml','.json','.txt','.css','.webmanifest'}:
+                  s=p.read_text(encoding='utf-8')
+                  p.write_text(pat.sub(canonical,s),encoding='utf-8')
+          # Preview URL must not compete with production in search.
+          (root/'_headers').write_text('https://paksights-direct.pages.dev/*\n  X-Robots-Tag: noindex\n',encoding='utf-8')
+          for f in ('index.html','404.html','articles/index.html','news/index.html','articles/gta-6-online-release-date.html','sitemap.xml','feed.xml','ads.txt'):
+              assert (root/f).stat().st_size, f
+          assert 'google-site-verification' in (root/'index.html').read_text()
+          assert len(list((root/'assets/gallery/gta6-fishing-20s').glob('gone-fishing-*.webp')))==52
+          for f in root.glob('*.xml'):
+              ET.parse(f)
+          files=[p for p in root.rglob('*') if p.is_file()]
+          assert len(files)<=1000, 'Cloudflare dashboard direct upload has a 1000-file limit'
+          assert max(p.stat().st_size for p in files)<=25*1024*1024, 'File exceeds Pages limit'
+          with zipfile.ZipFile('paksights-direct-upload.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in files:
+                  z.write(p,p.relative_to(root))
+          print('Validated',len(files),'files;',sum(p.stat().st_size for p in files),'bytes')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paksights-direct-upload
+          path: paksights-direct-upload.zip
+          retention-days: 30
+          if-no-files-found: error
