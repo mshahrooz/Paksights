@@ -135,3 +135,45 @@ with tempfile.TemporaryDirectory() as td:
     assert 50000 < target.stat().st_size < 8*1024*1024
     print("Optimized hero MP4 bytes:",target.stat().st_size)
 (D/"paksights-education-hero-credit.txt").write_text("Students Studying at the Library — Tima Miroshnichenko, Pexels. "+clip_page+" | https://www.pexels.com/license/")
+
+# Licensed Pexels education clip, downloaded and optimized at build time.
+import urllib.request, re, html, tempfile, subprocess, sys
+from urllib.parse import urlparse
+ua={"User-Agent":"Mozilla/5.0 (compatible; Paksights educational website)"}
+clip_id="5676170"
+clip_page="https://www.pexels.com/video/two-women-studying-5676170/"
+sources=["https://www.pexels.com/download/video/"+clip_id+"/"]
+try:
+    req=urllib.request.Request(clip_page,headers=ua)
+    with urllib.request.urlopen(req,timeout=15) as r:
+        doc=html.unescape(r.read(5000000).decode("utf-8","replace")).replace("\\/","/")
+    sources+=list(dict.fromkeys(re.findall(r'https://videos\.pexels\.com/[^"\s<>]+?\.mp4(?:\?[^"\s<>]*)?',doc)))
+except Exception as e: print("Pexels page metadata:",str(e))
+# Public Pexels CDN rendition candidates for the selected clip; verify actual video bytes.
+sources += ["https://videos.pexels.com/video-files/"+clip_id+"/"+clip_id+"-"+suffix+".mp4" for suffix in ["hd_1280_720_25fps","hd_1920_1080_25fps","hd_1280_720_30fps","hd_1920_1080_30fps","sd_640_360_25fps","hd_1280_720_24fps","hd_1920_1080_24fps","hd_1280_720_23.98fps","hd_1920_1080_23.98fps"]]
+sources += ["https://player.vimeo.com/external/"+clip_id+".hd.mp4"] if False else []
+with tempfile.TemporaryDirectory() as td:
+    src=Path(td)/"source.mp4"
+    found=False
+    for url in dict.fromkeys(sources):
+        if urlparse(url).hostname not in ("www.pexels.com","videos.pexels.com"): continue
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url,headers=ua),timeout=25) as r:
+                first=r.read(64)
+                if b"ftyp" not in first: continue
+                with src.open("wb") as o:
+                    o.write(first); shutil.copyfileobj(r,o)
+            if src.stat().st_size>100000: found=True;print("Pexels source:",url,src.stat().st_size);break
+        except Exception as e: print("Source unavailable:",str(e))
+    if not found: raise RuntimeError("Could not retrieve the selected Pexels clip")
+    ff=shutil.which("ffmpeg")
+    if not ff:
+        subprocess.run([sys.executable,"-m","pip","install","--disable-pip-version-check","--quiet","imageio-ffmpeg==0.6.0"],check=True)
+        import imageio_ffmpeg
+        ff=imageio_ffmpeg.get_ffmpeg_exe()
+    target=D/"paksights-study-together-v2.mp4"
+    subprocess.run([ff,"-y","-i",str(src),"-t","12","-an","-vf","scale=960:-2,fps=24","-c:v","libx264","-preset","medium","-crf","25","-pix_fmt","yuv420p","-movflags","+faststart",str(target)],check=True)
+    subprocess.run([ff,"-y","-ss","1","-i",str(target),"-frames:v","1","-q:v","3",str(D/"paksights-study-together-v2-poster.jpg")],check=True)
+    assert 50000 < target.stat().st_size < 8*1024*1024
+    print("Optimized hero MP4 bytes:",target.stat().st_size)
+(D/"paksights-study-together-v2-credit.txt").write_text("Two Women Studying — Pexels contributor, Pexels. "+clip_page+" | https://www.pexels.com/license/")
