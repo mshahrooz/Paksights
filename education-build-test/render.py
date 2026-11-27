@@ -51,3 +51,45 @@ for p in D.glob("*.png"):
     with Image.open(p) as check:check.verify()
     assert p.stat().st_size>10000
     print(p.name,p.stat().st_size)
+
+# Government recruitment weekly editorial artwork, 27 November 2026.
+im=Image.new("RGB",(1440,810),"#113D33");d=ImageDraw.Draw(im)
+for i in range(0,1400,35):
+    d.line((i,0,i-550,810),fill="#19483C",width=1)
+rr(d,(72,60,432,114),25,"#285C49");text(d,(94,77),"PAKSIGHTS  /  CAREER DESK",21,"#F2E7C9",True)
+text(d,(72,196),"Government",77,"white",True)
+text(d,(72,287),"Jobs in Pakistan",70,"white",True)
+text(d,(75,392),"Weekly recruitment roundup",32,"#E4D5A9")
+rr(d,(73,465,550,553),18,"#E7BF76");text(d,(96,489),"23–27 NOVEMBER 2026",29,GREEN,True)
+# Stylized civic building, application sheet and briefcase; no official insignia.
+d.polygon([(893,227),(1110,103),(1327,227)],fill="#DBE8DB")
+d.rectangle((907,228,1313,253),fill="#D6B676")
+for x in [935,1025,1115,1205]:
+    rr(d,(x,263,x+55,475),6,"#BDD1C3")
+d.rectangle((903,475,1316,494),fill="#D6B676")
+d.rectangle((875,495,1344,516),fill="#B6CBBB")
+rr(d,(970,533,1280,697),18,"#D9B878")
+rr(d,(1062,499,1184,554),13,"#D9B878")
+d.rectangle((1078,513,1167,541),fill="#174436")
+d.line((970,588,1280,588),fill="#886A3A",width=4);rr(d,(1104,575,1146,607),5,"#F7EDD2")
+text(d,(74,742),"Federal and provincial opportunities  •  Verify every official notice",22,"#D3E6D9")
+im.save(D/"pakistan-govt-jobs-2026-11-27-cover.png",optimize=True)
+im=Image.new("RGB",(1100,1180),"#F4F5F0");d=ImageDraw.Draw(im)
+d.rectangle((0,0,1100,225),fill="#143F32")
+text(d,(52,34),"PAKSIGHTS  /  APPLICATION PLANNER",21,"#E2B86B",True)
+text(d,(52,90),"Upcoming deadlines",55,"white",True)
+text(d,(54,165),"Selected public-sector openings • November 27 snapshot",22,"#DCE8DC")
+items=[("28 NOV","Controller General of Accounts","Specialist contract roles"),("06 DEC","Airports Security Force","Check current recruitment portal"),("07 DEC","Karachi Port Trust","Technical and operational roles"),("08 DEC","Workers Welfare Fund","Selected Balochistan quota roles"),("20 DEC","Capital Development Authority","Extended application deadline")]
+for i,(date,name,desc) in enumerate(items):
+    y=250+i*143;rr(d,(42,y,1058,y+123),18,"white","#D8E2D7",2)
+    rr(d,(61,y+20,260,y+103),12,"#E5EDE3");text(d,(80,y+45),date,34,GREEN,True)
+    text(d,(290,y+21),name,29,INK,True);text(d,(292,y+68),desc,21,MUTED)
+d.line((50,995,1050,995),fill="#CAD9CE",width=2)
+text(d,(52,1022),"Before applying: confirm domicile, qualifications, age and quota.",22,INK,True)
+text(d,(52,1067),"Dates may change. Use official portals; never pay an agent.",22,MUTED)
+text(d,(52,1120),"Independent editorial graphic • Not an official advertisement",18,MUTED)
+im.save(D/"pakistan-govt-jobs-2026-11-27-deadlines.png",optimize=True)
+for p in D.glob("pakistan-govt-jobs-*.png"):
+    with Image.open(p) as check: check.verify()
+    assert p.stat().st_size>10000
+    print(p.name,p.stat().st_size)
